@@ -57,15 +57,15 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/ねこいじめ_for_web.loader.js";
+      var loaderUrl = buildUrl + "/games.loader.js";
       var config = {
-        dataUrl: buildUrl + "/ねこいじめ_for_web.data.gz",
-        frameworkUrl: buildUrl + "/ねこいじめ_for_web.framework.js.gz",
-        codeUrl: buildUrl + "/ねこいじめ_for_web.wasm.gz",
+        dataUrl: buildUrl + "/games.data",
+        frameworkUrl: buildUrl + "/games.framework.js",
+        codeUrl: buildUrl + "/games.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DALACtation Makerz",
         productName: "ねこいじめ",
-        productVersion: "1.6.4",
+        productVersion: "2.6.5",
         showBanner: unityShowBanner,
       };
 
@@ -98,7 +98,7 @@
         canvas.style.height = "600px";
       }
 
-      canvas.style.background = "url('" + buildUrl + "/ねこいじめ_for_web.jpg') center / cover";
+      canvas.style.background = "url('" + buildUrl + "/games.jpg') center / cover";
       loadingBar.style.display = "block";
 
       var script = document.createElement("script");
