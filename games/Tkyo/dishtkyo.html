@@ -204,7 +204,7 @@ Module.expectedDataFileDownloads++;
     }
     var PACKAGE_NAME = 'dishtkyo.data';
     var REMOTE_PACKAGE_NAME = (Module['filePackagePrefixURL'] || '') + 'dishtkyo.data';
-    var REMOTE_PACKAGE_SIZE = 29964;
+    var REMOTE_PACKAGE_SIZE = 29924;
     var PACKAGE_UUID = '51f84d03-0c74-4552-ac13-924e79e76977';
   
     function fetchRemotePackage(packageName, packageSize, callback, errback) {
@@ -268,8 +268,6 @@ function assert(check, msg) {
   if (!check) throw msg + new Error().stack;
 }
 
-Module['FS_createPath']('/', 'res', true, true);
-Module['FS_createPath']('/res', 'shaders', true, true);
 
 
     function DataRequest(start, end, crunched, audio) {
@@ -307,7 +305,7 @@ Module['FS_createPath']('/res', 'shaders', true, true);
       },
     };
 
-      new DataRequest(0, 29964, 0, 0).open('GET', 'dishtkyo.ax');
+      new DataRequest(0, 29924, 0, 0).open('GET', 'dishtkyo.ax');
 
 
     function processPackageData(arrayBuffer) {
@@ -398,7 +396,7 @@ Module['FS_createPath']('/res', 'shaders', true, true);
 
 
     </script>
-    <script async type="text/javascript" src="hsp3dishw-gp.js"></script>
-  <p><font size="2" color="#c0c0c0">powered by <a href="https://hsp.tv/make/hsp3dish.html" target="_blank">hsp3dishw-gp.js</a> / OpenHSP</font></p>
+    <script async type="text/javascript" src="hsp3dishw.js"></script>
+  <p><font size="2" color="#c0c0c0">powered by <a href="https://hsp.tv/make/hsp3dish.html" target="_blank">hsp3dishw.js</a> / OpenHSP</font></p>
   </body>
 </html>
