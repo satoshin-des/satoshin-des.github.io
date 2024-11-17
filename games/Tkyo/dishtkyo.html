@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>tkyo - HSP3Dish</title>
+    <title>dishtkyo - HSP3Dish</title>
     <style>
       body {
         font-family: arial;
@@ -180,7 +180,7 @@
           this.totalDependencies = Math.max(this.totalDependencies, left);
           Module.setStatus(left ? 'Preparing... (' + (this.totalDependencies-left) + '/' + this.totalDependencies + ')' : 'All downloads complete.');
         },
-        arguments: ["tkyo.ax"]
+        arguments: ["dishtkyo.ax"]
       };
       Module.setStatus('Downloading...');
 
@@ -202,9 +202,9 @@ Module.expectedDataFileDownloads++;
       // worker
       PACKAGE_PATH = encodeURIComponent(location.pathname.toString().substring(0, location.pathname.toString().lastIndexOf('/')) + '/');
     }
-    var PACKAGE_NAME = 'tkyo.data';
-    var REMOTE_PACKAGE_NAME = (Module['filePackagePrefixURL'] || '') + 'tkyo.data';
-    var REMOTE_PACKAGE_SIZE = 31671;
+    var PACKAGE_NAME = 'dishtkyo.data';
+    var REMOTE_PACKAGE_NAME = (Module['filePackagePrefixURL'] || '') + 'dishtkyo.data';
+    var REMOTE_PACKAGE_SIZE = 31273;
     var PACKAGE_UUID = '51f84d03-0c74-4552-ac13-924e79e76977';
   
     function fetchRemotePackage(packageName, packageSize, callback, errback) {
@@ -305,7 +305,7 @@ function assert(check, msg) {
       },
     };
 
-      new DataRequest(0, 31671, 0, 0).open('GET', 'tkyo.ax');
+      new DataRequest(0, 31273, 0, 0).open('GET', 'dishtkyo.ax');
 
 
     function processPackageData(arrayBuffer) {
@@ -319,12 +319,12 @@ function assert(check, msg) {
       Module['HEAPU8'].set(byteArray, ptr);
       DataRequest.prototype.byteArray = Module['HEAPU8'].subarray(ptr, ptr+byteArray.length);
 
-          DataRequest.prototype.requests["tkyo.ax"].onload();
+          DataRequest.prototype.requests["dishtkyo.ax"].onload();
 
-          Module['removeRunDependency']('datafile_tkyo.data');
+          Module['removeRunDependency']('datafile_dishtkyo.data');
 
     };
-    Module['addRunDependency']('datafile_tkyo.data');
+    Module['addRunDependency']('datafile_dishtkyo.data');
   
     if (!Module.preloadResults) Module.preloadResults = {};
   
