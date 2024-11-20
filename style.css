@@ -2,14 +2,14 @@ a:link {
     color: #b8f0ff;
     text-decoration: underline;
 }
-   
+
 a:visited {
     color: #9eb8ff;
     text-decoration: underline;
 }
 
 body {
-    background-color:#000000;
+    background-color: #000000;
 }
 
 p {

@@ -1,51 +1,59 @@
 <html>
-  <head>
-    <title>さとしんのHP</title>
-    <meta charset="UTF-8">
-    <style>
-      .Nenpyo{
-        text-align: left;
-      }
-    </style>
-    <style>
-      @import url(style.css);
-    </style>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  </head>
-  <body>
-    <header>
-      <a href="index.html"><img src="satoshin_profile.jpg" alt="さとしんでぇす" width="50"></a>
-      <a href="math.html">数学のこと</a>
-      <a href="music.html">音楽のこと</a>
-      <a href="game.html">ゲームのこと</a>
-      <a href="program.html">プログラミングのこと</a>
-      <a href="other_home.html">その他色々</a>
-    </header>
-    <p>ここでは、さとしんの勉強・研究している領域についての説明や、見つけたもの、作ったものについて説明していく。</p>
-    <h1>数学の何をやってるか</h1>
-    <p>私は格子理論、格子基底簡約について研究しています。とはいってもなんやねんそれという方もいるかもしれないので、取り敢えず表面的どころか表面にそっと触れている空気くらいの薄っぺらーい所を書いておきます。</p>
-    <h2>格子って</h2>
-    <p>\(n\)次元格子とは一次独立なベクトル\(~\mathbf{b}_1,\ldots,\mathbf{b}_n\in\mathbb{R}^m\)の整数係数全体の集合</p>
-    <p>$$L = \mathcal{L}(\mathbf{b}_1, \dots, \mathbf{b}_n) := \left\{\left. \sum_{i = 1}^n x_i \mathbf{b}_i \in \mathbb{R}^m \right| x_i \in \mathbb{Z} \right\}$$</p>
-    <p>を格子という。</p>
-    <p>また、\(\{\mathbf{b}_1,\ldots,\mathbf{b}_n\}\)を基底、基底を並べて作った行列</p>
-    <p>$$\mathbf{B}:=\begin{bmatrix}\mathbf{b}_1\\ \vdots\\ \mathbf{b}_n\end{bmatrix}\in\mathbb{R}^{n\times m}$$</p>
-    <p>を基底行列と呼ぶ。</p>
-    <p>基底簡約は、恐ろしく簡単に言えばこの行列\(~\mathbf{B}\)に良い感じの行基本変形を施してできる限り各基底が短く、且つ直交に近くなるようにしましょうというお話です。</p>
-    <h2>基底簡約の例</h2>
-    <h3>LLL基底簡約</h3>
-    <p>これはそこそこ有名</p>
-    <p>\(n\)次元格子の基底\(\{\mathbf{b}_1,\ldots,\mathbf{b}_n\}\)が\(\delta\)-LLL簡約基底であるとは</p>
-    <p>$$\left\{\begin{aligned}&1\le{}^\forall j<{}^\forall i\le n: |\mu_{i, j}|\le\frac{1}{2}\\ &2\le{}^\forall k\le n: \|\mathbf{b}_k^*\|^2\ge (\delta-\mu_{k, k-1}^2)\|\mathbf{b}_{k-1}^*\|^2\end{aligned}\right.$$</p>
-    <p>なるときをいう。但し、</p>
-    <p>$$\left\{\begin{align}\mathbf{b}_1^*&:=\mathbf{b}_1\\ \mathbf{b}_i^*&:=\mathbf{b}_i-\sum_{j=1}^{i-1}\mu_{i, j}\mathbf{b}_j^*\quad (2\le i\le n)\end{align}\right.$$</p>
-    <p>はGram-Schmidt直交化ベクトル（GSO-ベクトル）である。</p>
-    <h3>PotLLL基底簡約</h3>
-    <p>これはちょっとマイナー。でも研究ではよく使うので書いておく。</p>
-    <p>\(n\)次元格子の基底\(\mathbf{B}:=\{\mathbf{b}_1,\ldots,\mathbf{b}_n\}\)が\(\delta\)-LLL簡約基底であるとは</p>
-    <p>$$\left\{\begin{aligned}&1\le{}^\forall j<{}^\forall i\le n: |\mu_{i, j}|\le\frac{1}{2}\\ &1\le{}^\forall k<\ell \le n: \delta\cdot\mathrm{Pot}(\mathbf{B})\le \rm{Pot}(\sigma_{\mathit{k}, \ell}(\mathbf{B}))\end{aligned}\right.$$</p>
-    <p>なるときをいう。但し、</p>
-    <p>$$\mathrm{Pot}(\mathbf{B}):=\prod_{i=1}^n \|\mathbf{b}_i^*\|^{2(n-i+1)}$$</p>
-    <p>は格子基底のpotentialである。</p>
-  </body>
+
+<head>
+  <title>さとしんのHP</title>
+  <meta charset="UTF-8">
+  <style>
+    .Nenpyo {
+      text-align: left;
+    }
+  </style>
+  <style>
+    @import url(style.css);
+  </style>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <header>
+    <a href="index.html"><img src="satoshin_profile.jpg" alt="さとしんでぇす" width="50"></a>
+    <a href="math.html">数学のこと</a>
+    <a href="music.html">音楽のこと</a>
+    <a href="game.html">ゲームのこと</a>
+    <a href="program.html">プログラミングのこと</a>
+    <a href="other_home.html">その他色々</a>
+  </header>
+  <p>ここでは、さとしんの勉強・研究している領域についての説明や、見つけたもの、作ったものについて説明していく。</p>
+  <h1>数学の何をやってるか</h1>
+  <p>私は格子理論、格子基底簡約について研究しています。とはいってもなんやねんそれという方もいるかもしれないので、取り敢えず表面的どころか表面にそっと触れている空気くらいの薄っぺらーい所を書いておきます。</p>
+  <h2>格子って</h2>
+  <p>\(n\)次元格子とは一次独立なベクトル\(~\mathbf{b}_1,\ldots,\mathbf{b}_n\in\mathbb{R}^m\)の整数係数全体の集合</p>
+  <p>$$L = \mathcal{L}(\mathbf{b}_1, \dots, \mathbf{b}_n) := \left\{\left. \sum_{i = 1}^n x_i \mathbf{b}_i \in
+    \mathbb{R}^m \right| x_i \in \mathbb{Z} \right\}$$</p>
+  <p>を格子という。</p>
+  <p>また、\(\{\mathbf{b}_1,\ldots,\mathbf{b}_n\}\)を基底、基底を並べて作った行列</p>
+  <p>$$\mathbf{B}:=\begin{bmatrix}\mathbf{b}_1\\ \vdots\\ \mathbf{b}_n\end{bmatrix}\in\mathbb{R}^{n\times m}$$</p>
+  <p>を基底行列と呼ぶ。</p>
+  <p>基底簡約は、恐ろしく簡単に言えばこの行列\(~\mathbf{B}\)に良い感じの行基本変形を施してできる限り各基底が短く、且つ直交に近くなるようにしましょうというお話です。</p>
+  <h2>基底簡約の例</h2>
+  <h3>LLL基底簡約</h3>
+  <p>これはそこそこ有名</p>
+  <p>\(n\)次元格子の基底\(\{\mathbf{b}_1,\ldots,\mathbf{b}_n\}\)が\(\delta\)-LLL簡約基底であるとは</p>
+  <p>$$\left\{\begin{aligned}&1\le{}^\forall j<{}^\forall i\le n: |\mu_{i, j}|\le\frac{1}{2}\\ &2\le{}^\forall k\le n:
+      \|\mathbf{b}_k^*\|^2\ge (\delta-\mu_{k, k-1}^2)\|\mathbf{b}_{k-1}^*\|^2\end{aligned}\right.$$</p>
+      <p>なるときをいう。但し、</p>
+      <p>$$\left\{\begin{align}\mathbf{b}_1^*&:=\mathbf{b}_1\\ \mathbf{b}_i^*&:=\mathbf{b}_i-\sum_{j=1}^{i-1}\mu_{i,
+        j}\mathbf{b}_j^*\quad (2\le i\le n)\end{align}\right.$$</p>
+      <p>はGram-Schmidt直交化ベクトル（GSO-ベクトル）である。</p>
+      <h3>PotLLL基底簡約</h3>
+      <p>これはちょっとマイナー。でも研究ではよく使うので書いておく。</p>
+      <p>\(n\)次元格子の基底\(\mathbf{B}:=\{\mathbf{b}_1,\ldots,\mathbf{b}_n\}\)が\(\delta\)-LLL簡約基底であるとは</p>
+      <p>$$\left\{\begin{aligned}&1\le{}^\forall j<{}^\forall i\le n: |\mu_{i, j}|\le\frac{1}{2}\\ &1\le{}^\forall
+          k<\ell \le n: \delta\cdot\mathrm{Pot}(\mathbf{B})\le \rm{Pot}(\sigma_{\mathit{k},
+          \ell}(\mathbf{B}))\end{aligned}\right.$$</p>
+          <p>なるときをいう。但し、</p>
+          <p>$$\mathrm{Pot}(\mathbf{B}):=\prod_{i=1}^n \|\mathbf{b}_i^*\|^{2(n-i+1)}$$</p>
+          <p>は格子基底のpotentialである。</p>
+</body>
+
 </html>
