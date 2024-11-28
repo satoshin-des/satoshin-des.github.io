@@ -40,8 +40,8 @@
   <h3>LLL基底簡約</h3>
   <p>これはそこそこ有名</p>
   <p>\(n\)次元格子の基底\(\{\mathbf{b}_1,\ldots,\mathbf{b}_n\}\)が\(\delta\)-LLL簡約基底であるとは</p>
-  <p>$$\left\{\begin{aligned}&1\le{}^\forall j<{}^\forall i\le n: |\mu_{i, j}|\le\frac{1}{2}\\ &2\le{}^\forall k\le n:
-      \|\mathbf{b}_k^*\|^2\ge (\delta-\mu_{k, k-1}^2)\|\mathbf{b}_{k-1}^*\|^2\end{aligned}\right.$$</p>
+  <p>$$\left\{\begin{aligned}&1\le{}^\forall j<{}^\forall i\le n: |\mu_{i, j}|\le\frac{1}{2}\\ &2\le{}^\forall k\le
+      n:\|\mathbf{b}_k^*\|^2\ge (\delta-\mu_{k, k-1}^2)\|\mathbf{b}_{k-1}^*\|^2\end{aligned}\right.$$</p>
       <p>なるときをいう。但し、</p>
       <p>$$\left\{\begin{align}\mathbf{b}_1^*&:=\mathbf{b}_1\\ \mathbf{b}_i^*&:=\mathbf{b}_i-\sum_{j=1}^{i-1}\mu_{i,
         j}\mathbf{b}_j^*\quad (2\le i\le n)\end{align}\right.$$</p>
@@ -60,13 +60,14 @@
           <p>絶対に止まるとか、思っている人もいるらしいがそんなことはない。なぜか知らないが止まったり、あるいはどこかで強制停止させているだけで停止性は証明されていない。</p>
           <p>\(n\)次元格子の基底\(\{\mathbf{b}_1,\ldots,\mathbf{b}_n\}\)がブロックサイズ\(\beta\)に対してBKZ簡約されているとは</p>
           <h2>GSAの変化</h2>
-          <p>GSAは幾何級数仮定（Geometry Series Assumption）の略だが、ここでは簡単に言えばGram-Schmidtベクトルのノルムのことを言っている。</p>
+          <p>GSAは幾何級数仮定（Geometry Series Assumption）の略だが、ここでは簡単に言えばGram-Schmidtベクトルのノルムの対数値のことを言っている。</p>
           <p>これは私が勝手に言ってるわけではなく、（論文とかではあまり見かけないが）そこそこ研究室での会話などでは使う言い回しである。</p>
           <p>
             なんで、GSAなんてのがGram-Schmidtベクトルのノルムなんかを表すかと言えば、そもそも幾何級数仮定というのは簡約基底\(\{\mathbf{b}_1,\ldots,\mathbf{b}_n\}\)のGram-Schmidtベクトル\(\mathbf{b}_1^*,\ldots,\mathbf{b}_n^*\)について、
           </p>
-          <p>$${}^\exists q>0~\text{s.t.}~1\le{}^\forall i\le
-            n-1,~\frac{\|\mathbf{b}_i^*\|}{\|\mathbf{b}_{i+1}^*\|}\approx q$$</p>
+          <p>$$\begin{aligned}
+              &\quad\quad \quad \ \ \!\frac{3}{4}\le{}^\forall q<1~\text{s.t.}~1\le{}^\forall i\le n,~\frac{\|\mathbf{b}_i^\star\|^2}{\|\mathbf{b}_1\|^2}\approx q^{i-1}\\
+              &\left(\iff \frac{3}{4}\le{}^\forall q<1~\text{s.t.}~1\le{}^\forall i\le n,~ \log\|\mathbf{b}_i^\star\|\approx(i-1)\frac{\log q}{2}+\log\|\mathbf{b}_1\|\right)\end{aligned}$$</p>
           <p>が成立するっぽいというやつなので、それに因んでだと思われる。</p>
           <p>ここでは幾つかのアルゴリズムにおけるGSAの変化を見てみよう。</p>
           <h3>LLLアルゴリズムの場合</h3>
