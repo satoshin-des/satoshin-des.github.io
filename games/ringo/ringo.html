@@ -262,7 +262,7 @@
       }
       var PACKAGE_NAME = 'ringo.data';
       var REMOTE_PACKAGE_NAME = (Module['filePackagePrefixURL'] || '') + 'ringo.data';
-      var REMOTE_PACKAGE_SIZE = 3444809;
+      var REMOTE_PACKAGE_SIZE = 3444824;
       var PACKAGE_UUID = '51f84d03-0c74-4552-ac13-924e79e76977';
 
       function fetchRemotePackage(packageName, packageSize, callback, errback) {
@@ -363,11 +363,11 @@
           },
         };
 
-        new DataRequest(0, 6620, 0, 0).open('GET', 'ringo.ax');
-        new DataRequest(6620, 57734, 0, 0).open('GET', 'apple.png');
-        new DataRequest(57734, 1645436, 0, 0).open('GET', 'bgm.wav');
-        new DataRequest(1645436, 1749291, 0, 0).open('GET', 'ringorou.png');
-        new DataRequest(1749291, 3444809, 0, 0).open('GET', 'title.wav');
+        new DataRequest(0, 6635, 0, 0).open('GET', 'ringo.ax');
+        new DataRequest(6635, 57749, 0, 0).open('GET', 'apple.png');
+        new DataRequest(57749, 1645451, 0, 0).open('GET', 'bgm.wav');
+        new DataRequest(1645451, 1749306, 0, 0).open('GET', 'ringorou.png');
+        new DataRequest(1749306, 3444824, 0, 0).open('GET', 'title.wav');
 
 
         function processPackageData(arrayBuffer) {
