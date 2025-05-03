@@ -28,6 +28,7 @@
       text-align: left;
     }
   </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/extras/jquery.metadata.min.js"></script>
 </head>
@@ -80,14 +81,59 @@
         <td>漫画</td>
       </tr>
       <tr>
+        <td>苺ましまろ（１）</td>
+        <td>ばらスィー</td>
+        <td>漫画</td>
+      </tr>
+      <tr>
+        <td>苺ましまろ（２）</td>
+        <td>ばらスィー</td>
+        <td>漫画</td>
+      </tr>
+      <tr>
+        <td>苺ましまろ（３）</td>
+        <td>ばらスィー</td>
+        <td>漫画</td>
+      </tr>
+      <tr>
+        <td>苺ましまろ（４）</td>
+        <td>ばらスィー</td>
+        <td>漫画</td>
+      </tr>
+      <tr>
+        <td>苺ましまろ（５）</td>
+        <td>ばらスィー</td>
+        <td>漫画</td>
+      </tr>
+      <tr>
         <td>格子暗号解読のための数学的基礎</td>
         <td>青野良範・安田雅哉</td>
         <td>数学書</td>
       </tr>
       <tr>
+        <td>格子と最適化手法を用いた素因数分解法の実験報告</td>
+        <td>山口純平・伊豆哲也・國廣昇</td>
+        <td>論文</td>
+      </tr>
+      <tr>
         <td>こちら、終末停滞委員会。（１）</td>
         <td>逢縁奇演</td>
         <td>ラノベ</td>
+      </tr>
+      <tr>
+        <td>ごっどちゃんず（１）</td>
+        <td>ユキヲ</td>
+        <td>漫画</td>
+      </tr>
+      <tr>
+        <td>ごっどちゃんず（２）</td>
+        <td>ユキヲ</td>
+        <td>漫画</td>
+      </tr>
+      <tr>
+        <td>埼玉の戦争遺構</td>
+        <td>関口和也</td>
+        <td>郷土史</td>
       </tr>
       <tr>
         <td>サマーウォーズ　公式コミックアンソロジー</td>
@@ -285,9 +331,24 @@
         <td>数学書</td>
       </tr>
       <tr>
+        <td>双対格子への格子簡約適用によるENUMの計算量削減についての考察</td>
+        <td>岸本共生・川添充・吉冨賢太郎</td>
+        <td>論文</td>
+      </tr>
+      <tr>
+        <td>双対版DeepBKZ基底簡約の開発とLWEチャレンジ解読への適用</td>
+        <td>安田雅哉・山口純平・大岡美智子・中邑聡史</td>
+        <td>論文</td>
+      </tr>
+      <tr>
         <td>超動く家にて</td>
         <td>宮内悠介</td>
         <td>小説</td>
+      </tr>
+      <tr>
+        <td>ニコニコ動画における映像要約とサビ検出の試み</td>
+        <td>青木秀憲・宮下芳明</td>
+        <td>論文</td>
       </tr>
       <tr>
         <td>長門有希ちゃんの消失</td>
@@ -295,9 +356,24 @@
         <td>ラノベ</td>
       </tr>
       <tr>
+        <td>日本名所大地図</td>
+        <td>株式会社平凡社</td>
+        <td>地図</td>
+      </tr>
+      <tr>
         <td>ひだまりスケッチノベル　ようこそひだまり荘へ</td>
         <td>日暮茶坊</td>
         <td>ラノベ</td>
+      </tr>
+      <tr>
+        <td>町田の地名のいわれ</td>
+        <td>町田市立図書館</td>
+        <td>郷土誌</td>
+      </tr>
+      <tr>
+        <td>有限群の一様分解にまつわる諸問題</td>
+        <td>品川和雅・金井和貴・宮本賢伍・縫田光司</td>
+        <td>論文</td>
       </tr>
       <tr>
         <td>らき☆すた（１）</td>
@@ -345,12 +421,31 @@
         <td>ラノベ</td>
       </tr>
       <tr>
+        <td>量子計算を用いた素因数分解について</td>
+        <td>伊豆哲也・山口純平・國廣昇</td>
+        <td>論文</td>
+      </tr>
+      <tr>
         <td>論理と集合から始める数学の基礎</td>
         <td>嘉田勝</td>
         <td>数学書</td>
       </tr>
     </tbody>
   </table>
+
+  <script type="text/javascript">
+     $(document).ready(function(){
+   $(".table_sort").tablesorter({
+       textExtraction: function(node){
+           var attr = $(node).attr('data-value');
+           if(typeof attr !== 'undefined' && attr !== false){
+               return attr;
+           }
+           return $(node).text();
+       }
+    });
+ }); 
+ </script>
 
   <footer style="text-align: center;">
     <p>Copyright © 2024 さとしん All Rights Reserved.</p>
