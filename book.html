@@ -4,6 +4,9 @@
   <title>さとしんのHP</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/css/theme.default.min.css">
   <style>
     @import url(style.css);
 
@@ -28,9 +31,20 @@
       text-align: left;
     }
   </style>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/css/theme.default.min.css">
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+  $(".table_sort").tablesorter({
+      textExtraction: function(node){
+          var attr = $(node).attr('data-value');
+          if(typeof attr !== 'undefined' && attr !== false){
+              return attr;
+          }
+          return $(node).text();
+      }
+   });
+}); 
+</script>
 </head>
 
 <body>
@@ -54,7 +68,6 @@
         <th>ジャンル</th>
       </tr>
     </thead>
-    <tbody>
       <tr>
         <td>S BLUE</td>
         <td>アンソロジー</td>
@@ -430,22 +443,7 @@
         <td>嘉田勝</td>
         <td>数学書</td>
       </tr>
-    </tbody>
   </table>
-
-  <script type="text/javascript">
-     $(document).ready(function(){
-   $(".table_sort").tablesorter({
-       textExtraction: function(node){
-           var attr = $(node).attr('data-value');
-           if(typeof attr !== 'undefined' && attr !== false){
-               return attr;
-           }
-           return $(node).text();
-       }
-    });
- }); 
- </script>
 
   <footer style="text-align: center;">
     <p>Copyright © 2024 さとしん All Rights Reserved.</p>
