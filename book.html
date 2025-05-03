@@ -9,7 +9,23 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/css/theme.default.min.css">
   <style>
-    @import url(style.css);
+    body {
+      background-color: #000000;
+    }
+
+    p {
+      color: white;
+    }
+
+    a:link {
+    color: #b8f0ff;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #9eb8ff;
+    text-decoration: underline;
+}
 
     table {
       text-align: left;
@@ -19,7 +35,6 @@
     }
 
     td {
-      color: #ffffff;
       text-align: left;
       border-collapse: collapse;
       border: 2px solid white;
@@ -27,7 +42,6 @@
     }
 
     th {
-      color: #ffffff;
       text-align: left;
       border-collapse: collapse;
       border: 2px solid white;
@@ -55,7 +69,7 @@
   </header>
   <p>ここでは，私の読んだ本について書いていきます．<br>取り敢えず一覧表みたいなものを作りたいですが，そのうち簡単な感想も載せるかも</p>
 
-  <table class="tablesorter" id="table_sort" style="background-color: black;">
+  <table class="tablesorter" id="table_sort">
     <thead>
       <tr>
         <th>作品名</th>
