@@ -4,14 +4,59 @@
   <title>さとしんのHP</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js"></script>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/css/theme.default.min.css">
   <style>
-    .Nenpyo {
+    body {
+      background-color: #000000;
+    }
+
+    p {
+      color: white;
+    }
+
+    a:link {
+      color: #b8f0ff;
+      text-decoration: underline;
+    }
+
+    a:visited {
+      color: #9eb8ff;
+      text-decoration: underline;
+    }
+
+    table {
+      text-align: left;
+      border-collapse: collapse;
+      border: 2px solid white;
+      text-align: left;
+    }
+
+    td {
+      text-align: left;
+      border-collapse: collapse;
+      border: 2px solid white;
+      text-align: left;
+    }
+
+    th {
+      text-align: left;
+      border-collapse: collapse;
+      border: 2px solid white;
       text-align: left;
     }
   </style>
-  <style>
-    @import url(../style.css);
-  </style>
+
+  <script>
+    $(document).ready(function () {
+      $('#table_sort').tablesorter();
+    });
+  </script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
@@ -26,180 +71,25 @@
     <a href="../book.html">読書のこと</a>
     <a href="../other_home.html">その他色々</a>
   </header>
-  <h1>なにこれ</h1>
-  <p>普段お世話になっている拡張子さんたちにこの場を借りてお礼を言おうのコーナーです。</p>
-  <table border="1" style="text-align: left; border-collapse: collapse; border-color: white;">
+  <p>
+    ここでは，私の試聴したアニメについて書いていきます．
+    <br>ここで言う「試聴したアニメ」とは，ある一定期間反復継続して試聴したアニメ，及びYouTube・ニコニコ動画・アニマックス・カートゥーンネットワークなどで再放送又は一挙放送を試聴したアニメを指します．
+  </p>
+
+  <table class="tablesorter" id="table_sort">
+    <thead>
+      <tr>
+        <th>拡張子</th>
+        <th>何の略？</th>
+        <th>デビュー年</th>
+        <th>なかよし度</th>
+      </tr>
+    </thead>
     <tr>
-      <th>拡張子さん</th>
-      <th>いつお世話になるのかしら？</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.apk}\)</th>
-      <th>ありがとう。感謝感激雨嵐。</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.aup}\)</th>
-      <th>AviUtlのプロジェクトファイル的なやつ。めちゃくちゃ感謝してます。</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.avi}\)</th>
-      <th>動画の拡張子の一つ。AviUtlで動画編集するときなんかはめちゃくちゃお世話になってます。<br>いやぁ、ありがとう。</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.ax}\)</th>
-      <th>HSPでゲーム開発をするときは非常に感謝しています。これからもよろしくお願いします～</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.c}\)</th>
-      <th>Cのソースの拡張子。最近はあんま使ってないけど、以前はよくお世話になりました。<br>これからもたまに使ってあげましょう。</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.cpp}\)</th>
-      <th>C++のソースの拡張子の一つ。大学院での研究やゲーム開発ではいつもお世話になってます。<br>いやぁ、ありがとう。</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.cs}\)</th>
-      <th>C#のやつ。ゲーム開発するときには非常によく使う。<br>UnityとかVisual Studioあってこそだけれども、感謝ァ☆</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.css}\)</th>
-      <th>CSSも無かったら、このくそったれHPは作れませんでしたね。まったく。<br>いやぁ、ありがとう。</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.dll}\)</th>
-      <th>\(\mathcal{Dynamic~Link~Library}\)．よく使うし、研究などに際して作ることもまちまち。<br>これは本当に本当に感謝してます。</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.dms}\)</th>
-      <th>Dominoのプロジェクトファイル的なやつの拡張子。<br>ｋ本的にDominoで作ってるからこれが無かったら大変でした(´；ω；`)ありがとう。</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.docx}\)</th>
-      <th>Wordのやつ。昔はよく使っていたのでとりあえず感謝の言葉は伝えます。<br>でも、\(\TeX\)の方が圧倒的に使いやすい。もう使わないでしょう。知らんけど。</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.eps}\)</th>
-      <th>画像ファイルの拡張子の一つ。Encapsulated PostScriptの略だって最近知りました。<br>\(\TeX\)で画像を貼り付けるときなんかは大体この形式ですね、感謝してます。</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.exe}\)</th>
-      <th>すさまじく感謝してます。</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.gif}\)</th>
-      <th>画像ファイルの一つ。奇跡的に劇的に感謝です。</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.hsp}\)</th>
-      <th>HSPのソース。ゲーム開発するときによく使うその２。</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.html}\)</th>
-      <th>これがなかったらこの下らないHPも作れなかった。その点は感謝ァ☆</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.ipynb}\)</th>
-      <th>Google Colabとかでよく使わせてもらっています。ありがとう。</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.jpg}\)</th>
-      <th>画像の拡張子の一つ。スマホに保存されてる画像の多くはこれですね。<br>感謝すぎるぜ☆</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.m4a}\)</th>
-      <th>音楽ファイルのやつ。スマホに入ってる音楽では二番目におおい（と思う）。<br>感謝感謝～。</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.md}\)</th>
-      <th>Markdownのやつ。なんだかんだ、GitHubとかQiitaとかDiscordのやつとか、色々な所でお世話になってます。<br>いやぁ、ありがとう。</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.mid}\)</th>
-      <th>MIDIのやつ。作曲するとなったらほぼ確実に必要。</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.mp3}\)</th>
-      <th>音楽のファイルのやつ。やっぱスマホに入ってる音楽もほとんどこれ。<br>いつも電車とかでお世話になってます。</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.mp4}\)</th>
-      <th>動画ファイルのやつ。なんだかんだこれを使うことが多いです。<br>いや、頭が上がらないね、ほんと。</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.out}\)</th>
-      <th>C言語とかC++とかビルドすると「a.out」ってやつが出てきますね。<br>謝辞か。。。とりあえず、ありがとう。</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.pdf}\)</th>
-      <th>便利。</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.png}\)</th>
-      <th>画像の拡張子の一つ。スマホに保存されてる画像の多くはこれだった（希ガス）<br>素晴らしく感謝している。感謝感謝感謝ァ☆</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.psd}\)</th>
-      <th>兎に角感謝。</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.py}\)</th>
-      <th>Pythonのソースの拡張子。研究やら趣味やらで重宝しています。ありがとう。<br>感謝ァ☆</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.rar}\)</th>
-      <th>zip同様に感謝です。でも最近お世話になってないですね。</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.rr}\)</th>
-      <th>Risa/Asirのソースの拡張子、と言っても実際は拡張子なんて何でも良いけど。<br>最近はあまり使ってないが、以前はお世話になりました。</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.sage}\)</th>
-      <th>SageMathのソースの拡張子。これも研究では非常にひじょーーーーーーにお世話になってます。<br>ほんとーにありがとう。ありがとう。</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.sf2}\)</th>
-      <th>サウンドフォントのやつ。音楽制作の時に使うことがたまにあります。感謝感謝。</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.so}\)</th>
-      <th>共有ライブラリのやつ。これも研究に際してしばしば利用してます。感謝ァ☆。</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.sty}\)</th>
-      <th>\(\TeX\)とかのstyleファイル。論文を書く時には必須です。ありがとうございます本当に。</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.svg}\)</th>
-      <th>Scalable Vector Graphicsの略なんですね。</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.tex}\)</th>
-      <th>\(\LaTeX\)とかのソースの拡張子。<br>いやぁ、あんたが居なかったら論文とかどうやって書いてたんだろうね。感謝ァ☆</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.ttf}\)</th>
-      <th>沢山のフォントを使えるのは、この方々の御蔭です。本当にありがとう。</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.url}\)</th>
-      <th>インターネットショートカットのやつ。そこそこ使ってます。かなり便利。ありがとう。</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.ust}\)</th>
-      <th>UTAUのプロジェクトファイル（？）の拡張子。UTAUで作曲するなら絶対必要。<br>いやぁほんと、ありがとう。</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.vvproj}\)</th>
-      <th>VOICEVOXのプロジェクトファイルの拡張子。ずんだもん。<br>ずずんだずん。ずずんだずんずんずん。</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.wav}\)</th>
-      <th>音楽ファイルのやつ。編集したりミックスしたりするのはこっちの方が都合が良いかも。<br>いやぁ、ありがとう。</th>
-    </tr>
-    <tr>
-      <th>\(\texttt{.zip}\)</th>
-      <th>圧縮ファイルのやつ。貴方の御蔭で沢山のファイルを送信できてます。<br>これは本当に感謝。無論、他の拡張子様方への感謝が嘘な訳じゃない。</th>
+      <td>exe</td>
+      <td></td>
+      <td></td>
+      <td>♡♡♡♡♡</td>
     </tr>
   </table>
 
@@ -207,9 +97,6 @@
     <p>Copyright © 2024 さとしん All Rights Reserved.</p>
   </footer>
 
-</body>
-
-</html>
 </body>
 
 </html>
