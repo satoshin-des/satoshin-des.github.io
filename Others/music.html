@@ -1,0 +1,108 @@
+<html>
+
+<head>
+  <title>さとしんのHP</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js"></script>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/css/theme.default.min.css">
+  <style>
+    body {
+      background-color: #000000;
+    }
+
+    p {
+      color: white;
+    }
+
+    a:link {
+      color: #b8f0ff;
+      text-decoration: underline;
+    }
+
+    a:visited {
+      color: #9eb8ff;
+      text-decoration: underline;
+    }
+
+    table {
+      text-align: left;
+      border-collapse: collapse;
+      border: 2px solid white;
+      text-align: left;
+    }
+
+    td {
+      text-align: left;
+      border-collapse: collapse;
+      border: 2px solid white;
+      text-align: left;
+    }
+
+    th {
+      text-align: left;
+      border-collapse: collapse;
+      border: 2px solid white;
+      text-align: left;
+    }
+
+    #table_sort tbody tr td {
+      color: #FFF;
+      background-color: #000;
+    }
+  </style>
+
+  <script>
+    $(document).ready(function () {
+      $('#table_sort').tablesorter();
+    });
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <header>
+    <a href="../index.html"><img src="../satoshin_profile.jpg" alt="さとしんでぇす" width="50"></a>
+    <a href="../portfolio.html">ポートフォリオ</a>
+    <a href="../math.html">数学のこと</a>
+    <a href="../music.html">音楽のこと</a>
+    <a href="../game.html">ゲームのこと</a>
+    <a href="../program.html">プログラミングのこと</a>
+    <a href="../book.html">読書のこと</a>
+    <a href="../other_home.html">その他色々</a>
+  </header>
+  <p>
+    ここでは，私の好きな曲をリストアップしていきます.
+  </p>
+
+  <table class="tablesorter" id="table_sort">
+    <thead>
+      <tr>
+        <th>曲名</th>
+        <th>リリース</th>
+        <th>アーティスト</th>
+        <th>作曲</th>
+        <th>作詞<th>
+      </tr>
+    </thead>
+    <tr>
+      <td>砂の惑星</td>
+      <td></td>
+      <td>初音ミク</td>
+      <td>ハチ</td>
+      <td>ハチ</td>
+    </tr>
+  </table>
+
+  <footer style="text-align: center;">
+    <p>Copyright © 2025 さとしん All Rights Reserved.</p>
+  </footer>
+
+</body>
+
+</html>
