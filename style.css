@@ -13,7 +13,7 @@
 html,
 body {
     margin: 0;
-    background-color: #000;
+    /*background-color: #000;*/
     /* ここが白だと格子が見えません */
     overflow-x: hidden;
 }
@@ -449,6 +449,16 @@ ul li a:hover::before {
     pointer-events: none;
 }
 
+/* --- 背景：格子アニメーションの修正版 --- */
+
+/* 1. bodyを透明にして、背景が見えるようにする */
+html,
+body {
+    background-color: #000 !important;
+    margin: 0;
+    padding: 0;
+}
+
 /* 2. 背景を固定するコンテナ */
 .bg-grid {
     position: fixed;
@@ -457,50 +467,49 @@ ul li a:hover::before {
     width: 100vw;
     height: 100vh;
     z-index: -1;
-    /* コンテンツの下に配置 */
+    /* コンテンツのすぐ後ろ */
     background-color: #000;
+    /* ここで黒を担保する */
+    overflow: hidden;
 }
 
-/* 3. 格子そのもの（3Dを使わず、単純な平行移動にする） */
-.bg-grid::before {
+/* 3. 傾斜とアニメーションをこのラッパーに集約する */
+.grid-wrapper {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    transform: skewY(-15deg);
+    /* ここで斜めにする */
+}
+
+/* 4. wrapperの擬似要素として格子を描画する */
+.grid-wrapper::before {
     content: "";
     position: absolute;
-    top: -100px;
-    /* アニメーションの余白 */
-    left: -100px;
-    right: -100px;
-    bottom: -100px;
-
-    /* 格子の線を引く */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image:
-        linear-gradient(to right, rgba(0, 255, 204, 0.2) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(0, 255, 204, 0.2) 1px, transparent 1px);
-    background-size: 50px 50px;
-    /* 格子のサイズ */
-
-    /* 動きを付ける */
+        linear-gradient(to right, rgba(0, 255, 204, 0.25) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 255, 204, 0.25) 1px, transparent 1px);
+    background-size: 60px 60px;
     animation: grid-move 3s linear infinite;
 }
 
-/* 斜めにするためのレイヤー */
-.grid-wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    /* ここで全体を少し傾ける（3D回転が動かない場合への対策） */
-    transform: skewY(-5deg);
-}
-
-/* アニメーション：斜め下に流れる */
+/* アニメーション：斜めに流れるように見える移動 */
 @keyframes grid-move {
     0% {
-        transform: translate(0, 0);
+        transform: translateY(0);
     }
 
     100% {
-        transform: translate(50px, 50px);
-        /* background-sizeと同じ数値動かす */
+        transform: translateY(60px);
     }
+
+    /* サイズに合わせて縦に動かす */
 }
 
 /* コンテンツ確認用 */
@@ -526,7 +535,7 @@ table {
 
 /* --- 通常時から「ほわほわ」漂う設定 --- */
 .hover-float-glow {
-    display: inline-block;
+    display: block;
     color: rgba(255, 255, 255, 0.8);
     /* 通常時は少し透明度を持たせると質感が上がります */
     text-decoration: none;
@@ -581,4 +590,72 @@ table {
     100% {
         transform: translateY(-6px) scale(1.1);
     }
+}
+
+/* 土台を真っ黒に固定 */
+html {
+    background-color: #000 !important;
+}
+
+/* bodyとその直下の要素をすべて透明化 */
+body,
+body>div,
+#page,
+#wrapper,
+.site-container {
+    background-color: transparent !important;
+    background: transparent !important;
+}
+
+/* もしヘッダーより下が白いなら、
+   その「白い部分」を右クリックして「検証」し、
+   そこに背景色を設定しているクラス名を見つけてください。
+*/
+
+/* 2. 背景アニメーションを「一番後ろ」に移動 */
+#cyberCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    /* コンテンツの後ろに下げる */
+    background-color: #000;
+    display: block;
+}
+
+/* 3. 重要：全ての文字や箱を「透明」にし、かつ「手前」に持ってくる */
+header,
+main,
+div,
+table,
+footer,
+h1,
+p {
+    position: relative;
+    /* z-indexを有効にするため */
+    z-index: 1;
+    /* アニメーションより手前に出す */
+    background-color: transparent !important;
+    /* 背景を透明にする */
+    background: transparent !important;
+}
+
+/* 4. 土台の設定 */
+html,
+body {
+    /*background-color: #000 !important;*/
+    margin: 0;
+    color: #ffffff;
+    /* 文字を白くして読みやすくする */
+}
+
+/* 5. テーブルだけは少し暗い背景をつけて読みやすくする */
+table {
+    background: rgba(0, 0, 0, 0.6) !important;
+    backdrop-filter: blur(4px);
+    /* 背景を少しぼかす */
+    border: 1px solid rgba(0, 255, 204, 0.3);
+    margin: 20px auto;
 }
