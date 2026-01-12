@@ -12,10 +12,10 @@
 
 html,
 body {
-    background-color: var(--bg-color);
     margin: 0;
-    padding: 0;
-    min-height: 100vh;
+    background-color: #000;
+    /* ここが白だと格子が見えません */
+    overflow-x: hidden;
 }
 
 body {
@@ -23,42 +23,6 @@ body {
     font-family: "Helvetica Neue", Arial, sans-serif;
     overflow-x: hidden;
     line-height: 1.6;
-}
-
-/* 格子背景 */
-.grid-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    overflow: hidden;
-    background: var(--bg-color);
-}
-
-.grid-plane {
-    position: absolute;
-    width: 200%;
-    height: 400%;
-    top: -150%;
-    left: -50%;
-    background-image:
-        linear-gradient(to right, var(--grid-line-color) 1px, transparent 1px),
-        linear-gradient(to bottom, var(--grid-line-color) 1px, transparent 1px);
-    background-size: 60px 60px;
-    transform: perspective(400px) rotateX(60deg);
-    animation: move-grid 15s linear infinite;
-}
-
-@keyframes move-grid {
-    0% {
-        transform: perspective(400px) rotateX(60deg) translateY(0);
-    }
-
-    100% {
-        transform: perspective(400px) rotateX(60deg) translateY(60px);
-    }
 }
 
 /* ヘッダーとナビゲーションのUX向上 */
@@ -358,109 +322,199 @@ del {
 
 /* リスト全体のスタイル調整 */
 ul {
-  list-style: none;
-  padding: 0;
-  max-width: 600px;
-  margin: 40px auto;
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 40px auto;
 }
 
 ul li {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 /* リンクの基本スタイル */
 ul li a {
-  display: block;
-  padding: 12px 20px;
-  color: #ffffff;
-  text-decoration: none !important;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-left: 4px solid #ffffff; /* 左側に太めのライン */
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-  position: relative;
-  overflow: hidden;
+    display: block;
+    padding: 12px 20px;
+    color: #ffffff;
+    text-decoration: none !important;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 4px solid #ffffff;
+    /* 左側に太めのライン */
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
 }
 
 /* ホバー時のアニメーション */
 ul li a:hover {
-  color: #00ffcc; /* アクセントカラー */
-  background: rgba(0, 255, 204, 0.1);
-  border-color: #00ffcc;
-  padding-left: 35px; /* 右に少し動くUX */
-  box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
-  text-shadow: 0 0 5px rgba(0, 255, 204, 0.5);
+    color: #00ffcc;
+    /* アクセントカラー */
+    background: rgba(0, 255, 204, 0.1);
+    border-color: #00ffcc;
+    padding-left: 35px;
+    /* 右に少し動くUX */
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
+    text-shadow: 0 0 5px rgba(0, 255, 204, 0.5);
 }
 
 /* スキャンライン（光の筋）が通り抜けるエフェクト */
 ul li a::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(0, 255, 204, 0.2),
-    transparent
-  );
-  transition: all 0.6s;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(0, 255, 204, 0.2),
+            transparent);
+    transition: all 0.6s;
 }
 
 ul li a:hover::before {
-  left: 100%;
+    left: 100%;
 }
 
 /* --- スタイリッシュなaタグクラス --- */
 .nav-link-item {
-  display: block;
-  position: relative;
-  padding: 15px 25px;
-  margin-bottom: 12px;
-  color: #ffffff !important; /* 通常時は白文字 */
-  text-decoration: none !important;
-  background: rgba(255, 255, 255, 0.03); /* わずかに背景を透かす */
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-left: 3px solid #ffffff; /* 左のアクセント線 */
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: hidden; /* 光の筋を枠内に収める */
-  font-family: sans-serif;
-  letter-spacing: 0.05em;
+    display: block;
+    position: relative;
+    padding: 15px 25px;
+    margin-bottom: 12px;
+    color: #ffffff !important;
+    /* 通常時は白文字 */
+    text-decoration: none !important;
+    background: rgba(255, 255, 255, 0.03);
+    /* わずかに背景を透かす */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 3px solid #ffffff;
+    /* 左のアクセント線 */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    /* 光の筋を枠内に収める */
+    font-family: sans-serif;
+    letter-spacing: 0.05em;
 }
 
 /* ホバー時の挙動 */
 .nav-link-item:hover {
-  background: rgba(0, 255, 204, 0.08); /* 格子と同色の薄い背景 */
-  color: #00ffcc !important; /* 文字がネオンカラーに */
-  border-color: rgba(0, 255, 204, 0.5);
-  border-left-color: #00ffcc; /* 左線が光る */
-  padding-left: 35px; /* 右へスライドするUX */
-  box-shadow: 0 0 20px rgba(0, 255, 204, 0.2); /* ぼんやりとした発光 */
+    background: rgba(0, 255, 204, 0.08);
+    /* 格子と同色の薄い背景 */
+    color: #00ffcc !important;
+    /* 文字がネオンカラーに */
+    border-color: rgba(0, 255, 204, 0.5);
+    border-left-color: #00ffcc;
+    /* 左線が光る */
+    padding-left: 35px;
+    /* 右へスライドするUX */
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.2);
+    /* ぼんやりとした発光 */
 }
 
 /* スキャンライン（光の筋）アニメーション */
 .nav-link-item::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.2),
-    rgba(0, 255, 204, 0.4),
-    rgba(255, 255, 255, 0.2),
-    transparent
-  );
-  transition: none;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            rgba(0, 255, 204, 0.4),
+            rgba(255, 255, 255, 0.2),
+            transparent);
+    transition: none;
 }
 
 /* ホバーした瞬間に光が走り抜ける */
 .nav-link-item:hover::before {
-  left: 100%;
-  transition: all 0.6s ease-in-out;
+    left: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+/* --- オプション：上部に向かってフェードアウトさせる（地平線の演出） --- */
+.grid-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #000 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* 2. 背景を固定するコンテナ */
+.bg-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    /* コンテンツの下に配置 */
+    background-color: #000;
+}
+
+/* 3. 格子そのもの（3Dを使わず、単純な平行移動にする） */
+.bg-grid::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    /* アニメーションの余白 */
+    left: -100px;
+    right: -100px;
+    bottom: -100px;
+
+    /* 格子の線を引く */
+    background-image:
+        linear-gradient(to right, rgba(0, 255, 204, 0.2) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 255, 204, 0.2) 1px, transparent 1px);
+    background-size: 50px 50px;
+    /* 格子のサイズ */
+
+    /* 動きを付ける */
+    animation: grid-move 3s linear infinite;
+}
+
+/* 斜めにするためのレイヤー */
+.grid-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* ここで全体を少し傾ける（3D回転が動かない場合への対策） */
+    transform: skewY(-5deg);
+}
+
+/* アニメーション：斜め下に流れる */
+@keyframes grid-move {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(50px, 50px);
+        /* background-sizeと同じ数値動かす */
+    }
+}
+
+/* コンテンツ確認用 */
+.debug-text {
+    color: #00ffcc;
+    font-family: monospace;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+header, footer, main, ul, table {
+  background-color: transparent !important;
+  position: relative;
+  z-index: 1; /* 背景(z-index: -1)より手前に出す */
 }
