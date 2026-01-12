@@ -1,39 +1,24 @@
-<html>
+<!DOCTYPE html>
+<html lang="ja">
 
 <head>
   <title>さとしんのHP</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-    table {
-      text-align: left;
-      border-collapse: collapse;
-      border: 2px solid white;
-      text-align: left;
-    }
-
-    tr {
-      text-align: left;
-      border-collapse: collapse;
-      border: 2px solid white;
-      text-align: left;
-    }
-
-    th {
-      text-align: left;
-      border-collapse: collapse;
-      border: 2px solid white;
-      text-align: left;
-    }
-  </style>
-  <style>
     @import url(style.css);
   </style>
 </head>
 
 <body>
+  <div class="grid-background">
+    <div class="grid-plane"></div>
+  </div>
+
   <header>
-    <a href="index.html"><img src="satoshin_profile.jpg" alt="さとしんでぇす" width="50"></a>
+    <a href="index.html" style="padding: 0; border: none;">
+      <img src="satoshin_profile.jpg" alt="さとしんでぇす" width="55">
+    </a>
     <a href="portfolio.html">ポートフォリオ</a>
     <a href="math.html">数学のこと</a>
     <a href="music.html">音楽のこと</a>
@@ -42,11 +27,20 @@
     <a href="book.html">読書のこと</a>
     <a href="other_home.html">その他色々</a>
   </header>
-  <img src="http://www5.kannet.ne.jp/~counter/count.cgi?name=satoshin01&type=24&width=9">
-  <p><b>さとしん</b>とは、東京都内の大学院に通うただの大学院生である。</p>
-  <p>このホームページでは、誰が知りたいかもよくわからない私の作曲活動、プログラミング、数学、その他色々について書いていきます。</p>
-  <p>別に見たくもねぇという人は<del>回れ右してとっととブラウザバックしてください。</del></p>
-  <h1>略歴とか</h1>
+
+  <div style="text-align: center; margin-top: 40px;">
+    <img src="http://www5.kannet.ne.jp/~counter/count.cgi?name=satoshin01&type=24&width=9"
+      style="filter: brightness(1.2) hue-rotate(140deg); opacity: 0.8;">
+  </div>
+
+  <div style="margin: 40px 0;">
+    <p><b>さとしん</b>とは、東京都内の大学院に通うただの大学院生である。</p>
+    <p>このホームページでは、誰が知りたいかもよくわからない私の作曲活動、プログラミング、数学、その他色々について書いていきます。</p>
+    <p>別に見たくもねぇという人は<del>回れ右してとっととブラウザバックしてください。</del></p>
+  </div>
+
+  <h1>Biography</h1>
+
   <table>
     <tr>
       <th>ぎりぎり平成</th>
@@ -86,8 +80,8 @@
     </tr>
   </table>
 
-  <footer style="text-align: center;">
-    <p>Copyright © 2024 -2025 さとしん All Rights Reserved.</p>
+  <footer>
+    <p>Copyright © 2024 - 2025 さとしん All Rights Reserved.</p>
   </footer>
 
 </body>
