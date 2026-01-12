@@ -513,8 +513,72 @@ ul li a:hover::before {
     z-index: 10;
 }
 
-header, footer, main, ul, table {
-  background-color: transparent !important;
-  position: relative;
-  z-index: 1; /* 背景(z-index: -1)より手前に出す */
+header,
+footer,
+main,
+ul,
+table {
+    background-color: transparent !important;
+    position: relative;
+    z-index: 1;
+    /* 背景(z-index: -1)より手前に出す */
+}
+
+/* --- 通常時から「ほわほわ」漂う設定 --- */
+.hover-float-glow {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.8);
+    /* 通常時は少し透明度を持たせると質感が上がります */
+    text-decoration: none;
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+
+    /* 常にアニメーションを実行（通常時は控えめ） */
+    animation: constant-float 4s ease-in-out infinite;
+}
+
+/* 通常時の微細な浮遊アニメーション */
+@keyframes constant-float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+
+    /* 4pxだけゆっくり浮く */
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* --- ホバーした瞬間に「覚醒」する設定 --- */
+.hover-float-glow:hover {
+    color: #00ffcc !important;
+    /* ネオンカラーに変身 */
+
+    /* 影を「ほわほわ」と広げる */
+    text-shadow:
+        0 0 10px rgba(0, 255, 204, 0.8),
+        0 0 20px rgba(0, 255, 204, 0.3);
+
+    /* ホバー時はアニメーションを「覚醒版」に切り替え */
+    animation: active-float 2s ease-in-out infinite;
+}
+
+/* ホバー時の大きく力強い浮遊 */
+@keyframes active-float {
+    0% {
+        transform: translateY(-6px) scale(1.1);
+    }
+
+    50% {
+        transform: translateY(-12px) scale(1.15);
+    }
+
+    /* より高く、より大きく */
+    100% {
+        transform: translateY(-6px) scale(1.1);
+    }
 }
