@@ -592,6 +592,17 @@ table {
     }
 }
 
+/* 全ページ共通のフッターデザイン */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    color: #00ffcc;
+    font-size: 0.9rem;
+    position: relative;
+    z-index: 10;
+    background-color: transparent !important;
+}
+
 /* 土台を真っ黒に固定 */
 html {
     background-color: #000 !important;

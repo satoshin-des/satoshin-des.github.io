@@ -1,3 +1,7 @@
+/**
+ * このJavaScriptはほぼすべてAIによって作成されたものです
+ */
+
 window.addEventListener('load', function () {
     const canvas = document.getElementById('cyberCanvas');
     if (!canvas) return;
