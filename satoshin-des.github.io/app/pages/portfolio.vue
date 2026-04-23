@@ -50,11 +50,11 @@ import SubSection from '~/components/SubSection.vue';
     <div class="scroll-container">
         <table border="1" style="text-align: left; border-collapse: collapse; border-color: white;">
             <tr>
-                <th>\(\texttt{Bash}\)</th>
-                <th>\(\texttt{C}\)</th>
-                <th>\(\texttt{C++}\)</th>
-                <th>\(\texttt{C#}\)</th>
-                <th>\(\texttt{emojin}\)</th>
+                <th>Bash</th>
+                <th>C</th>
+                <th>C++</th>
+                <th>C#</th>
+                <th>emojin</th>
             </tr>
             <tr>
                 <th><img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Bash_Logo_Colored.svg" width="55"
@@ -72,11 +72,11 @@ import SubSection from '~/components/SubSection.vue';
                 </th>
             </tr>
             <tr>
-                <th>\(\texttt{Go}\)</th>
-                <th>\(\texttt{HSP3}\)</th>
-                <th>\(\texttt{JavaScript}\)</th>
-                <th>\(\texttt{Maxima}\)</th>
-                <th>\(\texttt{Python}\)</th>
+                <th>Go</th>
+                <th>HSP3</th>
+                <th>JavaScript</th>
+                <th>Maxima</th>
+                <th>Python</th>
             </tr>
             <tr>
                 <th><img src="https://cdn.worldvectorlogo.com/logos/golang-1.svg" width="55" class="hover-float-glow">
@@ -94,8 +94,8 @@ import SubSection from '~/components/SubSection.vue';
                         width="55" class="hover-float-glow"></th>
             </tr>
             <tr>
-                <th>\(\texttt{Risa/}\)\(\texttt{Asir}\)</th>
-                <th>\(\texttt{SageMath}\)</th>
+                <th>Risa/Asir</th>
+                <th>SageMath</th>
             </tr>
             <tr>
                 <th><img src="http://www.math.kobe-u.ac.jp/Asir/hopo_std.jpg" width="55" class="hover-float-glow"></th>
@@ -110,11 +110,11 @@ import SubSection from '~/components/SubSection.vue';
     <div class="scroll-container">
         <table border="1" style="text-align: left; border-collapse: collapse; border-color: white;">
             <tr>
-                <th>\(\texttt{CSS}\)</th>
-                <th>\(\texttt{HTML}\)</th>
-                <th>\(\texttt{LaTeX}\)</th>
-                <th>\(\texttt{Markdown}\)</th>
-                <th>\(\texttt{WML}\)</th>
+                <th>CSS</th>
+                <th>HTML</th>
+                <th>LaTeX</th>
+                <th>Markdown</th>
+                <th>WML</th>
             </tr>
             <tr>
                 <th>
@@ -142,11 +142,11 @@ import SubSection from '~/components/SubSection.vue';
     <div class="scroll-container">
         <table border="1" style="text-align: left; border-collapse: collapse; border-color: white;">
             <tr>
-                <th>\(\texttt{DX}\)ライブラリ</th>
-                <th>\(\texttt{Eigen}\)</th>
-                <th>\(\texttt{fplll}\)</th>
-                <th>\(\texttt{IPython}\)</th>
-                <th>\(\texttt{Matplotlib}\)</th>
+                <th>DXライブラリ</th>
+                <th>Eigen</th>
+                <th>fplll</th>
+                <th>IPython</th>
+                <th>Matplotlib</th>
             </tr>
             <tr>
                 <th>
@@ -167,11 +167,11 @@ import SubSection from '~/components/SubSection.vue';
                 </th>
             </tr>
             <tr>
-                <th>\(\texttt{NTL}\)</th>
-                <th>\(\texttt{Numpy}\)</th>
-                <th>\(\texttt{pandas}\)</th>
-                <th>\(\texttt{plotly}\)</th>
-                <th>\(\texttt{scipy}\)</th>
+                <th>NTL</th>
+                <th>Numpy</th>
+                <th>pandas</th>
+                <th>plotly</th>
+                <th>scipy</th>
             </tr>
             <tr>
                 <th></th>
@@ -192,9 +192,9 @@ import SubSection from '~/components/SubSection.vue';
                 </th>
             </tr>
             <tr>
-                <th colspan="2">\(\texttt{pygame}\)</th>
-                <th>\(\texttt{Siv3D}\)</th>
-                <th>\(\texttt{sympy}\)</th>
+                <th colspan="2">pygame</th>
+                <th>Siv3D</th>
+                <th>sympy</th>
             </tr>
             <tr>
                 <th colspan="2"><img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Pygame_logo.svg"
@@ -216,10 +216,10 @@ import SubSection from '~/components/SubSection.vue';
     <div class="scroll-container">
         <table border="1" style="text-align: left; border-collapse: collapse; border-color: white;">
             <tr>
-                <th>\(\texttt{Google}\) \(\texttt{Colab}\)</th>
-                <th>\(\texttt{Unity}\)</th>
-                <th>\(\texttt{Visual}\) \(\texttt{Studio}\)</th>
-                <th>\(\texttt{Visual}\) \(\texttt{Studio}\) \(\texttt{Code}\)</th>
+                <th>Google Colab</th>
+                <th>Unity</th>
+                <th>Visual Studio</th>
+                <th>Visual Studio Code</th>
             </tr>
             <tr>
                 <th>
@@ -246,9 +246,9 @@ import SubSection from '~/components/SubSection.vue';
     <div class="scroll-container">
         <table border="1" style="text-align: left; border-collapse: collapse; border-color: white;">
             <tr>
-                <th>\(\texttt{ChatGPT}\) \(\texttt{Colab}\)</th>
-                <th>\(\texttt{Gemini}\)</th>
-                <th>\(\texttt{Copilot}\)</th>
+                <th>ChatGPT Colab</th>
+                <th>Gemini</th>
+                <th>Copilot</th>
             </tr>
             <tr>
                 <th>
@@ -287,18 +287,18 @@ import SubSection from '~/components/SubSection.vue';
         </li>
         <li><b>使用言語</b></li>
         <ul>
-            <li class="hover-float-glow">\(\texttt{C++}\)</li>
-            <li class="hover-float-glow">\(\texttt{Python3}\)</li>
-            <li class="hover-float-glow">\(\texttt{SageMath}\)</li>
+            <li class="hover-float-glow">C++</li>
+            <li class="hover-float-glow">Python3</li>
+            <li class="hover-float-glow">SageMath</li>
         </ul>
         <li><b>使用ツール等</b></li>
         <ul>
-            <li class="hover-float-glow">\(\texttt{Visual Studio Code}\)</li>
-            <li class="hover-float-glow">\(\texttt{NTL}\)</li>
-            <li class="hover-float-glow">\(\texttt{Eigen}\)</li>
-            <li class="hover-float-glow">\(\texttt{Numpy}\)</li>
-            <li class="hover-float-glow">\(\texttt{pandas}\)</li>
-            <li class="hover-float-glow">\(\texttt{Matplotlib}\)</li>
+            <li class="hover-float-glow">Visual Studio Code</li>
+            <li class="hover-float-glow">NTL</li>
+            <li class="hover-float-glow">Eigen</li>
+            <li class="hover-float-glow">Numpy</li>
+            <li class="hover-float-glow">pandas</li>
+            <li class="hover-float-glow">Matplotlib</li>
         </ul>
         <li><b>開発期間</b>：約3ヶ月</li>
         <li><b>担当範囲</b></li>
@@ -319,11 +319,11 @@ import SubSection from '~/components/SubSection.vue';
         <li><b>ジャンル</b>：ライブラリ（線形代数）</li>
         <li><b>使用言語</b></li>
         <ul>
-            <li class="hover-float-glow">\(\texttt{Go}\)</li>
+            <li class="hover-float-glow">Go</li>
         </ul>
         <li><b>使用ツール</b></li>
         <ul>
-            <li class="hover-float-glow">\(\texttt{Visual Studio Code}\)</li>
+            <li class="hover-float-glow">Visual Studio Code</li>
         </ul>
         <li><b>開発期間</b>：1ヶ月～（現在も開発中）</li>
         <li><b>担当範囲</b></li>
@@ -339,11 +339,11 @@ import SubSection from '~/components/SubSection.vue';
         <li><b>ジャンル</b>：ライブラリ（格子アルゴリズム）</li>
         <li><b>使用言語</b></li>
         <ul>
-            <li class="hover-float-glow">\(\texttt{Go}\)</li>
+            <li class="hover-float-glow">Go</li>
         </ul>
         <li><b>使用ツール</b></li>
         <ul>
-            <li class="hover-float-glow">\(\texttt{Visual Studio Code}\)</li>
+            <li class="hover-float-glow">Visual Studio Code</li>
         </ul>
         <li><b>開発期間</b>：1ヶ月～（現在も開発中）</li>
         <li><b>担当範囲</b></li>
@@ -365,11 +365,11 @@ import SubSection from '~/components/SubSection.vue';
         </li>
         <li><b>使用言語</b></li>
         <ul>
-            <li class="hover-float-glow">\(\texttt{JavaScript}\)</li>
+            <li class="hover-float-glow">JavaScript</li>
         </ul>
         <li><b>使用ツール</b></li>
         <ul>
-            <li class="hover-float-glow">\(\texttt{Visual Studio Code}\)</li>
+            <li class="hover-float-glow">Visual Studio Code</li>
         </ul>
         <li><b>開発期間</b>：1日</li>
         <li><b>担当範囲</b></li>
@@ -387,21 +387,21 @@ import SubSection from '~/components/SubSection.vue';
         <img src="/screen_shots/HSP_2024.png" width="200">
         <li><b>ジャンル</b>：ゲーム（弾幕・避けゲー）</li>
         <li><b>概要</b><br>
-            自分の実力やアイデアがどれほど通用するのか，という腕試し的な意味と，当時\(\texttt{HSP}\)という言語があるとしったので，ちょっと\(\texttt{HSP}\)でゲームを作ってみようという気持ちで作りました．
+            自分の実力やアイデアがどれほど通用するのか，という腕試し的な意味と，当時HSPという言語があるとしったので，ちょっとHSPでゲームを作ってみようという気持ちで作りました．
             <br>
             基本的なところはシンプルな弾幕ゲームですが，他と差別化をはかるため弾幕シューティングゲームではなく，1分間弾幕からよけ続けるゲームになっています．
             弾幕も色々な所から飛んでくる仕様になっていて，クリアしにくいのもありなかなか飽きさせないつくりになっているかと思います．
         </li>
         <li><b>使用言語</b></li>
         <ul>
-            <li class="hover-float-glow">\(\texttt{HSP3}\)</li>
+            <li class="hover-float-glow">HSP3</li>
         </ul>
         <li><b>使用ツール</b></li>
         <ul>
-            <li class="hover-float-glow">\(\texttt{HSP}\) \(\texttt{script}\) \(\texttt{editor}\) \(\texttt{For}\)
-                \(\texttt{Windows}\)
-                \(\texttt{version 3.6}\)</li>
-            <li class="hover-float-glow">\(\texttt{Visual Studio Code}\)</li>
+            <li class="hover-float-glow">HSP script editor For
+                Windows
+                version 3.6</li>
+            <li class="hover-float-glow">Visual Studio Code</li>
         </ul>
         <li><b>開発期間</b>：約2ヶ月</li>
         <li><b>担当範囲</b></li>
@@ -428,12 +428,12 @@ import SubSection from '~/components/SubSection.vue';
         <li><a href="https://github.com/satoshin-des/nashigorou"><b>ソースコード</b></a></li>
         <li><b>使用言語</b></li>
         <ul>
-            <li class="hover-float-glow">\(\texttt{C++}\)</li>
+            <li class="hover-float-glow">C++</li>
         </ul>
         <li><b>使用ツール等</b></li>
         <ul>
-            <li class="hover-float-glow">\(\texttt{Visual Studio 2022}\)</li>
-            <li class="hover-float-glow">\(\texttt{DX}\)ライブラリ</li>
+            <li class="hover-float-glow">Visual Studio 2022</li>
+            <li class="hover-float-glow">DXライブラリ</li>
         </ul>
         <li><b>開発期間</b>：約1ヶ月</li>
         <li><b>担当範囲</b></li>
@@ -457,12 +457,12 @@ import SubSection from '~/components/SubSection.vue';
         </li>
         <li><b>使用言語</b></li>
         <ul>
-            <li class="hover-float-glow">\(\texttt{C#}\)</li>
+            <li class="hover-float-glow">C#</li>
         </ul>
         <li><b>使用ツール</b></li>
         <ul>
-            <li class="hover-float-glow">\(\texttt{Unity}\)</li>
-            <li class="hover-float-glow">\(\texttt{Visual Studio}\)</li>
+            <li class="hover-float-glow">Unity</li>
+            <li class="hover-float-glow">Visual Studio</li>
         </ul>
         <li><b>開発期間</b>：約2ヶ月</li>
         <li><b>担当範囲</b></li>
@@ -487,13 +487,13 @@ import SubSection from '~/components/SubSection.vue';
         </li>
         <li><b>使用言語</b></li>
         <ul>
-            <li class="hover-float-glow">\(\texttt{C++}\)</li>
+            <li class="hover-float-glow">C++</li>
         </ul>
         <li><b>使用ツール</b></li>
         <ul>
-            <li class="hover-float-glow">\(\texttt{Visual Studio 2022}\)</li>
-            <li class="hover-float-glow">\(\texttt{Siv3D}\)</li>
-            <li class="hover-float-glow">\(\texttt{Visual Studio Code}\)</li>
+            <li class="hover-float-glow">Visual Studio 2022</li>
+            <li class="hover-float-glow">Siv3D</li>
+            <li class="hover-float-glow">Visual Studio Code</li>
         </ul>
         <li><b>開発期間</b>：4日（アプデ予定あり）</li>
         <li><b>担当範囲</b></li>
