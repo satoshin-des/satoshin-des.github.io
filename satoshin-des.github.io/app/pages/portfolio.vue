@@ -388,7 +388,7 @@ import SubSection from '~/components/SubSection.vue';
     <SubSection>Games</SubSection>
     <h3><a href="https://dev.onionsoft.net/seed/info.ax?id=2446" class="nav-link-item">こんな弾幕避けられる筈がない</a></h3>
     <ul>
-        <img src="screen_shots/HSP_2024.png" width="200">
+        <img src="~/screen_shots/HSP_2024.png" width="200">
         <li><b>ジャンル</b>：ゲーム（弾幕・避けゲー）</li>
         <li><b>概要</b><br>
             自分の実力やアイデアがどれほど通用するのか，という腕試し的な意味と，当時\(\texttt{HSP}\)という言語があるとしったので，ちょっと\(\texttt{HSP}\)でゲームを作ってみようという気持ちで作りました．
@@ -427,8 +427,8 @@ import SubSection from '~/components/SubSection.vue';
             class="nav-link-item">なしごろうの比合わせゲーム</a>
     </h3>
     <ul>
-        <img src="screen_shots/nashigorou1.png" width="200">
-        <img src="screen_shots/nashigorou2.png" width="200">
+        <img src="~/screen_shots/nashigorou1.png" width="200">
+        <img src="~/screen_shots/nashigorou2.png" width="200">
         <li><a href="https://github.com/satoshin-des/nashigorou"><b>ソースコード</b></a></li>
         <li><b>使用言語</b></li>
         <ul>
@@ -450,8 +450,8 @@ import SubSection from '~/components/SubSection.vue';
 
     <h3><a href="https://unityroom.com/games/ijime_nukko" class="nav-link-item">ねこいじめ</a></h3>
     <ul>
-        <img src="screen_shots/necoijime1.png" width="200">
-        <img src="screen_shots/necoijime2.png" width="200">
+        <img src="~/screen_shots/necoijime1.png" width="200">
+        <img src="~/screen_shots/necoijime2.png" width="200">
         <li><b>ジャンル</b>：弾幕・当てゲー</li>
         <li><b>概要</b><br>
             本ゲームは，恐らく初めて制作した本格的（？）なゲームで自分が作ってみたいとずっと思い描いていたものを形にしたものです．
@@ -483,7 +483,7 @@ import SubSection from '~/components/SubSection.vue';
     <h3><a href="https://satoshin-des.github.io/games/pinpon/PinponDush.html" class="nav-link-item">ピンポンダッシュチャレンジ！</a>
     </h3>
     <ul>
-        <img src="screen_shots/pinpondush.png" width="200">
+        <img src="~/screen_shots/pinpondush.png" width="200">
         <li><b>ジャンル</b>：カジュアルゲーム</li>
         <li><b>概要</b><br>
             本ゲームは，右からひたすら流れてくる複数の家のうち一つだけが留守中の家なので，その家をタップして（ピンポンダッシュ）してピンポンダッシュを成功させようというゲームです．<br>
