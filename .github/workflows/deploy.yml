@@ -18,6 +18,12 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    
+    # 【追加】npmコマンドを実行するデフォルトのフォルダ位置を指定します
+    defaults:
+      run:
+        working-directory: ./satoshin-des.github.io
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -36,7 +42,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .output/public # Nuxt3のデフォルトの出力先を指定
+          # 【変更】リポジトリの一番上からのパスになるようにフォルダ名を追加します
+          path: ./satoshin-des.github.io/.output/public
 
   deploy:
     needs: build
