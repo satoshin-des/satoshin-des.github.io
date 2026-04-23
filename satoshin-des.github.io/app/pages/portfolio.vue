@@ -6,10 +6,6 @@ import SubSection from '~/components/SubSection.vue';
 </script>
 
 <template>
-    <div style="text-align: center; margin-top: 40px;">
-        <img src="http://www5.kannet.ne.jp/~counter/count.cgi?name=satoshin01&type=24&width=9"
-            style="filter: brightness(1.2) hue-rotate(140deg); opacity: 0.8;">
-    </div>
     <Header />
     <div style="text-align: center; margin-top: 40px;">
         <img src="http://www5.kannet.ne.jp/~counter/count.cgi?name=satoshin02&type=24&width=9">

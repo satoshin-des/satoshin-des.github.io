@@ -5,11 +5,11 @@ import Section from '~/components/Section.vue';
 </script>
 
 <template>
+    <Header />
     <div style="text-align: center; margin-top: 40px;">
         <img src="http://www5.kannet.ne.jp/~counter/count.cgi?name=satoshin01&type=24&width=9"
             style="filter: brightness(1.2) hue-rotate(140deg); opacity: 0.8;">
     </div>
-    <Header />
     <h1>さとしんのHP（工事中）</h1>
     <p><b>さとしん</b>とは、東京都内の大学院に通うただの大学院生である。</p>
     <p>このホームページでは、私の活動について書いていきます。</p>
