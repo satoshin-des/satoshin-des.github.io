@@ -12,7 +12,7 @@ import Section from '~/components/Section.vue';
     <p><b>さとしん</b>とは、東京都内の大学院に通うただの大学院生である。</p>
     <p>このホームページでは、私の活動について書いていきます。</p>
     <Section>Bioglaphy</Section>
-    <table>
+    <table style="text-align: center;">
         <tr>
             <th>ぎりぎり平成</th>
             <th>立教大学理学部数学科へ入学</th>
