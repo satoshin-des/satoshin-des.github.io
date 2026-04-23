@@ -166,4 +166,54 @@ ul li a::before {
 ul li a:hover::before {
   left: 100%;
 }
+
+/* --- スタイリッシュなaタグクラス --- */
+.nav-link-item {
+  display: block;
+  position: relative;
+  padding: 15px 25px;
+  margin-bottom: 12px;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 3px solid #ffffff;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  font-family: sans-serif;
+  letter-spacing: 0.05em;
+}
+
+/* ホバー時の挙動 */
+.nav-link-item:hover {
+  background: rgba(0, 255, 204, 0.08);
+  color: #00ffcc !important;
+  border-color: rgba(0, 255, 204, 0.5);
+  border-left-color: #00ffcc;
+  padding-left: 35px;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.2);
+}
+
+/* スキャンライン（光の筋）アニメーション */
+.nav-link-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      rgba(0, 255, 204, 0.4),
+      rgba(255, 255, 255, 0.2),
+      transparent);
+  transition: none;
+}
+
+/* ホバーした瞬間に光が走り抜ける */
+.nav-link-item:hover::before {
+  left: 100%;
+  transition: all 0.6s ease-in-out;
+}
 </style>
