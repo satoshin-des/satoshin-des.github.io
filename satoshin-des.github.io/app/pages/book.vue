@@ -214,7 +214,7 @@ const rows = [
 </template>
 
 <style lang="css">
-.vgt-table {
+:deep(.vgt-table) {
     background-color: black !important;
     color: white !important;
 }
