@@ -29,7 +29,7 @@ import SubSection from '~/components/SubSection.vue';
     <Footer />
 </template>
 
-<script>
+<script lang="ts">
 export default {
     data() {
         return {
