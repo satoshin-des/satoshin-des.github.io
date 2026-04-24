@@ -220,7 +220,7 @@ const rows = [
 <template>
     <Header />
     <div>
-        <VueGoodTable :columns="columns" :rows="rows" />
+        <VueGoodTable :columns="columns" :rows="rows" theme="nocturnal" />
     </div>
     <Footer />
 </template>

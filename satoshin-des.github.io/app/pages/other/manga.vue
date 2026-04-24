@@ -128,7 +128,7 @@ const rows = [
         ここでは，私の読んだ漫画について書いていきます．
     </p>
     <div>
-        <VueGoodTable :columns="columns" :rows="rows" />
+        <VueGoodTable :columns="columns" :rows="rows" theme="nocturnal" />
     </div>
     <Footer />
 </template>

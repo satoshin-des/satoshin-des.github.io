@@ -66,12 +66,12 @@ const rows_lib = [
     </p>
     <SubSection>で、どの言語をいつ使ってるの？</SubSection>
     <div>
-        <VueGoodTable :columns="columns_lang" :rows="rows_lang" />
+        <VueGoodTable :columns="columns_lang" :rows="rows_lang" theme="nocturnal" />
     </div>
 
     <SubSection>ライブラリなどについても書いちゃいましょう</SubSection>
     <div>
-        <VueGoodTable :columns="columns_lib" :rows="rows_lib" />
+        <VueGoodTable :columns="columns_lib" :rows="rows_lib" theme="nocturnal" />
     </div>
 
     <Footer />
