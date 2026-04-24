@@ -1,9 +1,14 @@
 <script setup lang="ts">
+import { ref } from 'vue';
+
 import { VueGoodTable } from 'vue-good-table-next';
 import 'vue-good-table-next/dist/vue-good-table-next.css';
 
 import Header from '~/components/Header.vue';
 import Footer from '~/components/Footer.vue';
+
+const backgroundColor = ref('black');
+const txtColor = ref('white');
 
 const columns = [
     { label: "タイトル", field: "title" },
@@ -204,7 +209,7 @@ const rows = [
         <br>取り敢えず一覧表みたいなものを作りたいですが，そのうち簡単な感想も載せるかも
         <br>※特に数学書や理工書，技術書などの中には読了していない本が多くあります．
     </p>
-    <div>
+    <div :style="{ backgroundColor: backgroundColor, color: txtColor }">
         <VueGoodTable :columns="columns" :rows="rows" />
     </div>
     <Footer />
