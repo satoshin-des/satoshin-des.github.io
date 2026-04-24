@@ -5,10 +5,11 @@
         <NuxtLink to="/program">プログラミングのこと</NuxtLink>
         <NuxtLink to="/music">音楽のこと</NuxtLink>
         <NuxtLink to="/book">読書のこと</NuxtLink>
+        <NuxtLink to="/other_home">その他色々</NuxtLink>
         <!--<NuxtLink to="~/math">数学のこと</NuxtLink>
         <NuxtLink to="~/music">音楽のこと</NuxtLink>
         <NuxtLink to="~/program">プログラミングのこと</NuxtLink>
         
-        <NuxtLink to="~/other_home">その他色々</NuxtLink>-->
+        -->
     </header>
 </template>
