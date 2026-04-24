@@ -9,7 +9,7 @@ const columns = [
     { label: "タイトル", field: "title" },
     { label: "原作", field: "author" },
     { label: "初放送", field: "year" },
-    { label: "会社", field: "type" },
+    { label: "会社", field: "company" },
 ]
 
 const rows = [
