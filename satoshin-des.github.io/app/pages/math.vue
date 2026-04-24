@@ -1,14 +1,16 @@
 <script setup lang="ts">
-import VueMathjax from 'vue-mathjax'
+import { ref } from 'vue';
+
+import VueMathjax from 'vue-mathjax-next'
 
 import Header from '~/components/Header.vue';
 import Footer from '~/components/Footer.vue';
 
-const formula = '$$x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}.$$';
+const formula = ref('$$x^2 + y^2 = z^2$$');
 </script>
 
 <template>
     <Header />
-    <vue-mathjax :formula="formula"></vue-mathjax>
+    <vue-mathjax :formula="formula" />
     <Footer />
 </template>
