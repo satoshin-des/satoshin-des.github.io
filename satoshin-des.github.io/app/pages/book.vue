@@ -208,24 +208,7 @@ const rows = [
         <br>※特に数学書や理工書，技術書などの中には読了していない本が多くあります．
     </p>
     <div>
-        <VueGoodTable :columns="columns" :rows="rows" />
+        <VueGoodTable :columns="columns" :rows="rows" theme="nocturnal"/>
     </div>
     <Footer />
 </template>
-
-<style lang="css">
-:deep(.vgt-table) {
-    background-color: black !important;
-    color: white !important;
-}
-
-.vgt-table th {
-    background-color: black !important;
-    color: white !important;
-}
-
-.vgt-table td {
-    background-color: black !important;
-    color: white !important;
-}
-</style>
