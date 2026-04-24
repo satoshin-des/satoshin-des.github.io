@@ -10,7 +10,7 @@ const columns = [
     { label: "原作", field: "author" },
     { label: "初放送", field: "year" },
     { label: "会社", field: "company" },
-]
+];
 
 const rows = [
     { 'id': 1, 'title': 'AKIRA', 'author': '大友克洋', 'year': '1988', 'company': '東京ムービー新社' },
