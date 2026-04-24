@@ -1,0 +1,1568 @@
+from bs4 import BeautifulSoup
+
+html = """
+<tr>
+  <td>A polynomial time version of LLL with deep insertions</td>
+  <td>Felix Fontein，Michael Schneidery and Urs Wagnerz</td>
+  <td>2018</td>
+  <td>論文</td>
+</tr>
+<tr>
+  <td>Analysis of decreasing squared-sum of Gram–Schmidt lengths for short lattice vectors</td>
+  <td>安田雅哉，横山和弘，下山武司，小暮淳 and 小柴健史</td>
+  <td>2017</td>
+  <td>論文</td>
+</tr>
+<tr>
+  <td>An LLL algorithm with quadratic complexity</td>
+  <td>Phong Q. Nguyen and Damien Stehle</td>
+  <td>2009</td>
+  <td>論文</td>
+</tr>
+<tr>
+  <td>C++ライブラリEigenのメモ</td>
+  <td>シ</td>
+  <td>2013</td>
+  <td>技術書</td>
+</tr>
+<tr>
+  <td>Computational Mathematics with SageMath</td>
+  <td>Paul Zimmermann et al.</td>
+  <td>2019</td>
+  <td>技術書</td>
+</tr>
+<tr>
+  <td>DeepLLLを用いたSVP解読報告</td>
+  <td>山口純平 and 安田雅哉</td>
+  <td>2017</td>
+  <td>論文</td>
+</tr>
+<tr>
+  <td>F4 Algorithm及びSignature Based Algorithmの実装と改良について</td>
+  <td>齋藤大斗</td>
+  <td>2025</td>
+  <td>論文</td>
+</tr>
+<tr>
+  <td>Factoring integers by CVP algorithms</td>
+  <td>Claus Peter Schnorr</td>
+  <td>2013</td>
+  <td>論文</td>
+</tr>
+<tr>
+  <td>Factoring integers with sublinear resources on a superconducting quantum processor</td>
+  <td>Bao Yan et al.</td>
+  <td>2022</td>
+  <td>論文</td>
+</tr>
+<tr>
+  <td>Floating-Point LLL Revisited</td>
+  <td>Phong Q. Nguyen and Damien Stehle</td>
+  <td>2002</td>
+  <td>論文</td>
+</tr>
+<tr>
+  <td>Helvetica Standard</td>
+  <td>あらゐけいいち</td>
+  <td>2011</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>Helvetica Standard　絵</td>
+  <td>あらゐけいいち</td>
+  <td>2014</td>
+  <td>画集？</td>
+</tr>
+<tr>
+  <td>Illustrator Fan for Windows</td>
+  <td>宮川千春++</td>
+  <td>2002</td>
+  <td>技術書</td>
+</tr>
+<tr>
+  <td>Jashihon04</td>
+  <td>ひなたもも</td>
+  <td>2024</td>
+  <td>同人画集</td>
+</tr>
+<tr>
+  <td>Lattice Basis Reduction</td>
+  <td>Murray R. Bremner</td>
+  <td>2012</td>
+  <td>数学書</td>
+</tr>
+<tr>
+  <td>Pythonで学ぶはじめてのAIプログラミング</td>
+  <td>小高知宏</td>
+  <td>2020</td>
+  <td>技術書</td>
+</tr>
+<tr>
+  <td>「P≠NP」問題</td>
+  <td>野崎昭弘</td>
+  <td>2015</td>
+  <td>数学書</td>
+</tr>
+<tr>
+  <td>S BLUE</td>
+  <td>アンソロジー</td>
+  <td>2010</td>
+  <td>ラノベ</td>
+</tr>
+<tr>
+  <td>Schoof アルゴリズムによる超特異楕円曲線の自己準同型写像のトレース計算の高速化</td>
+  <td>小峰和樹，片山瑛 and 安田雅哉</td>
+  <td>2025</td>
+  <td>論文</td>
+</tr>
+<tr>
+  <td>Self-dual DeepBKZ for finding short lattice vectors</td>
+  <td>安田雅哉</td>
+  <td>2020</td>
+  <td>論文</td>
+</tr>
+<tr>
+  <td>Summer Vacation</td>
+  <td>いざね</td>
+  <td>2024</td>
+  <td>同人画集</td>
+</tr>
+<tr>
+  <td>Speaking of Speech New Edition</td>
+  <td>David Harrington and Charles Le Beau</td>
+  <td>2008</td>
+  <td>テキスト</td>
+</tr>
+<tr>
+  <td>The Grimoir of Marisa</td>
+  <td>ZUN</td>
+  <td>2009</td>
+  <td>弾幕解説書</td>
+</tr>
+<tr>
+  <td>Towards a Modern LLL Implementation</td>
+  <td>Léo Ducas，Ludo N. Pulles and Marc Stevens</td>
+  <td>2025</td>
+  <td>論文</td>
+</tr>
+<tr>
+  <td>Unityの教科書</td>
+  <td>北村愛美</td>
+  <td>2019</td>
+  <td>技術書</td>
+</tr>
+<tr>
+  <td>Web学習アプリ対応　C言語入門</td>
+  <td>板谷雄二</td>
+  <td>2019</td>
+  <td>技術書</td>
+</tr>
+<tr>
+  <td>What Do You Think?</td>
+  <td>立教大学英語ディスカッション教育センター</td>
+  <td>2010</td>
+  <td>テキスト</td>
+</tr>
+<tr>
+  <td>アイマスどうでしょう　試験に出るどうでしょう</td>
+  <td>タカ</td>
+  <td>2024</td>
+  <td>同人漫画</td>
+</tr>
+<tr>
+  <td>昭島市史</td>
+  <td>昭島市史編さん委員会</td>
+  <td>1978</td>
+  <td>郷土史</td>
+</tr>
+<tr>
+  <td>あずまんが大王（１）</td>
+  <td>あずまきよひこ</td>
+  <td>2000</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>あずまんが大王（２）</td>
+  <td>あずまきよひこ</td>
+  <td>2000</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>あずまんが大王（３）</td>
+  <td>あずまきよひこ</td>
+  <td>2001</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>あずまんが大王（４）</td>
+  <td>あずまきよひこ</td>
+  <td>2002</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>あなたと読む恋の歌百首</td>
+  <td>俵万智</td>
+  <td>2005</td>
+  <td>歌集</td>
+</tr>
+<tr>
+  <td>雨宮さん（１）</td>
+  <td>あらゐけいいち</td>
+  <td>2022</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>苺ましまろ（１）</td>
+  <td>ばらスィー</td>
+  <td>2003</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>苺ましまろ（２）</td>
+  <td>ばらスィー</td>
+  <td>2003</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>苺ましまろ（３）</td>
+  <td>ばらスィー</td>
+  <td>2004</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>苺ましまろ（４）</td>
+  <td>ばらスィー</td>
+  <td>2005</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>苺ましまろ（５）</td>
+  <td>ばらスィー</td>
+  <td>2007</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>入間郡誌</td>
+  <td>安部立郎</td>
+  <td>1913</td>
+  <td>郷土史</td>
+</tr>
+<tr>
+  <td>いわゆる天使の文化祭</td>
+  <td>似鳥鶏</td>
+  <td>2011</td>
+  <td>小説</td>
+</tr>
+<tr>
+  <td>美しすぎる「数」の世界</td>
+  <td>清水健一</td>
+  <td>2017</td>
+  <td>数学書</td>
+</tr>
+<tr>
+  <td>オイラー〈ゼータ関数論文集〉</td>
+  <td>黒川信重，小山信也，馬場郁 and 高田加代子</td>
+  <td>2018</td>
+  <td>数学書</td>
+</tr>
+<tr>
+  <td>おまもりんごさん</td>
+  <td>ms/hirahira.net</td>
+  <td>2010</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>改訂逗子町誌</td>
+  <td>改訂逗子町誌刊行会</td>
+  <td>1974</td>
+  <td>郷土史</td>
+</tr>
+<tr>
+  <td>鏡音と双対空間</td>
+  <td>sekryy</td>
+  <td>2024</td>
+  <td>同人数学書</td>
+</tr>
+<tr>
+  <td>神楽歌　催馬楽　梁塵秘抄　閑吟集</td>
+  <td>臼田甚五郎 and 新間進一</td>
+  <td>1976</td>
+  <td>古典</td>
+</tr>
+<tr>
+  <td>学校を出よう！（１）</td>
+  <td>谷川流</td>
+  <td>2003</td>
+  <td>ラノベ</td>
+</tr>
+<tr>
+  <td>学校を出よう！（２）</td>
+  <td>谷川流</td>
+  <td>2003</td>
+  <td>ラノベ</td>
+</tr>
+<tr>
+  <td>かなまいのイラスト集２</td>
+  <td>金澤まい</td>
+  <td>2023</td>
+  <td>同人画集</td>
+</tr>
+<tr>
+  <td>神様のお仕事（１）</td>
+  <td>幹</td>
+  <td>2013</td>
+  <td>ラノベ</td>
+</tr>
+<tr>
+  <td>川角古墳群測量調査報告書</td>
+  <td>駒澤大学考古学研究室</td>
+  <td>2022</td>
+  <td>調査報告書</td>
+</tr>
+<tr>
+  <td>カラー図解　古生物たちのふしぎな世界</td>
+  <td>土屋健</td>
+  <td>2017</td>
+  <td>理工書</td>
+</tr>
+<tr>
+  <td>艦娘桟橋</td>
+  <td>C2機関</td>
+  <td>2024</td>
+  <td>雑誌付録</td>
+</tr>
+<tr>
+  <td>簡約変数の導入による虚二次体における格子基底簡約</td>
+  <td>有元康一</td>
+  <td>2019</td>
+  <td>論文</td>
+</tr>
+<tr>
+  <td>北足立郡誌</td>
+  <td>北足立郡役所</td>
+  <td>1972</td>
+  <td>郷土史</td>
+</tr>
+<tr>
+  <td>きまぐれロボット</td>
+  <td>星新一</td>
+  <td>2014</td>
+  <td>小説</td>
+</tr>
+<tr>
+  <td>クジラと海とぼく</td>
+  <td>水口博也</td>
+  <td>2010</td>
+  <td>小説</td>
+</tr>
+<tr>
+  <td>クビキリサイクル</td>
+  <td>西尾維新</td>
+  <td>2008</td>
+  <td>小説</td>
+</tr>
+<tr>
+  <td>クビツリハイスクール</td>
+  <td>西尾維新</td>
+  <td>2008</td>
+  <td>小説</td>
+</tr>
+<tr>
+  <td>群・環・体入門</td>
+  <td>新妻弘 and 木村哲三</td>
+  <td>1999</td>
+  <td>数学書</td>
+</tr>
+<tr>
+  <td>群論入門</td>
+  <td>芳沢光雄</td>
+  <td>2015</td>
+  <td>数学書</td>
+</tr>
+<tr>
+  <td>けいおん！（１）</td>
+  <td>かきふらい</td>
+  <td>2008</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>けいおん！（２）</td>
+  <td>かきふらい</td>
+  <td>2009</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>けいおん！（３）</td>
+  <td>かきふらい</td>
+  <td>2010</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>けいおん！（４）</td>
+  <td>かきふらい</td>
+  <td>2010</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>幻想地学博物誌</td>
+  <td>でんすけ</td>
+  <td>2025</td>
+  <td>同人誌</td>
+</tr>
+<tr>
+  <td>検地帳</td>
+  <td>瑞穂町教育委員会</td>
+  <td>1988</td>
+  <td>郷土史</td>
+</tr>
+<tr>
+  <td>格子暗号解読のための数学的基礎</td>
+  <td>青野良範 and 安田雅哉</td>
+  <td>2019</td>
+  <td>数学書</td>
+</tr>
+<tr>
+  <td>高次元空間を見る方法</td>
+  <td>小笠英志</td>
+  <td>2019</td>
+  <td>数学書</td>
+</tr>
+<tr>
+  <td>格子と最適化手法を用いた素因数分解法の実験報告</td>
+  <td>山口純平，伊豆哲也 and 國廣昇</td>
+  <td>2023</td>
+  <td>論文</td>
+</tr>
+<tr>
+  <td>古寺巡礼辞典</td>
+  <td>中尾堯</td>
+  <td>1973</td>
+  <td>じてん</td>
+</tr>
+<tr>
+  <td>国語辞典の名語釈</td>
+  <td>武藤康史</td>
+  <td>2008</td>
+  <td>読み物</td>
+</tr>
+<tr>
+  <td>国分寺市史料集（Ⅱ）　武蔵野新田開発関係文書　川崎平右衛門関係文書</td>
+  <td>国分寺市史編さん委員会</td>
+  <td>1982</td>
+  <td>郷土史</td>
+</tr>
+<tr>
+  <td>「国民抗戦必携」「国民築城必携」「国土決戦教令」</td>
+  <td>藤田昌雄 and 佐山二郎</td>
+  <td>2024</td>
+  <td>古典</td>
+</tr>
+<tr>
+  <td>古代みちのく１０１の謎</td>
+  <td>鈴木旭</td>
+  <td>1995</td>
+  <td>郷土史</td>
+</tr>
+<tr>
+  <td>児玉町史史料調査報告 第6集</td>
+  <td>根岸篤太郎</td>
+  <td>1980</td>
+  <td>郷土史</td>
+</tr>
+<tr>
+  <td>こちら、終末停滞委員会。（１）</td>
+  <td>逢縁奇演</td>
+  <td>2024</td>
+  <td>ラノベ</td>
+</tr>
+<tr>
+  <td>こっきのえほん</td>
+  <td>戸田やすし</td>
+  <td>1987</td>
+  <td>絵本</td>
+</tr>
+<tr>
+  <td>ごっどちゃんず（１）</td>
+  <td>ユキヲ</td>
+  <td>2018</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>ごっどちゃんず（２）</td>
+  <td>ユキヲ</td>
+  <td>2020</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>小林さんちのメイドラゴン（８）</td>
+  <td>クール教信者</td>
+  <td>2019</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>小林さんちのメイドラゴン（９）</td>
+  <td>クール教信者</td>
+  <td>2019</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>小林さんちのメイドラゴン（１２）</td>
+  <td>クール教信者</td>
+  <td>2022</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>小林さんちのメイドラゴン　エルマのOL日記（３）</td>
+  <td>カザマアヤミ and クール教信者</td>
+  <td>2019</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>小林さんちのメイドラゴン　エルマのOL日記（４）</td>
+  <td>カザマアヤミ and クール教信者</td>
+  <td>2020</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>小林さんちのメイドラゴン　公式ファンブック　まるごとカンナ</td>
+  <td>クール教信者</td>
+  <td>2025</td>
+  <td>ファンブック</td>
+</tr>
+<tr>
+  <td>コミュ障探偵の地味すぎる事件簿</td>
+  <td>似鳥鶏</td>
+  <td>2021</td>
+  <td>小説</td>
+</tr>
+<tr>
+  <td>埼玉県広域道路地図</td>
+  <td>東京人文社</td>
+  <td>1992</td>
+  <td>地図</td>
+</tr>
+<tr>
+  <td>埼玉　地名の由来を歩く</td>
+  <td>谷川彰英</td>
+  <td>2017</td>
+  <td>郷土史</td>
+</tr>
+<tr>
+  <td>埼玉の戦争遺跡</td>
+  <td>関口和也</td>
+  <td>2023
+  <td>郷土史</td>
+</tr>
+<tr>
+  <td>サイバー攻撃</td>
+  <td>中島明日香</td>
+  <td>2018</td>
+  <td>技術書</td>
+</tr>
+<tr>
+  <td>桜Trickアンソロジーコミック（１）</td>
+  <td>アンソロジー</td>
+  <td>2014</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>雑音まみれの哀悼歌</td>
+  <td>SAIFISU</td>
+  <td>2025</td>
+  <td>ラノベ</td>
+</tr>
+<tr>
+  <td>サマーウォーズ　公式コミックアンソロジー</td>
+  <td>アンソロジー</td>
+  <td>2010</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>狭山之栞</td>
+  <td>杉本林志</td>
+  <td>1939</td>
+  <td>郷土史</td>
+</tr>
+<tr>
+  <td>字典かな</td>
+  <td>笠間影印叢刊刊行会</td>
+  <td>1972</td>
+  <td>じてん</td>
+</tr>
+<tr>
+  <td>邪神ちゃんドロップキック（１）</td>
+  <td>ユキヲ</td>
+  <td>2018</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>邪神ちゃんドロップキック（２）</td>
+  <td>ユキヲ</td>
+  <td>2018</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>邪神ちゃんドロップキック（３）</td>
+  <td>ユキヲ</td>
+  <td>2018</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>邪神ちゃんドロップキック（４）</td>
+  <td>ユキヲ</td>
+  <td>2018</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>邪神ちゃんドロップキック（５）</td>
+  <td>ユキヲ</td>
+  <td>2018</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>邪神ちゃんドロップキック（６）</td>
+  <td>ユキヲ</td>
+  <td>2018</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>邪神ちゃんドロップキック（７）</td>
+  <td>ユキヲ</td>
+  <td>2018</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>邪神ちゃんドロップキック（８）</td>
+  <td>ユキヲ</td>
+  <td>2018</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>邪神ちゃんドロップキック（９）</td>
+  <td>ユキヲ</td>
+  <td>2018</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>邪神ちゃんドロップキック（１０）</td>
+  <td>ユキヲ</td>
+  <td>2018</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>邪神ちゃんドロップキック（１１）</td>
+  <td>ユキヲ</td>
+  <td>2018</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>邪神ちゃんドロップキック（１２）</td>
+  <td>ユキヲ</td>
+  <td>2019</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>邪神ちゃんドロップキック（１３）</td>
+  <td>ユキヲ</td>
+  <td>2019</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>邪神ちゃんドロップキック（１４）</td>
+  <td>ユキヲ</td>
+  <td>2020</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>邪神ちゃんドロップキック（１５）</td>
+  <td>ユキヲ</td>
+  <td>2020</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>邪神ちゃんドロップキック（１６）</td>
+  <td>ユキヲ</td>
+  <td>2020</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>邪神ちゃんドロップキック（１７）</td>
+  <td>ユキヲ</td>
+  <td>2021</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>邪神ちゃんドロップキック（１８）</td>
+  <td>ユキヲ</td>
+  <td>2021</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>邪神ちゃんドロップキック（１９）</td>
+  <td>ユキヲ</td>
+  <td>2022</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>邪神ちゃんドロップキック（２０）</td>
+  <td>ユキヲ</td>
+  <td>2022</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>邪神ちゃんドロップキック（２１）</td>
+  <td>ユキヲ</td>
+  <td>2023</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>邪神ちゃんドロップキック（２２）</td>
+  <td>ユキヲ</td>
+  <td>2023</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>邪神ちゃんドロップキック（２３）</td>
+  <td>ユキヲ</td>
+  <td>2024</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>邪神ちゃんドロップキック（２４）</td>
+  <td>ユキヲ</td>
+  <td>2024</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>春期限定いちごタルト事件</td>
+  <td>米澤穂信</td>
+  <td>2004</td>
+  <td>小説</td>
+</tr>
+<tr>
+  <td>しょうこセンセイ！（１）</td>
+  <td>なじみ</td>
+  <td>2019</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>少女終末旅行（１）</td>
+  <td>つくみず</td>
+  <td>2014</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>少女は書架の海で眠る</td>
+  <td>支倉凍砂</td>
+  <td>2015</td>
+  <td>ラノベ</td>
+</tr>
+<tr>
+  <td>小説 葬送のフリーレン: ~前奏~</td>
+  <td>八目迷 and 山田鐘人</td>
+  <td>2024</td>
+  <td>ラノベ</td>
+</tr>
+<tr>
+  <td>小説の小説</td>
+  <td>似鳥鶏</td>
+  <td>2022</td>
+  <td>小説</td>
+</tr>
+<tr>
+  <td>白雪姫と黒タイツ</td>
+  <td>御影石材</td>
+  <td>2017</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>新版　基本統計学</td>
+  <td>岡本雅典</td>
+  <td>2012</td>
+  <td>数学書</td>
+</tr>
+<tr>
+  <td>人類は衰退しました（１）</td>
+  <td>田中ロミオ</td>
+  <td>2007</td>
+  <td>ラノベ</td>
+</tr>
+<tr>
+  <td>人類は衰退しました（２）</td>
+  <td>田中ロミオ</td>
+  <td>2007</td>
+  <td>ラノベ</td>
+</tr>
+<tr>
+  <td>数学オリンピックチャンピオンの美しい解き方</td>
+  <td>Terence Tao and 寺嶋英志</td>
+  <td>2010</td>
+  <td>数学書</td>
+</tr>
+<tr>
+  <td>圖學概論</td>
+  <td>須藤利一</td>
+  <td>1961</td>
+  <td>数学書</td>
+</tr>
+<tr>
+  <td>涼宮ハルヒの憂鬱</td>
+  <td>谷川流</td>
+  <td>2003</td>
+  <td>ラノベ</td>
+</tr>
+<tr>
+  <td>涼宮ハルヒの溜息</td>
+  <td>谷川流</td>
+  <td>2003</td>
+  <td>ラノベ</td>
+</tr>
+<tr>
+  <td>涼宮ハルヒの退屈</td>
+  <td>谷川流</td>
+  <td>2004</td>
+  <td>ラノベ</td>
+</tr>
+<tr>
+  <td>涼宮ハルヒの消失</td>
+  <td>谷川流</td>
+  <td>2004</td>
+  <td>ラノベ</td>
+</tr>
+<tr>
+  <td>涼宮ハルヒの暴走</td>
+  <td>谷川流</td>
+  <td>2004</td>
+  <td>ラノベ</td>
+</tr>
+<tr>
+  <td>涼宮ハルヒの動揺</td>
+  <td>谷川流</td>
+  <td>2005</td>
+  <td>ラノベ</td>
+</tr>
+<tr>
+  <td>涼宮ハルヒの陰謀</td>
+  <td>谷川流</td>
+  <td>2005</td>
+  <td>ラノベ</td>
+</tr>
+<tr>
+  <td>涼宮ハルヒの憤慨</td>
+  <td>谷川流</td>
+  <td>2006</td>
+  <td>ラノベ</td>
+</tr>
+<tr>
+  <td>涼宮ハルヒの分裂</td>
+  <td>谷川流</td>
+  <td>2007</td>
+  <td>ラノベ</td>
+</tr>
+<tr>
+  <td>涼宮ハルヒの驚愕（前）</td>
+  <td>谷川流</td>
+  <td>2011</td>
+  <td>ラノベ</td>
+</tr>
+<tr>
+  <td>涼宮ハルヒの驚愕（後）</td>
+  <td>谷川流</td>
+  <td>2011</td>
+  <td>ラノベ</td>
+</tr>
+<tr>
+  <td>涼宮ハルヒの直観</td>
+  <td>谷川流</td>
+  <td>2020</td>
+  <td>ラノベ</td>
+</tr>
+<tr>
+  <td>涼宮ハルヒの劇場</td>
+  <td>谷川流</td>
+  <td>2024</td>
+  <td>ラノベ</td>
+</tr>
+<tr>
+  <td>涼宮ハルヒの観測</td>
+  <td>スニーカー文庫編集部</td>
+  <td>2011</td>
+  <td>ファンブック</td>
+</tr>
+<tr>
+  <td>せいすうたん</td>
+  <td>小林堂蟲 and 関真一朗</td>
+  <td>2023</td>
+  <td>数学書</td>
+</tr>
+<tr>
+  <td>整数と平面格子の数学</td>
+  <td>桑田孝泰 and 前原濶</td>
+  <td>2015</td>
+  <td>数学書</td>
+</tr>
+<tr>
+  <td>戦国の比企　境目の城</td>
+  <td>埼玉県立嵐山史跡の博物館</td>
+  <td>2020</td>
+  <td>郷土史</td>
+</tr>
+<tr>
+  <td>双対格子への格子簡約適用によるENUMの計算量削減についての考察</td>
+  <td>岸本共生，川添充 and 吉冨賢太郎</td>
+  <td>2025</td>
+  <td>論文</td>
+</tr>
+<tr>
+  <td>葬送のフリーレン　画集　vol.1</td>
+  <td>山田鐘人 and アベツカサ</td>
+  <td>2023</td>
+  <td>画集</td>
+</tr>
+<tr>
+  <td>双対版DeepBKZ基底簡約の開発とLWEチャレンジ解読への適用</td>
+  <td>安田雅哉，山口純平，大岡美智子 and 中邑聡史</td>
+  <td>2018
+  <td>論文</td>
+</tr>
+<tr>
+  <td>代数曲線入門</td>
+  <td>宮西正宜 and 増田佳代</td>
+  <td>2016</td>
+  <td>数学書</td>
+</tr>
+<tr>
+  <td>竹取物語（全）</td>
+  <td>角川書店</td>
+  <td>2001</td>
+  <td>古典</td>
+</tr>
+<tr>
+  <td>秩父山間の歴史民俗</td>
+  <td>飯塚好</td>
+  <td>2018</td>
+  <td>郷土史</td>
+</tr>
+<tr>
+  <td>秩父順拝記</td>
+  <td>竹内立義</td>
+  <td>1823</td>
+  <td>日記</td>
+</tr>
+<tr>
+  <td>秩父日記</td>
+  <td>渡辺渉園</td>
+  <td>1853</td>
+  <td>日記</td>
+</tr>
+<tr>
+  <td>地名アイヌ語小辞典</td>
+  <td>知里真志保</td>
+  <td>1956</td>
+  <td>じてん</td>
+</tr>
+<tr>
+  <td>中世史ハンドブック</td>
+  <td>永原慶二 et al.</td>
+  <td>1973</td>
+  <td>古典</td>
+</tr>
+<tr>
+  <td>超動く家にて</td>
+  <td>宮内悠介</td>
+  <td>2021</td>
+  <td>小説</td>
+</tr>
+<tr>
+  <td>超越数とはなにか</td>
+  <td>西岡久美子</td>
+  <td>2015</td>
+  <td>数学書</td>
+</tr>
+<tr>
+  <td>「超」入門　微分積分</td>
+  <td>神永正博</td>
+  <td>2012</td>
+  <td>数学書</td>
+</tr>
+<tr>
+  <td>直観でわかるシュレーディンガー方程式</td>
+  <td>岸野正剛</td>
+  <td>2012</td>
+  <td>理工書</td>
+</tr>
+<tr>
+  <td>鶴ケ島町史 近世資料編 1</td>
+  <td>鶴ケ島町 (埼玉県)</td>
+  <td>1982</td>
+  <td>郷土史</td>
+</tr>
+<tr>
+  <td>東京府市区町村便覧</td>
+  <td>東京地方改良協会</td>
+  <td>1939</td>
+  <td>地方自治</td>
+</tr>
+<tr>
+  <td>東方外来韋編</td>
+  <td>アスキー・メディアワークス</td>
+  <td>2024</td>
+  <td>ムック本</td>
+</tr>
+<tr>
+  <td>東方求聞口授</td>
+  <td>ZUN</td>
+  <td>2012</td>
+  <td>設定資料集</td>
+</tr>
+<tr>
+  <td>東方求聞史紀</td>
+  <td>ZUN</td>
+  <td>2007</td>
+  <td>設定資料集</td>
+</tr>
+<tr>
+  <td>東方幻存神籤</td>
+  <td>ZUN</td>
+  <td>2025</td>
+  <td>設定資料集</td>
+</tr>
+<tr>
+  <td>東方文果真報</td>
+  <td>ZUN</td>
+  <td>2017</td>
+  <td>設定資料集</td>
+</tr>
+<tr>
+  <td>東方文花帖</td>
+  <td>ZUN</td>
+  <td>2005</td>
+  <td>設定資料集</td>
+</tr>
+<tr>
+  <td>毒物ずかん</td>
+  <td>くられ and 姫川たけお</td>
+  <td>2018</td>
+  <td>理工書</td>
+</tr>
+<tr>
+  <td>所沢町郷土史</td>
+  <td>所沢市史編さん室 </td>
+  <td>1981</td>
+  <td>郷土史</td>
+</tr>
+<tr>
+  <td>ところざわ歴史物語　増補改訂版</td>
+  <td>所沢市教育委員会</td>
+  <td>2020</td>
+  <td>郷土史</td>
+</tr>
+<tr>
+  <td>長門有希ちゃんの消失　とある一日</td>
+  <td>新木伸，ぷよ and 谷川流</td>
+  <td>2015</td>
+  <td>ラノベ</td>
+</tr>
+<tr>
+  <td>なもり画集　ゆるなもり</td>
+  <td>なもり</td>
+  <td>2013</td>
+  <td>画集</td>
+</tr>
+<tr>
+  <td>ニコニコ動画における映像要約とサビ検出の試み</td>
+  <td>青木秀憲 and 宮下芳明</td>
+  <td>2008</td>
+  <td>論文</td>
+</tr>
+<tr>
+  <td>日常の夏休み</td>
+  <td>伊豆平成 and あらゐけいいち</td>
+  <td>2014</td>
+  <td>小説</td>
+</tr>
+<tr>
+  <td>日本妖怪異聞録</td>
+  <td>小松和彦</td>
+  <td>2007</td>
+  <td>古典</td>
+</tr>
+<tr>
+  <td>日本列島の下では何が起きているのか</td>
+  <td> 中島淳一</td>
+  <td>2018</td>
+  <td>理工書</td>
+</tr>
+<tr>
+  <td>日本名所大地図</td>
+  <td>株式会社平凡社</td>
+  <td>2024</td>
+  <td>地図</td>
+</tr>
+<tr>
+  <td>入門解剖図譜</td>
+  <td>三井但夫</td>
+  <td>1974</td>
+  <td>医学書</td>
+</tr>
+<tr>
+  <td>のんのんびより（１）</td>
+  <td>あっと</td>
+  <td>2010</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>のんのんびより（２）</td>
+  <td>あっと</td>
+  <td>2010</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>のんのんびより（３）</td>
+  <td>あっと</td>
+  <td>2011</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>のんのんびより（１５）</td>
+  <td>あっと</td>
+  <td>2020</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>博麗神社例大祭　２０回記念誌</td>
+  <td>博麗神社社務所</td>
+  <td>2023</td>
+  <td>同人画集</td>
+</tr>
+<tr>
+  <td>はたらく細胞おくすり（１）</td>
+  <td>久似良，割田コマ and 清水茜</td>
+  <td>2024</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>はたらく細胞おくすり（２）</td>
+  <td>久似良，割田コマ and 清水茜</td>
+  <td>2024</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>はたらく細胞おくすり（３）</td>
+  <td>久似良，割田コマ and 清水茜</td>
+  <td>2024</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>東久留米市文化財資料集（９）</td>
+  <td>東久留米市教育委員会文化財課</td>
+  <td>1983</td>
+  <td>郷土史</td>
+</tr>
+<tr>
+  <td>東村山市農産物直売所めぐりマップ</td>
+  <td>東村山市　地域創生部　産業振興課</td>
+  <td>2021</td>
+  <td>地図</td>
+</tr>
+<tr>
+  <td>東大和市史資料編 ９</td>
+  <td>東大和市史編さん委員会</td>
+  <td>1999</td>
+  <td>郷土史</td>
+</tr>
+<tr>
+  <td>ひだまりスケッチノベル　ようこそひだまり荘へ</td>
+  <td>日暮茶坊，蒼樹うめ</td>
+  <td>2007</td>
+  <td>ラノベ</td>
+</tr>
+<tr>
+  <td>ひだまりスケッチ　ひだまりSchool Life</td>
+  <td>日暮茶坊，蒼樹うめ</td>
+  <td>2007</td>
+  <td>ラノベ</td>
+</tr>
+<tr>
+  <td>日野市史　民俗編</td>
+  <td>日野市史編さん委員会</td>
+  <td>1983</td>
+  <td>郷土史</td>
+</tr>
+<tr>
+  <td>檜原村紀聞</td>
+  <td>瓜生卓造</td>
+  <td>1996</td>
+  <td>郷土史</td>
+</tr>
+<tr>
+  <td>日々是好日（１）</td>
+  <td>粕家梅庵</td>
+  <td>2024</td>
+  <td>同人漫画</td>
+</tr>
+<tr>
+  <td>秘々封々:Strawberry</td>
+  <td>東風谷アオイ</td>
+  <td>2023</td>
+  <td>同人小説</td>
+</tr>
+<tr>
+  <td>微分方程式　増補版</td>
+  <td>原岡喜重</td>
+  <td>2016</td>
+  <td>数学書</td>
+</tr>
+<tr>
+  <td>氷菓</td>
+  <td>米澤穂信</td>
+  <td>2001</td>
+  <td>小説</td>
+</tr>
+<tr>
+  <td>複素関数入門</td>
+  <td>神保道夫</td>
+  <td>2003</td>
+  <td>数学書</td>
+</tr>
+<tr>
+  <td>複素関数論</td>
+  <td>辻良平，柳原二郎，西尾和弘，佐藤シヅ子 and 吉田克明</td>
+  <td>2011</td>
+  <td>数学書</td>
+</tr>
+<tr>
+  <td>不自然な宇宙　宇宙はひとつだけなのか？</td>
+  <td>須藤靖</td>
+  <td>2019</td>
+  <td>理工書</td>
+</tr>
+<tr>
+  <td>富士見市石造文家財目録　三　富士見の馬頭観世音</td>
+  <td>富士見市教育委員会</td>
+  <td>2000</td>
+  <td>郷土史</td>
+</tr>
+<tr>
+  <td>富士見のあゆみ</td>
+  <td>富士見市立資料館</td>
+  <td>2023</td>
+  <td>郷土史</td>
+</tr>
+<tr>
+  <td>富士見の村絵図</td>
+  <td>富士見市立難波田城資料館</td>
+  <td>2004</td>
+  <td>郷土史</td>
+</tr>
+<tr>
+  <td>物理数学の直観的方法　〈普及版〉</td>
+  <td>長沼伸一郎</td>
+  <td>2011</td>
+  <td>理工書</td>
+</tr>
+<tr>
+  <td>プログラミングC#</td>
+  <td>Ian Griffiths，木下哲也 and 鈴木幸敏</td>
+  <td>2021</td>
+  <td>技術書</td>
+</tr>
+<tr>
+  <td>ブロックチェーン</td>
+  <td>岡崎裕史</td>
+  <td>2019</td>
+  <td>技術書</td>
+</tr>
+<tr>
+  <td>補習授業部と学ぶ数学　場合の数・確率・統計</td>
+  <td>Azel</td>
+  <td>2024</td>
+  <td>同人数学書</td>
+</tr>
+<tr>
+  <td>宮河家の空腹（１）</td>
+  <td>美水かがみ</td>
+  <td>2012</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>宮河家の空腹</td>
+  <td>待田堂子 and 美水かがみ</td>
+  <td>2014</td>
+  <td>ラノベ</td>
+</tr>
+<tr>
+  <td>町田の地名のいわれ</td>
+  <td>町田市立図書館</td>
+  <td>1993</td>
+  <td>郷土誌</td>
+</tr>
+<tr>
+  <td>未来いそっぷ</td>
+  <td>星新一</td>
+  <td>1982</td>
+  <td>小説</td>
+</tr>
+<tr>
+  <td>無限の果てに何があるか</td>
+  <td>足立恒雄</td>
+  <td>2017</td>
+  <td>理工書</td>
+</tr>
+<tr>
+  <td>武蔵野話</td>
+  <td>齋藤鶴磯</td>
+  <td>1970</td>
+  <td>郷土史</td>
+</tr>
+<tr>
+  <td>村瀬のゼロからわかる地理B　地誌編</td>
+  <td>村瀬哲史</td>
+  <td>2018</td>
+  <td>参考書</td>
+</tr>
+<tr>
+  <td>メールセキュリティ入門（１）</td>
+  <td>山草</td>
+  <td>2023</td>
+  <td>同人技術書</td>
+</tr>
+<tr>
+  <td>化物語（上）</td>
+  <td>西尾維新</td>
+  <td>2006</td>
+  <td>小説</td>
+</tr>
+<tr>
+  <td>化物語（下）</td>
+  <td>西尾維新</td>
+  <td>2006</td>
+  <td>小説</td>
+</tr>
+<tr>
+  <td>傷物語</td>
+  <td>西尾維新</td>
+  <td>2008</td>
+  <td>小説</td>
+</tr>
+<tr>
+  <td>愚物語</td>
+  <td>西尾維新</td>
+  <td>2015</td>
+  <td>小説</td>
+</tr>
+<tr>
+  <td>短物語</td>
+  <td>西尾維新</td>
+  <td>2024</td>
+  <td>小説</td>
+</tr>
+<tr>
+  <td>もめんたりー・リリィ（１）</td>
+  <td>八薙玉造 and GoHands×松竹</td>
+  <td>2025</td>
+  <td>ラノベ</td>
+</tr>
+<tr>
+  <td>やってやれ幻想郷</td>
+  <td>あらたとしひら and ZUN</td>
+  <td>2022</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>大和町史研究　第8号</td>
+  <td>大和町教育委員会</td>
+  <td>1963</td>
+  <td>郷土史</td>
+</tr>
+<tr>
+  <td>ヤマノススメ　アニメガイド　おもいでビヨリ</td>
+  <td>KADOKAWA</td>
+  <td>2023</td>
+  <td>アニメガイド</td>
+</tr>
+<tr>
+  <td>有限群の一様分解にまつわる諸問題</td>
+  <td>品川和雅，金井和貴，宮本賢伍 and 縫田光司</td>
+  <td>2025</td>
+  <td>論文</td>
+</tr>
+<tr>
+  <td>ゆりゆり</td>
+  <td>なもり</td>
+  <td>2012</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>妖精使いになる方法</td>
+  <td>アンソロジー</td>
+  <td>2004</td>
+  <td>ラノベ</td>
+</tr>
+<tr>
+  <td>妖精配給会社</td>
+  <td>星新一</td>
+  <td>1976</td>
+  <td>小説</td>
+</tr>
+<tr>
+  <td>淀屋橋（１）</td>
+  <td>粕家梅庵</td>
+  <td>2024</td>
+  <td>同人漫画</td>
+</tr>
+<tr>
+  <td>読み書きで楽しく学ぶくずし字入門</td>
+  <td>小林正博</td>
+  <td>2019</td>
+  <td>テキスト</td>
+</tr>
+<tr>
+  <td>らき☆すた（１）</td>
+  <td>美水かがみ</td>
+  <td>2005</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>らき☆すた（２）</td>
+  <td>美水かがみ</td>
+  <td>2005</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>らき☆すた（３）</td>
+  <td>美水かがみ</td>
+  <td>2006</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>らき☆すた（４）</td>
+  <td>美水かがみ</td>
+  <td>2007</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>らき☆すた（５）</td>
+  <td>美水かがみ</td>
+  <td>2007</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>らき☆すた（６）</td>
+  <td>美水かがみ</td>
+  <td>2008</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>らき☆すた（７）</td>
+  <td>美水かがみ</td>
+  <td>2009</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>らき☆すた（８）</td>
+  <td>美水かがみ</td>
+  <td>2010</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>らき☆すた　20th Anniversary　イラストぶっく</td>
+  <td>美水かがみ</td>
+  <td>2023</td>
+  <td>雑誌付録</td>
+</tr>
+<tr>
+  <td>らき☆すた　らき☆すたオンライン</td>
+  <td>竹井10日 and 美水かがみ</td>
+  <td>2008</td>
+  <td>ラノベ</td>
+</tr>
+<tr>
+  <td>らき☆すた　こなたの方程式</td>
+  <td>コンプティーク</td>
+  <td>2007</td>
+  <td>ファンブック</td>
+</tr>
+<tr>
+  <td>らき☆すた　さいたま展　完全ガイド</td>
+  <td>KADOKAWA</td>
+  <td>2023</td>
+  <td>ムック本</td>
+</tr>
+<tr>
+  <td>らき☆すた殺人事件</td>
+  <td>竹井10日 and 美水かがみ</td>
+  <td>2007</td>
+  <td>ラノベ</td>
+</tr>
+<tr>
+  <td>らき☆すた　スーパー童話大戦</td>
+  <td>竹井10日 and 美水かがみ</td>
+  <td>2008</td>
+  <td>ラノベ</td>
+</tr>
+<tr>
+  <td>リーマン予想とはなにか</td>
+  <td>中村亨</td>
+  <td>2015</td>
+  <td>数学書</td>
+</tr>
+<tr>
+  <td>量子計算を用いた素因数分解について</td>
+  <td>伊豆哲也，山口純平 and 國廣昇</td>
+  <td>2025</td>
+  <td>論文</td>
+</tr>
+<tr>
+  <td>輪廻する宇宙　ダークエネルギーに満ちた宇宙の将来</td>
+  <td>横山順一</td>
+  <td>2015</td>
+  <td>理工書</td>
+</tr>
+<tr>
+  <td>√中学生（１）</td>
+  <td>さくやついたち</td>
+  <td>2012</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>歴史比較言語学入門</td>
+  <td>下宮忠雄</td>
+  <td>1999</td>
+  <td>言語学書</td>
+</tr>
+<tr>
+  <td>論理と集合から始める数学の基礎</td>
+  <td>嘉田勝</td>
+  <td>2008</td>
+  <td>数学書</td>
+</tr>
+<tr>
+  <td>私に天使が舞い降りた！（１３）</td>
+  <td>椋木ななつ</td>
+  <td>2023</td>
+  <td>漫画</td>
+</tr>
+<tr>
+  <td>私に天使が舞い降りた！（１６）</td>
+  <td>椋木ななつ</td>
+  <td>2025</td>
+  <td>漫画</td>
+</tr>
+"""
+
+soup = BeautifulSoup(html, "html.parser")
+
+result = []
+for i, tr in enumerate(soup.find_all("tr"), start=1):
+    tds = [td.get_text(strip=True) for td in tr.find_all("td")]
+    if len(tds) == 4:
+        result.append({
+            "id": i,
+            "title": tds[0],
+            "author": tds[1],
+            "year": tds[2],
+            "type": tds[3]
+        })
+
+print(f"{result}".replace("}, ", "},\n"))

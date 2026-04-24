@@ -2,6 +2,7 @@
 import Header from '~/components/Header.vue';
 import Footer from '~/components/Footer.vue';
 import Section from '~/components/Section.vue';
+import SubSection from '~/components/SubSection.vue';
 </script>
 
 <template>
