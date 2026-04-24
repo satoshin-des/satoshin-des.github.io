@@ -9,10 +9,22 @@ const backgroundColor = ref('black');
 const txtColor = ref('white');
 
 const columns = [
-    { label: "タイトル", field: "title" },
+    {
+        label: "タイトル",
+        field: "title",
+        filterOptions: {
+            enabled: true,
+        }
+    },
     { label: "著者", field: "author" },
     { label: "出版年", field: "year" },
-    { label: "ジャンル", field: "type" },
+    {
+        label: "ジャンル",
+        field: "type",
+        filterOptions: {
+            enabled: true,
+        }
+    },
 ]
 
 const rows = [
@@ -208,7 +220,7 @@ const rows = [
         <br>※特に数学書や理工書，技術書などの中には読了していない本が多くあります．
     </p>
     <div>
-        <VueGoodTable :columns="columns" :rows="rows" theme="nocturnal"/>
+        <VueGoodTable :columns="columns" :rows="rows" theme="nocturnal" />
     </div>
     <Footer />
 </template>
