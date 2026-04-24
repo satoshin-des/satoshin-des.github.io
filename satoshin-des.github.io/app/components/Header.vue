@@ -1,15 +1,14 @@
 <template>
     <header>
-        <NuxtLink to="/"><img src="/satoshin_profile.jpg" alt="さとしんでぇす" width="50"></NuxtLink>
-        <NuxtLink to="/portfolio">ポートフォリオ</NuxtLink>
-        <NuxtLink to="/program">プログラミングのこと</NuxtLink>
-        <NuxtLink to="/music">音楽のこと</NuxtLink>
-        <NuxtLink to="/book">読書のこと</NuxtLink>
-        <NuxtLink to="/other_home">その他色々</NuxtLink>
-        <!--<NuxtLink to="~/math">数学のこと</NuxtLink>
-        <NuxtLink to="~/music">音楽のこと</NuxtLink>
-        <NuxtLink to="~/program">プログラミングのこと</NuxtLink>
-        
+        <a href="/"><img src="/satoshin_profile.jpg" alt="さとしんでぇす" width="50"></a>
+        <a href="/portfolio">ポートフォリオ</a>
+        <a href="/program">プログラミングのこと</a>
+        <a href="/music">音楽のこと</a>
+        <a href="/book">読書のこと</a>
+        <a href="/other_home">その他色々</a>
+        <!--<a to="~/math">数学のこと</a>
+        <a to="~/music">音楽のこと</a>
+        <a to="~/program">プログラミングのこと</a>        
         -->
     </header>
 </template>

@@ -61,7 +61,7 @@ footer {
 }
 
 /* リンクの動き */
-header NuxtLink {
+header a {
   color: var(--text-color);
   text-decoration: none;
   font-size: 0.9rem;
@@ -72,7 +72,7 @@ header NuxtLink {
   /* 滑らかな動き */
 }
 
-header NuxtLink:hover {
+header a:hover {
   color: var(--accent-color);
   transform: translateY(-3px);
   /* 少し上に浮かせる */
@@ -80,7 +80,7 @@ header NuxtLink:hover {
 }
 
 /* リンクの下線の装飾 */
-header NuxtLink::after {
+header a::after {
   content: '';
   position: absolute;
   width: 0;
@@ -91,19 +91,19 @@ header NuxtLink::after {
   transition: width 0.3s ease;
 }
 
-header NuxtLink:hover::after {
+header a:hover::after {
   width: 100%;
 }
 
 /* プロフィール画像の動き */
-header NuxtLink img {
+header a img {
   border-radius: 50%;
   border: 2px solid var(--accent-color);
   transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
   vertical-align: middle;
 }
 
-header NuxtLink:hover img {
+header a:hover img {
   transform: scale(1.15) rotate(10deg);
   box-shadow: 0 0 20px var(--accent-color);
   border-color: #fff;
