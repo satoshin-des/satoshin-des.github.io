@@ -6,8 +6,20 @@ import Header from '~/components/Header.vue';
 import Footer from '~/components/Footer.vue';
 
 const columns = [
-    { label: "タイトル", field: "title" },
-    { label: "原作", field: "author" },
+    {
+        label: "タイトル",
+        field: "title",
+        filterOptions: {
+            enabled: true,
+        }
+    },
+    {
+        label: "著者",
+        field: "author",
+        filterOptions: {
+            enabled: true,
+        }
+    },
     { label: "出版年", field: "year" },
     { label: "出版社", field: "company" },
 ];

@@ -10,7 +10,13 @@ import SubSection from '~/components/SubSection.vue';
 const columns_lang = [
     { label: '言語', field: 'name' },
     { label: 'デビュー年', field: 'year', type: 'number' },
-    { label: '使用場面', field: 'scene' },
+    {
+        label: '使用場面',
+        field: 'scene',
+        filterOptions: {
+            enabled: true,
+        }
+    },
     { label: '使いやすさ', field: 'ease' },
 ];
 const rows_lang = [
@@ -33,8 +39,20 @@ const rows_lang = [
 const columns_lib = [
     { label: 'ライブラリ', field: 'name' },
     { label: 'デビュー年', field: 'year', type: 'number' },
-    { label: '言語', field: 'lang' },
-    { label: '使用場面', field: 'scene' },
+    {
+        label: '言語',
+        field: 'lang',
+        filterOptions: {
+            enabled: true,
+        }
+    },
+    {
+        label: '使用場面',
+        field: 'scene',
+        filterOptions: {
+            enabled: true,
+        }
+    },
     { label: '使いやすさ', field: 'ease' },
 ];
 const rows_lib = [
