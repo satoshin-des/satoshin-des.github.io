@@ -9,7 +9,7 @@ import Footer from '~/components/Footer.vue';
         <li><a href="/others/extension.html">お世話になっている拡張子さん</a></li>
         <li><a href="/other/anime">履修済みアニメ</a></li>
         <li><a href="/others/games.html">プレイ済みゲーム</a></li>
-        <li><a href="/others/manga.html">履修済み漫画</a></li>
+        <li><a href="/other/manga">履修済み漫画</a></li>
     </ul>
     <Footer />
 </template>
