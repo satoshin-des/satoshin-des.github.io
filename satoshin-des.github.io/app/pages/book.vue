@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-
 import { VueGoodTable } from 'vue-good-table-next';
 import 'vue-good-table-next/dist/vue-good-table-next.css';
 
@@ -209,8 +207,25 @@ const rows = [
         <br>取り敢えず一覧表みたいなものを作りたいですが，そのうち簡単な感想も載せるかも
         <br>※特に数学書や理工書，技術書などの中には読了していない本が多くあります．
     </p>
-    <div :style="{ backgroundColor: backgroundColor, color: txtColor }">
+    <div>
         <VueGoodTable :columns="columns" :rows="rows" />
     </div>
     <Footer />
 </template>
+
+<style lang="css">
+.vgt-table {
+    background-color: black !important;
+    color: white !important;
+}
+
+.vgt-table th {
+    background-color: black !important;
+    color: white !important;
+}
+
+.vgt-table td {
+    background-color: black !important;
+    color: white !important;
+}
+</style>
