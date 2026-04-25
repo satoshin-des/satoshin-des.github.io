@@ -1,29 +1,8 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-
-import { VueGoodTable } from 'vue-good-table-next';
-import 'vue-good-table-next/dist/vue-good-table-next.css';
-
 import Header from '~/components/Header.vue';
 import Footer from '~/components/Footer.vue';
 import Section from '~/components/Section.vue';
 import SubSection from '~/components/SubSection.vue';
-
-const columns = ref(
-    [
-        { label: "ロゴ", field: "img" },
-        { label: "名前", field: "name" }
-    ]
-);
-const prog_lang_skills = ref(
-    [
-        {
-            id: 1,
-            img: "<img src=\"https://upload.wikimedia.org/wikipedia/commons/4/4b/Bash_Logo_Colored.svg\" width=\"55\">",
-            name: "Bash"
-        }
-    ]
-);
 </script>
 
 <template>
@@ -68,9 +47,6 @@ const prog_lang_skills = ref(
 
     <Section>Skills</Section>
     <SubSection>プログラミング言語</SubSection>
-    <div>
-        <VueGoodTable :columns="columns" :rows="prog_lang_skills" theme="nocturnal" />
-    </div>
     <div class="scroll-container">
         <table border="1" style="text-align: left; border-collapse: collapse; border-color: white;">
             <tr>
