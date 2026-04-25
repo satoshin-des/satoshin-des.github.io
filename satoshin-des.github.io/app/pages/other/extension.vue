@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
+import { VueGoodTable } from 'vue-good-table-next';
+import 'vue-good-table-next/dist/vue-good-table-next.css';
+
+import Header from '~/components/Header.vue';
+import Footer from '~/components/Footer.vue';
+
 const columns = ref(
     [
         {
