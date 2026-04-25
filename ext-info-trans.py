@@ -1,0 +1,626 @@
+from bs4 import BeautifulSoup
+
+html = """
+<tr>
+  <td>aac</td>
+  <td>advanced audio coding</td>
+  <td>音楽</td>
+  <td>♡♡♡</td>
+</tr>
+<tr>
+  <td>ani</td>
+  <td>Windows animated cursor</td>
+  <td>カーソル</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>apk</td>
+  <td>Android application package</td>
+  <td>色々</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>aux</td>
+  <td></td>
+  <td>TeX</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>bbl</td>
+  <td></td>
+  <td>TeX</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>bmp</td>
+  <td>Windows bitmap</td>
+  <td>画像</td>
+  <td>♡♡♡</td>
+</tr>
+<tr>
+  <td>avi</td>
+  <td>audio video interleave</td>
+  <td>動画</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>aup</td>
+  <td>AviUtl project</td>
+  <td>動画編集</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>bat</td>
+  <td>batch</td>
+  <td>色々</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>bib</td>
+  <td>bibliography</td>
+  <td>TeX</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>cfg</td>
+  <td>config</td>
+  <td>コンフィグ</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>cpp</td>
+  <td>c plus plus</td>
+  <td>C++</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>cqo</td>
+  <td>card quest offline</td>
+  <td>東方カードクエストオフライン</td>
+  <td>♡♡♡</td>
+</tr>
+<tr>
+  <td>cs</td>
+  <td>C sharp</td>
+  <td>C#</td>
+  <td>♡♡♡</td>
+</tr>
+<tr>
+  <td>css</td>
+  <td>cascading style sheet</td>
+  <td>ホームページ作成</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>csv</td>
+  <td>comma-separated values</td>
+  <td>色々</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>cur</td>
+  <td>cursor</td>
+  <td>カーソル</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>dat</td>
+  <td>data</td>
+  <td>色々</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>data</td>
+  <td></td>
+  <td>色々</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>dll</td>
+  <td>dynamic link library</td>
+  <td>色々</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>dms</td>
+  <td></td>
+  <td>Domino</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>doc</td>
+  <td>document</td>
+  <td>文書</td>
+  <td>♡</td>
+</tr>
+<tr>
+  <td>docx</td>
+  <td></td>
+  <td>文書</td>
+  <td>♡</td>
+</tr>
+<tr>
+  <td>dvi</td>
+  <td>device-independent file format</td>
+  <td>TeX</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>emm</td>
+  <td></td>
+  <td>MMD</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>eps</td>
+  <td>encapsulated PostScript</td>
+  <td>画像</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>exe</td>
+  <td>executable</td>
+  <td>色々</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>fx</td>
+  <td></td>
+  <td>MMD</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>gif</td>
+  <td>graphics interchange format</td>
+  <td>画像・アニメーション</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>go</td>
+  <td></td>
+  <td>Go</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>gz</td>
+  <td>GNU zip</td>
+  <td>圧縮</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>h</td>
+  <td>header</td>
+  <td>C言語・C++</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>hpp</td>
+  <td></td>
+  <td>C++</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>hsp</td>
+  <td>hot soup processor</td>
+  <td>HSP</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>html</td>
+  <td>hypertext markup language</td>
+  <td>HTML</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>ico</td>
+  <td>icon</td>
+  <td>アイコン</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>ini</td>
+  <td>initialization</td>
+  <td>色々</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>ipynb</td>
+  <td>interactive Python notebook</td>
+  <td>Jupyter</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>java</td>
+  <td></td>
+  <td>Java</td>
+  <td>♡♡♡</td>
+</tr>
+<tr>
+  <td>jfif</td>
+  <td>JPEG file interchange format</td>
+  <td>画像</td>
+  <td>♡♡♡</td>
+</tr>
+<tr>
+  <td>jpeg</td>
+  <td>joint photographic experts group</td>
+  <td>画像</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>jpg</td>
+  <td>joint photographic experts group</td>
+  <td>画像</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>js</td>
+  <td>JavaScript</td>
+  <td>JavaScript</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>json</td>
+  <td>JavaScript object notation</td>
+  <td>色々</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>kml</td>
+  <td>keyhole markup language</td>
+  <td>地図</td>
+  <td>♡♡♡</td>
+</tr>
+<tr>
+  <td>lnk</td>
+  <td>link</td>
+  <td>ショートカット</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>lzh</td>
+  <td></td>
+  <td>圧縮</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>m3u</td>
+  <td>MP3 URL</td>
+  <td>音楽</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>mac</td>
+  <td></td>
+  <td>Maxima</td>
+  <td>♡♡♡</td>
+</tr>
+<tr>
+  <td>md</td>
+  <td>Markdown</td>
+  <td>色々</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>mid</td>
+  <td>musical instrument digital interface</td>
+  <td>音楽</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>mmd</td>
+  <td>Mermaid</td>
+  <td>フローチャート等</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>mmd</td>
+  <td>MikuMikuDance</td>
+  <td>MMD</td>
+  <td>♡♡♡</td>
+</tr>
+<tr>
+  <td>mov</td>
+  <td>movie</td>
+  <td>動画</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>msi</td>
+  <td>Microsoft Windows installer</td>
+  <td>インストール等</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>o</td>
+  <td>object</td>
+  <td>色々</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>ogg</td>
+  <td></td>
+  <td>音楽</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>otf</td>
+  <td>OpenType font</td>
+  <td>フォント</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>out</td>
+  <td></td>
+  <td>色々</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>pdb</td>
+  <td>program database</td>
+  <td>色々</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>pdf</td>
+  <td>portable document format</td>
+  <td>文書</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>pmd</td>
+  <td></td>
+  <td>MMD</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>pmm</td>
+  <td></td>
+  <td>MMD</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>pmx</td>
+  <td></td>
+  <td>MMD</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>png</td>
+  <td>portable network graphics</td>
+  <td>画像</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>pptm</td>
+  <td>PowerPoint macro-enabled presentation</td>
+  <td>プレゼン</td>
+  <td>♡</td>
+</tr>
+<tr>
+  <td>pptx</td>
+  <td>PowerPoint open XML presentation</td>
+  <td>プレゼン</td>
+  <td>♡</td>
+</tr>
+<tr>
+  <td>psd</td>
+  <td>PhotoShop document</td>
+  <td>画像</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+<td>pxd</td>
+<td></td>
+<td>Cython</td>
+<td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>py</td>
+  <td>Python</td>
+  <td>Python</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>pyx</td>
+  <td></td>
+  <td>Cython</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>rar</td>
+  <td>Roshal archive</td>
+  <td>圧縮</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>ris</td>
+  <td>research information systems</td>
+  <td>文献探し</td>
+  <td>♡♡</td>
+</tr>
+<tr>
+  <td>rpy</td>
+  <td>replay</td>
+  <td>東方</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>rr</td>
+  <td>Risa/Asir</td>
+  <td>Risa/Asir</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>rs</td>
+  <td>resource</td>
+  <td>リソース</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>sage</td>
+  <td>system for algebra and geometry experimentation</td>
+  <td>Sage</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>sagews</td>
+  <td>Sage worksheet</td>
+  <td>Sage</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>sf2</td>
+  <td>SoundFont 2</td>
+  <td>作曲</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>so</td>
+  <td>shared object</td>
+  <td>色々</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>sty</td>
+  <td>style</td>
+  <td>TeX</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>svg</td>
+  <td>scalable vector graphics</td>
+  <td>画像</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+<td>syso</td>
+<td></td>
+<td>Go言語</td>
+<td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>tar</td>
+  <td>tape archives</td>
+  <td>圧縮</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>tex</td>
+  <td>τέχνη</td>
+  <td>文書</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>tiff</td>
+  <td>tagged image file format</td>
+  <td>画像</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>tja</td>
+  <td></td>
+  <td>太鼓さん次郎</td>
+  <td>♡♡♡</td>
+</tr>
+<tr>
+  <td>ttf</td>
+  <td>TrueType font</td>
+  <td>フォント</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>txt</td>
+  <td>text</td>
+  <td>文書</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>ust</td>
+  <td>UTAU sequence text</td>
+  <td>UTAU</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>vcf</td>
+  <td>virtual contact file</td>
+  <td>連絡先</td>
+  <td>♡♡♡</td>
+</tr>
+<tr>
+  <td>vmd</td>
+  <td></td>
+  <td>MMD</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>vpd</td>
+  <td></td>
+  <td>MMD</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>vrm</td>
+  <td>virtual reality model</td>
+  <td>vroid</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>vvproj</td>
+  <td>VOICEVOX project</td>
+  <td>VOICEVOX</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>wasm</td>
+  <td>WebAssembly</td>
+  <td>webアプリ</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>wav</td>
+  <td>RIFF waveform audio format</td>
+  <td>音楽</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+<tr>
+  <td>webp</td>
+  <td>web picture</td>
+  <td>画像</td>
+  <td>♡♡♡♡</td>
+</tr>
+<tr>
+  <td>wxm</td>
+  <td>wxMaxima</td>
+  <td>Maxima</td>
+  <td>♡♡♡</td>
+</tr>
+<tr>
+  <td>x</td>
+  <td></td>
+  <td>MMD</td>
+  <td>♡♡♡</td>
+</tr>
+<tr>
+  <td>zip</td>
+  <td></td>
+  <td>圧縮</td>
+  <td>♡♡♡♡♡</td>
+</tr>
+"""
+
+soup = BeautifulSoup(html, "html.parser")
+
+result = []
+for i, tr in enumerate(soup.find_all("tr"), start=1):
+  tds = [td.get_text(strip=True) for td in tr.find_all("td")]
+  if len(tds) == 4:
+    result.append({
+"id": i,
+"name": tds[0],
+"abbr": tds[1],
+"how-to-use": tds[2],
+"fav": tds[3]
+  })
+
+print(f"{result}".replace("}, ", "},\n"))

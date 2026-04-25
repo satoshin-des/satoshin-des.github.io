@@ -6,7 +6,7 @@ import Footer from '~/components/Footer.vue';
 <template>
     <Header />
     <ul>
-        <li><a href="/others/extension.html">お世話になっている拡張子さん</a></li>
+        <li><a href="/other/extension">お世話になっている拡張子さん</a></li>
         <li><a href="/other/anime">履修済みアニメ</a></li>
         <li><a href="/other/game">プレイ済みゲーム</a></li>
         <li><a href="/other/manga">履修済み漫画</a></li>
