@@ -47,41 +47,43 @@ import SubSection from '~/components/SubSection.vue';
 
     <Section>Skills</Section>
     <SubSection>プログラミング言語</SubSection>
-    <div>
-        <v-container>
-            <v-row>
-                <v-col cols="2">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Bash_Logo_Colored.svg" width="55">
-                    <br>
-                    Bash
-                </v-col>
-                <v-col cols="2">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg"
-                        width="55">
-                    <br>
-                    C
-                </v-col>
-                <v-col cols="2">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg"
-                        width="55">
-                    <br>
-                    C++
-                </v-col>
-                <v-col cols="2">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg"
-                        width="55">
-                    <br>
-                    C#
-                </v-col>
-                <v-col cols="2">
-                    <img src="https://www.svgrepo.com/show/398338/smiling-face-with-open-mouth-and-smiling-eyes.svg"
-                        width="55">
-                    <br>
-                    emojin
-                </v-col>
-            </v-row>
-        </v-container>
-    </div>
+    <v-app>
+        <div>
+            <v-container>
+                <v-row justify="center" class="text-center">
+                    <v-col cols="auto">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Bash_Logo_Colored.svg" width="55">
+                        <br>
+                        Bash
+                    </v-col>
+                    <v-col cols="auto">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg"
+                            width="55">
+                        <br>
+                        C
+                    </v-col>
+                    <v-col cols="auto">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg"
+                            width="55">
+                        <br>
+                        C++
+                    </v-col>
+                    <v-col cols="auto">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg"
+                            width="55">
+                        <br>
+                        C#
+                    </v-col>
+                    <v-col cols="auto">
+                        <img src="https://www.svgrepo.com/show/398338/smiling-face-with-open-mouth-and-smiling-eyes.svg"
+                            width="55">
+                        <br>
+                        emojin
+                    </v-col>
+                </v-row>
+            </v-container>
+        </div>
+    </v-app>
     <div class="scroll-container">
         <table border="1" style="text-align: left; border-collapse: collapse; border-color: white;">
             <tr>
