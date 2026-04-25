@@ -6,541 +6,555 @@ import SubSection from '~/components/SubSection.vue';
 </script>
 
 <template>
-    <Header />
-    <div style="text-align: center; margin-top: 40px;">
-        <img src="http://www5.kannet.ne.jp/~counter/count.cgi?name=satoshin02&type=24&width=9">
-    </div>
-    <p>ここにはさとしんのポートフォリオが置いてあります．興味のあるかたは見ていってください．</p>
-    <Section>About Me</Section>
-    <p>
-        埼玉県出身の大学院生．
-        専攻は数学で，学部時代ゼミで格子の基礎を学び，格子アルゴリズムやその開発に興味を持ったため，修士課程，そして博士課程にすすみ現在D1．
-    </p>
-    <p>
-        修士では，M1時代に格子を用いた素因数分解法の実装実験を行い，90ビット合成数の素因数分解に成功し（このアルゴリズムを用いた素因数分解では当時の世界記録），指数時間計算量の振る舞いをすることを実験的に初めて示しました．
-    </p>
-    <p>
-        M2時代に，新しい停止性の保証された格子基底簡約アルゴリズム<b>PotBKZ</b>を開発しました．
-    </p>
-    <p>
-        学部時代から修士にかけて，純粋数学やそれをプログラミングとして実装すること，そして自分の研究成果を学会や会議で発表することなど様々な経験をしてきました．
-    </p>
-
-    <SubSection>発表学会・会議</SubSection>
-    <ul>
-        <li><b>SCIS2024</b><br>論文題目『近似最近ベクトル探索と埋め込み法を用いた格子による素因数分解法の実装報告』 @長崎</li>
-        <li><b>CREST WS</b><br>『近似最近ベクトル探索と埋め込み法を用いた格子による素因数分解法の実装報告』 @つくば</li>
-        <li><b>IWSEC2024</b><br>論文題目『Experimental Analysis of Integer Factorization Methods Using Lattices』 @京都</li>
-        <li><b>SCIS2025</b><br>論文題目『自己双対型PotBKZ基底簡約の提案とBKZとの比較』 ＠北九州</li>
-    </ul>
-
-    <SubSection>受賞歴</SubSection>
-    <ul>
-        <li><b><a
-                    href="https://science.rikkyo.ac.jp/news/2023/a3o1t3000000101r.html">理学部創立30周年記念優秀論文賞</a></b><br>2022年，論文題目『正の実数の与えられた正整数番目の小数点数を近似的に求める方法につい
-            て━小数点数の一般化を通して━』
-        </li>
-        <li><b><a
-                    href="https://hsp.tv/contest2024/cntst_fresult.html#2446">HSPプログラムコンテスト2024　学生賞</a></b><br>2024年，作品名『こんな弾幕避けられる筈がない』
-        </li>
-    </ul>
-
-    <Section>Skills</Section>
-    <SubSection>プログラミング言語</SubSection>
     <v-app>
-        <div>
-            <v-container>
-                <v-row justify="center" class="text-center">
-                    <v-col cols="auto">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Bash_Logo_Colored.svg" width="55">
-                        <br>
-                        Bash
-                    </v-col>
-                    <v-col cols="auto">
-                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg"
-                            width="55">
-                        <br>
-                        C
-                    </v-col>
-                    <v-col cols="auto">
-                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg"
-                            width="55">
-                        <br>
-                        C++
-                    </v-col>
-                    <v-col cols="auto">
-                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg"
-                            width="55">
-                        <br>
-                        C#
-                    </v-col>
-                    <v-col cols="auto">
-                        <img src="https://www.svgrepo.com/show/398338/smiling-face-with-open-mouth-and-smiling-eyes.svg"
-                            width="55">
-                        <br>
-                        emojin
-                    </v-col>
-                </v-row>
-            </v-container>
-        </div>
+        <Header />
+        <v-main>
+            <div style="text-align: center; margin-top: 40px;">
+                <img src="http://www5.kannet.ne.jp/~counter/count.cgi?name=satoshin02&type=24&width=9">
+            </div>
+            <p>ここにはさとしんのポートフォリオが置いてあります．興味のあるかたは見ていってください．</p>
+            <Section>About Me</Section>
+            <p>
+                埼玉県出身の大学院生．
+                専攻は数学で，学部時代ゼミで格子の基礎を学び，格子アルゴリズムやその開発に興味を持ったため，修士課程，そして博士課程にすすみ現在D1．
+            </p>
+            <p>
+                修士では，M1時代に格子を用いた素因数分解法の実装実験を行い，90ビット合成数の素因数分解に成功し（このアルゴリズムを用いた素因数分解では当時の世界記録），指数時間計算量の振る舞いをすることを実験的に初めて示しました．
+            </p>
+            <p>
+                M2時代に，新しい停止性の保証された格子基底簡約アルゴリズム<b>PotBKZ</b>を開発しました．
+            </p>
+            <p>
+                学部時代から修士にかけて，純粋数学やそれをプログラミングとして実装すること，そして自分の研究成果を学会や会議で発表することなど様々な経験をしてきました．
+            </p>
+
+            <SubSection>発表学会・会議</SubSection>
+            <ul>
+                <li><b>SCIS2024</b><br>論文題目『近似最近ベクトル探索と埋め込み法を用いた格子による素因数分解法の実装報告』 @長崎</li>
+                <li><b>CREST WS</b><br>『近似最近ベクトル探索と埋め込み法を用いた格子による素因数分解法の実装報告』 @つくば</li>
+                <li><b>IWSEC2024</b><br>論文題目『Experimental Analysis of Integer Factorization Methods Using Lattices』 @京都
+                </li>
+                <li><b>SCIS2025</b><br>論文題目『自己双対型PotBKZ基底簡約の提案とBKZとの比較』 ＠北九州</li>
+            </ul>
+
+            <SubSection>受賞歴</SubSection>
+            <ul>
+                <li><b><a
+                            href="https://science.rikkyo.ac.jp/news/2023/a3o1t3000000101r.html">理学部創立30周年記念優秀論文賞</a></b><br>2022年，論文題目『正の実数の与えられた正整数番目の小数点数を近似的に求める方法につい
+                    て━小数点数の一般化を通して━』
+                </li>
+                <li><b><a
+                            href="https://hsp.tv/contest2024/cntst_fresult.html#2446">HSPプログラムコンテスト2024　学生賞</a></b><br>2024年，作品名『こんな弾幕避けられる筈がない』
+                </li>
+            </ul>
+
+            <Section>Skills</Section>
+            <SubSection>プログラミング言語</SubSection>
+            <div>
+                <v-container>
+                    <v-row justify="center" class="text-center">
+                        <v-col cols="auto">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Bash_Logo_Colored.svg"
+                                width="55">
+                            <br>
+                            Bash
+                        </v-col>
+                        <v-col cols="auto">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg"
+                                width="55">
+                            <br>
+                            C
+                        </v-col>
+                        <v-col cols="auto">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg"
+                                width="55">
+                            <br>
+                            C++
+                        </v-col>
+                        <v-col cols="auto">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg"
+                                width="55">
+                            <br>
+                            C#
+                        </v-col>
+                        <v-col cols="auto">
+                            <img src="https://www.svgrepo.com/show/398338/smiling-face-with-open-mouth-and-smiling-eyes.svg"
+                                width="55">
+                            <br>
+                            emojin
+                        </v-col>
+                    </v-row>
+                </v-container>
+            </div>
+            <div class="scroll-container">
+                <table border="1" style="text-align: left; border-collapse: collapse; border-color: white;">
+                    <tr>
+                        <th>Bash</th>
+                        <th>C</th>
+                        <th>C++</th>
+                        <th>C#</th>
+                        <th>emojin</th>
+                    </tr>
+                    <tr>
+                        <th><img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Bash_Logo_Colored.svg"
+                                width="55" class="hover-float-glow"></th>
+                        <th><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg"
+                                width="55" class="hover-float-glow">
+                        </th>
+                        <th><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg"
+                                width="55" class="hover-float-glow"></th>
+                        <th><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg"
+                                width="55" class="hover-float-glow"></th>
+                        <th>
+                            <img src="https://www.svgrepo.com/show/398338/smiling-face-with-open-mouth-and-smiling-eyes.svg"
+                                width="55" class="hover-float-glow">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>Go</th>
+                        <th>HSP3</th>
+                        <th>JavaScript</th>
+                        <th>Maxima</th>
+                        <th>Python</th>
+                    </tr>
+                    <tr>
+                        <th><img src="https://cdn.worldvectorlogo.com/logos/golang-1.svg" width="55"
+                                class="hover-float-glow">
+                        </th>
+                        <th><img src="https://pbs.twimg.com/profile_images/1009315103181684742/n5dSFk6t_400x400.jpg"
+                                width="55" class="hover-float-glow">
+                        </th>
+                        <th>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
+                                width="55" class="hover-float-glow">
+                        </th>
+                        <th><img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Maxima-new.svg" width="55"
+                                class="hover-float-glow"></th>
+                        <th><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+                                width="55" class="hover-float-glow"></th>
+                    </tr>
+                    <tr>
+                        <th>Risa/Asir</th>
+                        <th>SageMath</th>
+                    </tr>
+                    <tr>
+                        <th><img src="http://www.math.kobe-u.ac.jp/Asir/hopo_std.jpg" width="55"
+                                class="hover-float-glow">
+                        </th>
+                        <th><img src="https://avatars.githubusercontent.com/u/982721?s=200&v=4" width="55"
+                                class="hover-float-glow">
+                        </th>
+                    </tr>
+                </table>
+            </div>
+
+            <SubSection>マークアップ言語</SubSection>
+            <div class="scroll-container">
+                <table border="1" style="text-align: left; border-collapse: collapse; border-color: white;">
+                    <tr>
+                        <th>CSS</th>
+                        <th>HTML</th>
+                        <th>LaTeX</th>
+                        <th>Markdown</th>
+                        <th>WML</th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <img src="https://cdn.worldvectorlogo.com/logos/css-3.svg" width="55"
+                                class="hover-float-glow">
+                        </th>
+                        <th>
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
+                                width="55" class="hover-float-glow">
+                        </th>
+                        <th>
+                            <img src="https://cdn.worldvectorlogo.com/logos/latex.svg" width="55"
+                                class="hover-float-glow">
+                        </th>
+                        <th>
+                            <img src="https://www.svgrepo.com/show/349446/markdown.svg" width="55"
+                                class="hover-float-glow">
+                        </th>
+                        <th>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/WML_logo_Wiki_Markup_Language_logo.svg"
+                                width="55" class="hover-float-glow">
+                        </th>
+                    </tr>
+                </table>
+            </div>
+
+            <SubSection>ライブラリなど</SubSection>
+            <div class="scroll-container">
+                <table border="1" style="text-align: left; border-collapse: collapse; border-color: white;">
+                    <tr>
+                        <th>DXライブラリ</th>
+                        <th>Eigen</th>
+                        <th>fplll</th>
+                        <th>IPython</th>
+                        <th>Matplotlib</th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <img src="https://dxlib.xsrv.jp/Image/DxLogo.jpg" width="55" class="hover-float-glow">
+                        </th>
+                        <th>
+                            <img src="https://livedoor.blogimg.jp/tek_nishi/imgs/9/f/9ff5f91d.png" width="55"
+                                class="hover-float-glow">
+                        </th>
+                        <th></th>
+                        <th>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/IPy-logo.png" width="55"
+                                class="hover-float-glow">
+                        </th>
+                        <th>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Created_with_Matplotlib-logo.svg"
+                                width="55" class="hover-float-glow">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>NTL</th>
+                        <th>Numpy</th>
+                        <th>pandas</th>
+                        <th>plotly</th>
+                        <th>scipy</th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th>
+                            <img src="https://cdn.worldvectorlogo.com/logos/numpy-1.svg" width="55"
+                                class="hover-float-glow">
+                        </th>
+                        <th>
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg"
+                                width="55" class="hover-float-glow">
+                        </th>
+                        <th>
+                            <img src="https://avatars.githubusercontent.com/u/5997976?s=200&v=4" width="55"
+                                class="hover-float-glow">
+                        </th>
+                        <th>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/SCIPY_2.svg" width="55"
+                                class="hover-float-glow">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th colspan="2">pygame</th>
+                        <th>Siv3D</th>
+                        <th>sympy</th>
+                    </tr>
+                    <tr>
+                        <th colspan="2"><img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Pygame_logo.svg"
+                                width="110" class="hover-float-glow">
+                        </th>
+                        <th>
+                            <img src="https://i.gyazo.com/b0c2bba5abd0a845bab4166608b6a8cf.png" width="55"
+                                class="hover-float-glow">
+                        </th>
+                        <th>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Sympy_logo.svg" width="55"
+                                class="hover-float-glow">
+                        </th>
+                    </tr>
+                </table>
+            </div>
+
+            <SubSection>エディター，IDEなど</SubSection>
+            <div class="scroll-container">
+                <table border="1" style="text-align: left; border-collapse: collapse; border-color: white;">
+                    <tr>
+                        <th>Google Colab</th>
+                        <th>Unity</th>
+                        <th>Visual Studio</th>
+                        <th>Visual Studio Code</th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <img src="https://embed.zenn.studio/api/optimize-og-image/26db74eefbf565c20234/https%3A%2F%2Fcolab.research.google.com%2Fimg%2Fcolab_favicon_256px.png"
+                                width="55" class="hover-float-glow">
+                        </th>
+                        <th>
+                            <img src="https://cg-kenkyujo.com/img/category/unity/img_overview_logo2.png" width="55"
+                                class="hover-float-glow">
+                        </th>
+                        <th>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Visual_Studio_Icon_2019.svg"
+                                width="55" class="hover-float-glow">
+                        </th>
+                        <th>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg"
+                                width="55" class="hover-float-glow">
+                        </th>
+                    </tr>
+                </table>
+            </div>
+
+            <SubSection>AI</SubSection>
+            <div class="scroll-container">
+                <table border="1" style="text-align: left; border-collapse: collapse; border-color: white;">
+                    <tr>
+                        <th>ChatGPT Colab</th>
+                        <th>Gemini</th>
+                        <th>Copilot</th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/2048px-ChatGPT_logo.svg.png"
+                                width="55" class="hover-float-glow">
+                        </th>
+                        <th>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Google-gemini-icon.svg"
+                                width="55" class="hover-float-glow">
+                        </th>
+                        <th>
+                            <img src="https://registry.npmmirror.com/@lobehub/icons-static-png/1.75.0/files/dark/copilot-color.png"
+                                width="55" class="hover-float-glow">
+                        </th>
+                    </tr>
+                </table>
+            </div>
+
+            <Section>Works</Section>
+            <SubSection>Research Results</SubSection>
+            <h3><a href="https://github.com/satoshin-des/self-dual-PotBKZ" class="nav-link-item">self-dual PotBKZ</a>
+            </h3>
+            <ul>
+                <li><a href="https://github.com/satoshin-des/self-dual-PotBKZ"><b>ソースコード</b></a></li>
+                <li><b>発表学会等</b></li>
+                <ul>
+                    <li>SCIS2025</li>
+                </ul>
+                <li><a
+                        href="https://github.com/satoshin-des/self-dual-PotBKZ/blob/main/presentation/main.pdf"><b>発表資料</b></a>
+                </li>
+                <li><b>ジャンル</b>：修士研究（格子アルゴリズム）</li>
+                <li><b>概要</b><br>
+                    これは修士研究で開発したプロダクトの一つで，耐量子計算機暗号の一つである<b>格子暗号</b>の解読技術である<b>格子基底簡約アルゴリズム</b>について，新しいアルゴリズムを開発したものになります．
+                    具体的には，格子基底簡約の中でもデファクトスタンダードなアルゴリズムの一つである<b>BKZアルゴリズム</b>は強力なアルゴリズムである一方，停止性が理論的には証明されていません．
+                    そこで，本修士研究では停止性が理論的に保証された新しいBKZの変種である<b>PotBKZ</b>とその変種<b>self-dual
+                        PotBKZ</b>を開発しました（基底に関して定まる<b>potential</b>という量を単調減少させることで停止させるのでPotBKZと名付けました）．
+                </li>
+                <li><b>使用言語</b></li>
+                <ul>
+                    <li class="hover-float-glow">C++</li>
+                    <li class="hover-float-glow">Python3</li>
+                    <li class="hover-float-glow">SageMath</li>
+                </ul>
+                <li><b>使用ツール等</b></li>
+                <ul>
+                    <li class="hover-float-glow">Visual Studio Code</li>
+                    <li class="hover-float-glow">NTL</li>
+                    <li class="hover-float-glow">Eigen</li>
+                    <li class="hover-float-glow">Numpy</li>
+                    <li class="hover-float-glow">pandas</li>
+                    <li class="hover-float-glow">Matplotlib</li>
+                </ul>
+                <li><b>開発期間</b>：約3ヶ月</li>
+                <li><b>担当範囲</b></li>
+                <ul>
+                    <li>理論的な計算</li>
+                    <li>アルゴリズム開発</li>
+                    <li>プログラム</li>
+                    <li>デバッグ</li>
+                    <li>実験</li>
+                    <li>論文執筆</li>
+                </ul>
+                <li><b><a href="https://deepwiki.com/satoshin-des/self-dual-PotBKZ">deepwiki</a></b></li>
+            </ul>
+
+            <SubSection>Libraries</SubSection>
+            <h3><a href="https://github.com/satoshin-des/glal" class="nav-link-item">glal</a></h3>
+            <ul>
+                <li><b>ジャンル</b>：ライブラリ（線形代数）</li>
+                <li><b>使用言語</b></li>
+                <ul>
+                    <li class="hover-float-glow">Go</li>
+                </ul>
+                <li><b>使用ツール</b></li>
+                <ul>
+                    <li class="hover-float-glow">Visual Studio Code</li>
+                </ul>
+                <li><b>開発期間</b>：1ヶ月～（現在も開発中）</li>
+                <li><b>担当範囲</b></li>
+                <ul>
+                    <li>プログラム</li>
+                    <li>デバッグ</li>
+                </ul>
+                <li><a href="https://deepwiki.com/satoshin-des/glal"><b>deepwiki</b></a></li>
+            </ul>
+
+            <h3><a href="https://github.com/satoshin-des/glatl" class="nav-link-item">glatl</a></h3>
+            <ul>
+                <li><b>ジャンル</b>：ライブラリ（格子アルゴリズム）</li>
+                <li><b>使用言語</b></li>
+                <ul>
+                    <li class="hover-float-glow">Go</li>
+                </ul>
+                <li><b>使用ツール</b></li>
+                <ul>
+                    <li class="hover-float-glow">Visual Studio Code</li>
+                </ul>
+                <li><b>開発期間</b>：1ヶ月～（現在も開発中）</li>
+                <li><b>担当範囲</b></li>
+                <ul>
+                    <li>プログラム</li>
+                    <li>デバッグ</li>
+                </ul>
+                <li><b><a href="https://deepwiki.com/satoshin-des/glatl">deepwiki</a></b></li>
+            </ul>
+
+            <SubSection>Extensions</SubSection>
+            <h3><a href="https://github.com/satoshin-des/chromingorou" class="nav-link-item">chromingorou</a></h3>
+            <ul>
+                <li><a href="https://github.com/satoshin-des/chromingorou"><b>ソースコード</b></a></li>
+                <li><b>ジャンル</b>：chrome拡張機能</li>
+                <li><b>概要</b><br>
+                    文末に「んご」を付け加えたり，たまに「こいつはりんごろう」を付け加えてくれたり，更に「りんご」を「山形りんご」に置き換えてくれるchrome拡張機能です．
+                    これは，何かの役に立つものではありませんが，ネットサーフィンや情報収集をする際に，クスっと笑えるような，そんな拡張機能です．
+                </li>
+                <li><b>使用言語</b></li>
+                <ul>
+                    <li class="hover-float-glow">JavaScript</li>
+                </ul>
+                <li><b>使用ツール</b></li>
+                <ul>
+                    <li class="hover-float-glow">Visual Studio Code</li>
+                </ul>
+                <li><b>開発期間</b>：1日</li>
+                <li><b>担当範囲</b></li>
+                <ul>
+                    <li>企画</li>
+                    <li>プログラム</li>
+                    <li>デバッグ</li>
+                    <li>ロゴ作成</li>
+                </ul>
+            </ul>
+
+            <SubSection>Games</SubSection>
+            <h3><a href="https://dev.onionsoft.net/seed/info.ax?id=2446" class="nav-link-item">こんな弾幕避けられる筈がない</a></h3>
+            <ul>
+                <img src="/screen_shots/HSP_2024.png" width="200">
+                <li><b>ジャンル</b>：ゲーム（弾幕・避けゲー）</li>
+                <li><b>概要</b><br>
+                    自分の実力やアイデアがどれほど通用するのか，という腕試し的な意味と，当時HSPという言語があるとしったので，ちょっとHSPでゲームを作ってみようという気持ちで作りました．
+                    <br>
+                    基本的なところはシンプルな弾幕ゲームですが，他と差別化をはかるため弾幕シューティングゲームではなく，1分間弾幕からよけ続けるゲームになっています．
+                    弾幕も色々な所から飛んでくる仕様になっていて，クリアしにくいのもありなかなか飽きさせないつくりになっているかと思います．
+                </li>
+                <li><b>使用言語</b></li>
+                <ul>
+                    <li class="hover-float-glow">HSP3</li>
+                </ul>
+                <li><b>使用ツール</b></li>
+                <ul>
+                    <li class="hover-float-glow">HSP script editor For
+                        Windows
+                        version 3.6</li>
+                    <li class="hover-float-glow">Visual Studio Code</li>
+                </ul>
+                <li><b>開発期間</b>：約2ヶ月</li>
+                <li><b>担当範囲</b></li>
+                <ul>
+                    <li>企画</li>
+                    <li>プログラム</li>
+                    <li>デザイン</li>
+                    <li>デバッグ</li>
+                    <li>作曲・編曲</li>
+                </ul>
+                <li><b>受賞</b></li>
+                <ul>
+                    <li>HSPプログラムコンテスト2024 学生賞</li>
+                </ul>
+                <li><a href="https://deepwiki.com/satoshin-des/UnavoidableDanmaku"><b>deepwiki</b></a></li>
+            </ul>
+
+            <h3><a href="https://drive.google.com/file/d/1P6Ff348pEjCOTLbAKHYggQk1SbTD8qS2/view?usp=sharing"
+                    class="nav-link-item">なしごろうの比合わせゲーム</a>
+            </h3>
+            <ul>
+                <img src="/screen_shots/nashigorou1.png" width="200">
+                <img src="/screen_shots/nashigorou2.png" width="200">
+                <li><a href="https://github.com/satoshin-des/nashigorou"><b>ソースコード</b></a></li>
+                <li><b>使用言語</b></li>
+                <ul>
+                    <li class="hover-float-glow">C++</li>
+                </ul>
+                <li><b>使用ツール等</b></li>
+                <ul>
+                    <li class="hover-float-glow">Visual Studio 2022</li>
+                    <li class="hover-float-glow">DXライブラリ</li>
+                </ul>
+                <li><b>開発期間</b>：約1ヶ月</li>
+                <li><b>担当範囲</b></li>
+                <ul>
+                    <li>企画</li>
+                    <li>プログラム</li>
+                    <li>編曲</li>
+                </ul>
+            </ul>
+
+            <h3><a href="https://unityroom.com/games/ijime_nukko" class="nav-link-item">ねこいじめ</a></h3>
+            <ul>
+                <img src="/screen_shots/necoijime1.png" width="200">
+                <img src="/screen_shots/necoijime2.png" width="200">
+                <li><b>ジャンル</b>：弾幕・当てゲー</li>
+                <li><b>概要</b><br>
+                    本ゲームは，恐らく初めて制作した本格的（？）なゲームで自分が作ってみたいとずっと思い描いていたものを形にしたものです．
+                    <br>
+                    基本的には，こちらも弾幕ゲームですが，シューティングではなくブロック崩しのようにボールを当てるゲームです．
+                    ボスにはHPはなく，当てた分だけスコアが加算され累計スコアを競うゲームです．
+                </li>
+                <li><b>使用言語</b></li>
+                <ul>
+                    <li class="hover-float-glow">C#</li>
+                </ul>
+                <li><b>使用ツール</b></li>
+                <ul>
+                    <li class="hover-float-glow">Unity</li>
+                    <li class="hover-float-glow">Visual Studio</li>
+                </ul>
+                <li><b>開発期間</b>：約2ヶ月</li>
+                <li><b>担当範囲</b></li>
+                <ul>
+                    <li>企画</li>
+                    <li>プログラム</li>
+                    <li>デザイン</li>
+                    <li>イラスト</li>
+                    <li>作曲・編曲</li>
+                </ul>
+                <li><b><a href="https://deepwiki.com/satoshin-des/IJIME_NUKKO">deepwiki</a></b></li>
+            </ul>
+
+            <h3><a href="https://satoshin-des.github.io/games/pinpon/PinponDush.html"
+                    class="nav-link-item">ピンポンダッシュチャレンジ！</a>
+            </h3>
+            <ul>
+                <img src="/screen_shots/pinpondush.png" width="200">
+                <li><b>ジャンル</b>：カジュアルゲーム</li>
+                <li><b>概要</b><br>
+                    本ゲームは，右からひたすら流れてくる複数の家のうち一つだけが留守中の家なので，その家をタップして（ピンポンダッシュ）してピンポンダッシュを成功させようというゲームです．<br>
+                    　手軽に誰でも出来て，ルールも非常に分かりやすいので，誰でも，いつでもプレイできます．
+                </li>
+                <li><b>使用言語</b></li>
+                <ul>
+                    <li class="hover-float-glow">C++</li>
+                </ul>
+                <li><b>使用ツール</b></li>
+                <ul>
+                    <li class="hover-float-glow">Visual Studio 2022</li>
+                    <li class="hover-float-glow">Siv3D</li>
+                    <li class="hover-float-glow">Visual Studio Code</li>
+                </ul>
+                <li><b>開発期間</b>：4日（アプデ予定あり）</li>
+                <li><b>担当範囲</b></li>
+                <ul>
+                    <li>企画</li>
+                    <li>プログラム</li>
+                    <li>作曲・編曲</li>
+                    <li>デバッグ</li>
+                </ul>
+                <li><b><a href="https://deepwiki.com/satoshin-des/PinponDush">deepwiki</a></b></li>
+            </ul>
+        </v-main>
+        <Footer />
     </v-app>
-    <div class="scroll-container">
-        <table border="1" style="text-align: left; border-collapse: collapse; border-color: white;">
-            <tr>
-                <th>Bash</th>
-                <th>C</th>
-                <th>C++</th>
-                <th>C#</th>
-                <th>emojin</th>
-            </tr>
-            <tr>
-                <th><img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Bash_Logo_Colored.svg" width="55"
-                        class="hover-float-glow"></th>
-                <th><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg"
-                        width="55" class="hover-float-glow">
-                </th>
-                <th><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg"
-                        width="55" class="hover-float-glow"></th>
-                <th><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg"
-                        width="55" class="hover-float-glow"></th>
-                <th>
-                    <img src="https://www.svgrepo.com/show/398338/smiling-face-with-open-mouth-and-smiling-eyes.svg"
-                        width="55" class="hover-float-glow">
-                </th>
-            </tr>
-            <tr>
-                <th>Go</th>
-                <th>HSP3</th>
-                <th>JavaScript</th>
-                <th>Maxima</th>
-                <th>Python</th>
-            </tr>
-            <tr>
-                <th><img src="https://cdn.worldvectorlogo.com/logos/golang-1.svg" width="55" class="hover-float-glow">
-                </th>
-                <th><img src="https://pbs.twimg.com/profile_images/1009315103181684742/n5dSFk6t_400x400.jpg" width="55"
-                        class="hover-float-glow">
-                </th>
-                <th>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
-                        width="55" class="hover-float-glow">
-                </th>
-                <th><img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Maxima-new.svg" width="55"
-                        class="hover-float-glow"></th>
-                <th><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
-                        width="55" class="hover-float-glow"></th>
-            </tr>
-            <tr>
-                <th>Risa/Asir</th>
-                <th>SageMath</th>
-            </tr>
-            <tr>
-                <th><img src="http://www.math.kobe-u.ac.jp/Asir/hopo_std.jpg" width="55" class="hover-float-glow"></th>
-                <th><img src="https://avatars.githubusercontent.com/u/982721?s=200&v=4" width="55"
-                        class="hover-float-glow">
-                </th>
-            </tr>
-        </table>
-    </div>
-
-    <SubSection>マークアップ言語</SubSection>
-    <div class="scroll-container">
-        <table border="1" style="text-align: left; border-collapse: collapse; border-color: white;">
-            <tr>
-                <th>CSS</th>
-                <th>HTML</th>
-                <th>LaTeX</th>
-                <th>Markdown</th>
-                <th>WML</th>
-            </tr>
-            <tr>
-                <th>
-                    <img src="https://cdn.worldvectorlogo.com/logos/css-3.svg" width="55" class="hover-float-glow">
-                </th>
-                <th>
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
-                        width="55" class="hover-float-glow">
-                </th>
-                <th>
-                    <img src="https://cdn.worldvectorlogo.com/logos/latex.svg" width="55" class="hover-float-glow">
-                </th>
-                <th>
-                    <img src="https://www.svgrepo.com/show/349446/markdown.svg" width="55" class="hover-float-glow">
-                </th>
-                <th>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/WML_logo_Wiki_Markup_Language_logo.svg"
-                        width="55" class="hover-float-glow">
-                </th>
-            </tr>
-        </table>
-    </div>
-
-    <SubSection>ライブラリなど</SubSection>
-    <div class="scroll-container">
-        <table border="1" style="text-align: left; border-collapse: collapse; border-color: white;">
-            <tr>
-                <th>DXライブラリ</th>
-                <th>Eigen</th>
-                <th>fplll</th>
-                <th>IPython</th>
-                <th>Matplotlib</th>
-            </tr>
-            <tr>
-                <th>
-                    <img src="https://dxlib.xsrv.jp/Image/DxLogo.jpg" width="55" class="hover-float-glow">
-                </th>
-                <th>
-                    <img src="https://livedoor.blogimg.jp/tek_nishi/imgs/9/f/9ff5f91d.png" width="55"
-                        class="hover-float-glow">
-                </th>
-                <th></th>
-                <th>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/IPy-logo.png" width="55"
-                        class="hover-float-glow">
-                </th>
-                <th>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Created_with_Matplotlib-logo.svg"
-                        width="55" class="hover-float-glow">
-                </th>
-            </tr>
-            <tr>
-                <th>NTL</th>
-                <th>Numpy</th>
-                <th>pandas</th>
-                <th>plotly</th>
-                <th>scipy</th>
-            </tr>
-            <tr>
-                <th></th>
-                <th>
-                    <img src="https://cdn.worldvectorlogo.com/logos/numpy-1.svg" width="55" class="hover-float-glow">
-                </th>
-                <th>
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg"
-                        width="55" class="hover-float-glow">
-                </th>
-                <th>
-                    <img src="https://avatars.githubusercontent.com/u/5997976?s=200&v=4" width="55"
-                        class="hover-float-glow">
-                </th>
-                <th>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/SCIPY_2.svg" width="55"
-                        class="hover-float-glow">
-                </th>
-            </tr>
-            <tr>
-                <th colspan="2">pygame</th>
-                <th>Siv3D</th>
-                <th>sympy</th>
-            </tr>
-            <tr>
-                <th colspan="2"><img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Pygame_logo.svg"
-                        width="110" class="hover-float-glow">
-                </th>
-                <th>
-                    <img src="https://i.gyazo.com/b0c2bba5abd0a845bab4166608b6a8cf.png" width="55"
-                        class="hover-float-glow">
-                </th>
-                <th>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Sympy_logo.svg" width="55"
-                        class="hover-float-glow">
-                </th>
-            </tr>
-        </table>
-    </div>
-
-    <SubSection>エディター，IDEなど</SubSection>
-    <div class="scroll-container">
-        <table border="1" style="text-align: left; border-collapse: collapse; border-color: white;">
-            <tr>
-                <th>Google Colab</th>
-                <th>Unity</th>
-                <th>Visual Studio</th>
-                <th>Visual Studio Code</th>
-            </tr>
-            <tr>
-                <th>
-                    <img src="https://embed.zenn.studio/api/optimize-og-image/26db74eefbf565c20234/https%3A%2F%2Fcolab.research.google.com%2Fimg%2Fcolab_favicon_256px.png"
-                        width="55" class="hover-float-glow">
-                </th>
-                <th>
-                    <img src="https://cg-kenkyujo.com/img/category/unity/img_overview_logo2.png" width="55"
-                        class="hover-float-glow">
-                </th>
-                <th>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Visual_Studio_Icon_2019.svg"
-                        width="55" class="hover-float-glow">
-                </th>
-                <th>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg"
-                        width="55" class="hover-float-glow">
-                </th>
-            </tr>
-        </table>
-    </div>
-
-    <SubSection>AI</SubSection>
-    <div class="scroll-container">
-        <table border="1" style="text-align: left; border-collapse: collapse; border-color: white;">
-            <tr>
-                <th>ChatGPT Colab</th>
-                <th>Gemini</th>
-                <th>Copilot</th>
-            </tr>
-            <tr>
-                <th>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/2048px-ChatGPT_logo.svg.png"
-                        width="55" class="hover-float-glow">
-                </th>
-                <th>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Google-gemini-icon.svg" width="55"
-                        class="hover-float-glow">
-                </th>
-                <th>
-                    <img src="https://registry.npmmirror.com/@lobehub/icons-static-png/1.75.0/files/dark/copilot-color.png"
-                        width="55" class="hover-float-glow">
-                </th>
-            </tr>
-        </table>
-    </div>
-
-    <Section>Works</Section>
-    <SubSection>Research Results</SubSection>
-    <h3><a href="https://github.com/satoshin-des/self-dual-PotBKZ" class="nav-link-item">self-dual PotBKZ</a></h3>
-    <ul>
-        <li><a href="https://github.com/satoshin-des/self-dual-PotBKZ"><b>ソースコード</b></a></li>
-        <li><b>発表学会等</b></li>
-        <ul>
-            <li>SCIS2025</li>
-        </ul>
-        <li><a href="https://github.com/satoshin-des/self-dual-PotBKZ/blob/main/presentation/main.pdf"><b>発表資料</b></a>
-        </li>
-        <li><b>ジャンル</b>：修士研究（格子アルゴリズム）</li>
-        <li><b>概要</b><br>
-            これは修士研究で開発したプロダクトの一つで，耐量子計算機暗号の一つである<b>格子暗号</b>の解読技術である<b>格子基底簡約アルゴリズム</b>について，新しいアルゴリズムを開発したものになります．
-            具体的には，格子基底簡約の中でもデファクトスタンダードなアルゴリズムの一つである<b>BKZアルゴリズム</b>は強力なアルゴリズムである一方，停止性が理論的には証明されていません．
-            そこで，本修士研究では停止性が理論的に保証された新しいBKZの変種である<b>PotBKZ</b>とその変種<b>self-dual
-                PotBKZ</b>を開発しました（基底に関して定まる<b>potential</b>という量を単調減少させることで停止させるのでPotBKZと名付けました）．
-        </li>
-        <li><b>使用言語</b></li>
-        <ul>
-            <li class="hover-float-glow">C++</li>
-            <li class="hover-float-glow">Python3</li>
-            <li class="hover-float-glow">SageMath</li>
-        </ul>
-        <li><b>使用ツール等</b></li>
-        <ul>
-            <li class="hover-float-glow">Visual Studio Code</li>
-            <li class="hover-float-glow">NTL</li>
-            <li class="hover-float-glow">Eigen</li>
-            <li class="hover-float-glow">Numpy</li>
-            <li class="hover-float-glow">pandas</li>
-            <li class="hover-float-glow">Matplotlib</li>
-        </ul>
-        <li><b>開発期間</b>：約3ヶ月</li>
-        <li><b>担当範囲</b></li>
-        <ul>
-            <li>理論的な計算</li>
-            <li>アルゴリズム開発</li>
-            <li>プログラム</li>
-            <li>デバッグ</li>
-            <li>実験</li>
-            <li>論文執筆</li>
-        </ul>
-        <li><b><a href="https://deepwiki.com/satoshin-des/self-dual-PotBKZ">deepwiki</a></b></li>
-    </ul>
-
-    <SubSection>Libraries</SubSection>
-    <h3><a href="https://github.com/satoshin-des/glal" class="nav-link-item">glal</a></h3>
-    <ul>
-        <li><b>ジャンル</b>：ライブラリ（線形代数）</li>
-        <li><b>使用言語</b></li>
-        <ul>
-            <li class="hover-float-glow">Go</li>
-        </ul>
-        <li><b>使用ツール</b></li>
-        <ul>
-            <li class="hover-float-glow">Visual Studio Code</li>
-        </ul>
-        <li><b>開発期間</b>：1ヶ月～（現在も開発中）</li>
-        <li><b>担当範囲</b></li>
-        <ul>
-            <li>プログラム</li>
-            <li>デバッグ</li>
-        </ul>
-        <li><a href="https://deepwiki.com/satoshin-des/glal"><b>deepwiki</b></a></li>
-    </ul>
-
-    <h3><a href="https://github.com/satoshin-des/glatl" class="nav-link-item">glatl</a></h3>
-    <ul>
-        <li><b>ジャンル</b>：ライブラリ（格子アルゴリズム）</li>
-        <li><b>使用言語</b></li>
-        <ul>
-            <li class="hover-float-glow">Go</li>
-        </ul>
-        <li><b>使用ツール</b></li>
-        <ul>
-            <li class="hover-float-glow">Visual Studio Code</li>
-        </ul>
-        <li><b>開発期間</b>：1ヶ月～（現在も開発中）</li>
-        <li><b>担当範囲</b></li>
-        <ul>
-            <li>プログラム</li>
-            <li>デバッグ</li>
-        </ul>
-        <li><b><a href="https://deepwiki.com/satoshin-des/glatl">deepwiki</a></b></li>
-    </ul>
-
-    <SubSection>Extensions</SubSection>
-    <h3><a href="https://github.com/satoshin-des/chromingorou" class="nav-link-item">chromingorou</a></h3>
-    <ul>
-        <li><a href="https://github.com/satoshin-des/chromingorou"><b>ソースコード</b></a></li>
-        <li><b>ジャンル</b>：chrome拡張機能</li>
-        <li><b>概要</b><br>
-            文末に「んご」を付け加えたり，たまに「こいつはりんごろう」を付け加えてくれたり，更に「りんご」を「山形りんご」に置き換えてくれるchrome拡張機能です．
-            これは，何かの役に立つものではありませんが，ネットサーフィンや情報収集をする際に，クスっと笑えるような，そんな拡張機能です．
-        </li>
-        <li><b>使用言語</b></li>
-        <ul>
-            <li class="hover-float-glow">JavaScript</li>
-        </ul>
-        <li><b>使用ツール</b></li>
-        <ul>
-            <li class="hover-float-glow">Visual Studio Code</li>
-        </ul>
-        <li><b>開発期間</b>：1日</li>
-        <li><b>担当範囲</b></li>
-        <ul>
-            <li>企画</li>
-            <li>プログラム</li>
-            <li>デバッグ</li>
-            <li>ロゴ作成</li>
-        </ul>
-    </ul>
-
-    <SubSection>Games</SubSection>
-    <h3><a href="https://dev.onionsoft.net/seed/info.ax?id=2446" class="nav-link-item">こんな弾幕避けられる筈がない</a></h3>
-    <ul>
-        <img src="/screen_shots/HSP_2024.png" width="200">
-        <li><b>ジャンル</b>：ゲーム（弾幕・避けゲー）</li>
-        <li><b>概要</b><br>
-            自分の実力やアイデアがどれほど通用するのか，という腕試し的な意味と，当時HSPという言語があるとしったので，ちょっとHSPでゲームを作ってみようという気持ちで作りました．
-            <br>
-            基本的なところはシンプルな弾幕ゲームですが，他と差別化をはかるため弾幕シューティングゲームではなく，1分間弾幕からよけ続けるゲームになっています．
-            弾幕も色々な所から飛んでくる仕様になっていて，クリアしにくいのもありなかなか飽きさせないつくりになっているかと思います．
-        </li>
-        <li><b>使用言語</b></li>
-        <ul>
-            <li class="hover-float-glow">HSP3</li>
-        </ul>
-        <li><b>使用ツール</b></li>
-        <ul>
-            <li class="hover-float-glow">HSP script editor For
-                Windows
-                version 3.6</li>
-            <li class="hover-float-glow">Visual Studio Code</li>
-        </ul>
-        <li><b>開発期間</b>：約2ヶ月</li>
-        <li><b>担当範囲</b></li>
-        <ul>
-            <li>企画</li>
-            <li>プログラム</li>
-            <li>デザイン</li>
-            <li>デバッグ</li>
-            <li>作曲・編曲</li>
-        </ul>
-        <li><b>受賞</b></li>
-        <ul>
-            <li>HSPプログラムコンテスト2024 学生賞</li>
-        </ul>
-        <li><a href="https://deepwiki.com/satoshin-des/UnavoidableDanmaku"><b>deepwiki</b></a></li>
-    </ul>
-
-    <h3><a href="https://drive.google.com/file/d/1P6Ff348pEjCOTLbAKHYggQk1SbTD8qS2/view?usp=sharing"
-            class="nav-link-item">なしごろうの比合わせゲーム</a>
-    </h3>
-    <ul>
-        <img src="/screen_shots/nashigorou1.png" width="200">
-        <img src="/screen_shots/nashigorou2.png" width="200">
-        <li><a href="https://github.com/satoshin-des/nashigorou"><b>ソースコード</b></a></li>
-        <li><b>使用言語</b></li>
-        <ul>
-            <li class="hover-float-glow">C++</li>
-        </ul>
-        <li><b>使用ツール等</b></li>
-        <ul>
-            <li class="hover-float-glow">Visual Studio 2022</li>
-            <li class="hover-float-glow">DXライブラリ</li>
-        </ul>
-        <li><b>開発期間</b>：約1ヶ月</li>
-        <li><b>担当範囲</b></li>
-        <ul>
-            <li>企画</li>
-            <li>プログラム</li>
-            <li>編曲</li>
-        </ul>
-    </ul>
-
-    <h3><a href="https://unityroom.com/games/ijime_nukko" class="nav-link-item">ねこいじめ</a></h3>
-    <ul>
-        <img src="/screen_shots/necoijime1.png" width="200">
-        <img src="/screen_shots/necoijime2.png" width="200">
-        <li><b>ジャンル</b>：弾幕・当てゲー</li>
-        <li><b>概要</b><br>
-            本ゲームは，恐らく初めて制作した本格的（？）なゲームで自分が作ってみたいとずっと思い描いていたものを形にしたものです．
-            <br>
-            基本的には，こちらも弾幕ゲームですが，シューティングではなくブロック崩しのようにボールを当てるゲームです．
-            ボスにはHPはなく，当てた分だけスコアが加算され累計スコアを競うゲームです．
-        </li>
-        <li><b>使用言語</b></li>
-        <ul>
-            <li class="hover-float-glow">C#</li>
-        </ul>
-        <li><b>使用ツール</b></li>
-        <ul>
-            <li class="hover-float-glow">Unity</li>
-            <li class="hover-float-glow">Visual Studio</li>
-        </ul>
-        <li><b>開発期間</b>：約2ヶ月</li>
-        <li><b>担当範囲</b></li>
-        <ul>
-            <li>企画</li>
-            <li>プログラム</li>
-            <li>デザイン</li>
-            <li>イラスト</li>
-            <li>作曲・編曲</li>
-        </ul>
-        <li><b><a href="https://deepwiki.com/satoshin-des/IJIME_NUKKO">deepwiki</a></b></li>
-    </ul>
-
-    <h3><a href="https://satoshin-des.github.io/games/pinpon/PinponDush.html" class="nav-link-item">ピンポンダッシュチャレンジ！</a>
-    </h3>
-    <ul>
-        <img src="/screen_shots/pinpondush.png" width="200">
-        <li><b>ジャンル</b>：カジュアルゲーム</li>
-        <li><b>概要</b><br>
-            本ゲームは，右からひたすら流れてくる複数の家のうち一つだけが留守中の家なので，その家をタップして（ピンポンダッシュ）してピンポンダッシュを成功させようというゲームです．<br>
-            　手軽に誰でも出来て，ルールも非常に分かりやすいので，誰でも，いつでもプレイできます．
-        </li>
-        <li><b>使用言語</b></li>
-        <ul>
-            <li class="hover-float-glow">C++</li>
-        </ul>
-        <li><b>使用ツール</b></li>
-        <ul>
-            <li class="hover-float-glow">Visual Studio 2022</li>
-            <li class="hover-float-glow">Siv3D</li>
-            <li class="hover-float-glow">Visual Studio Code</li>
-        </ul>
-        <li><b>開発期間</b>：4日（アプデ予定あり）</li>
-        <li><b>担当範囲</b></li>
-        <ul>
-            <li>企画</li>
-            <li>プログラム</li>
-            <li>作曲・編曲</li>
-            <li>デバッグ</li>
-        </ul>
-        <li><b><a href="https://deepwiki.com/satoshin-des/PinponDush">deepwiki</a></b></li>
-    </ul>
-    <Footer />
 </template>
