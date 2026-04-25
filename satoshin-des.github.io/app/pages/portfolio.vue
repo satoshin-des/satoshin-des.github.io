@@ -47,6 +47,15 @@ import SubSection from '~/components/SubSection.vue';
 
     <Section>Skills</Section>
     <SubSection>プログラミング言語</SubSection>
+    <v-container>
+        <v-row>
+            <v-cols cols="2">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Bash_Logo_Colored.svg" width="55">
+                <br>
+                Bash
+            </v-cols>
+        </v-row>
+    </v-container>
     <div class="scroll-container">
         <table border="1" style="text-align: left; border-collapse: collapse; border-color: white;">
             <tr>
