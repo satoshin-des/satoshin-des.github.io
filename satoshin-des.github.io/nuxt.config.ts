@@ -4,5 +4,8 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
     baseURL: "/"
-  }
+  },
+  build: {
+    transpile: ['vuetify'],
+  },
 })
