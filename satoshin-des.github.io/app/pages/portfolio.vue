@@ -1,8 +1,168 @@
 <script setup lang="ts">
+import { ref } from 'vue';
+
 import Header from '~/components/Header.vue';
 import Footer from '~/components/Footer.vue';
 import Section from '~/components/Section.vue';
 import SubSection from '~/components/SubSection.vue';
+import SkillTable from '~/components/SkillTable.vue';
+
+const lang_items = ref(
+    [
+        {
+            name: 'Bash',
+            src: 'https://upload.wikimedia.org/wikipedia/commons/4/4b/Bash_Logo_Colored.svg'
+        },
+        {
+            name: 'C',
+            src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg'
+        },
+        {
+            name: 'C++',
+            src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg'
+        },
+        {
+            name: 'C#',
+            src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg'
+        },
+        {
+            name: 'emojin',
+            src: 'https://www.svgrepo.com/show/398338/smiling-face-with-open-mouth-and-smiling-eyes.svg'
+        },
+        {
+            name: 'Go',
+            src: 'https://cdn.worldvectorlogo.com/logos/golang-1.svg'
+        },
+        {
+            name: 'HSP',
+            src: 'https://pbs.twimg.com/profile_images/1009315103181684742/n5dSFk6t_400x400.jpg'
+        },
+        {
+            name: 'JavaScript',
+            src: 'https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg'
+        },
+        {
+            name: 'Python',
+            src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg'
+        },
+        {
+            name: 'Risa/Asir',
+            src: 'http://www.math.kobe-u.ac.jp/Asir/hopo_std.jpg'
+        },
+        {
+            name: 'SageMath',
+            src: 'https://avatars.githubusercontent.com/u/982721?s=200&v=4'
+        }
+    ]
+);
+const markup_items = ref(
+    [
+        {
+            name: 'CSS',
+            src: 'https://cdn.worldvectorlogo.com/logos/css-3.svg'
+        },
+        {
+            name: 'HTML',
+            src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg'
+        },
+        {
+            name: 'LaTeX',
+            src: 'https://cdn.worldvectorlogo.com/logos/latex.svg'
+        }
+    ]
+);
+const lib_items = ref(
+    [
+        {
+            name: 'DXライブラリ',
+            src: 'https://dxlib.xsrv.jp/Image/DxLogo.jpg'
+        },
+        {
+            name: 'Eigen',
+            src: 'https://livedoor.blogimg.jp/tek_nishi/imgs/9/f/9ff5f91d.png'
+        },
+        {
+            name: 'fplll',
+            src: ''
+        },
+        {
+            name: 'IPython',
+            src: 'https://upload.wikimedia.org/wikipedia/commons/a/a1/IPy-logo.png'
+        },
+        {
+            name: 'Matplotlib',
+            src: 'https://upload.wikimedia.org/wikipedia/commons/0/01/Created_with_Matplotlib-logo.svg'
+        },
+        {
+            name: 'NTL',
+            src: ''
+        },
+        {
+            name: 'Numpy',
+            src: 'https://cdn.worldvectorlogo.com/logos/numpy-1.svg'
+        },
+        {
+            name: 'pandas',
+            src: 'https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg'
+        },
+        {
+            name: 'plotly',
+            src: 'https://avatars.githubusercontent.com/u/5997976?s=200&v=4'
+        },
+        {
+            name: 'scipy',
+            src: 'https://upload.wikimedia.org/wikipedia/commons/b/b2/SCIPY_2.svg'
+        },
+        {
+            name: 'pygame',
+            src: 'https://upload.wikimedia.org/wikipedia/commons/b/be/Pygame_logo.svg'
+        },
+        {
+            name: 'Siv3D',
+            src: 'https://i.gyazo.com/b0c2bba5abd0a845bab4166608b6a8cf.png'
+        },
+        {
+            name: 'sympy',
+            src: 'https://upload.wikimedia.org/wikipedia/commons/5/54/Sympy_logo.svg'
+        }
+    ]
+);
+const editor_items = ref(
+    [
+        {
+            name: 'Google Colab',
+            src: 'https://embed.zenn.studio/api/optimize-og-image/26db74eefbf565c20234/https%3A%2F%2Fcolab.research.google.com%2Fimg%2Fcolab_favicon_256px.png'
+        },
+        {
+            name: 'Unity',
+            src: 'https://cg-kenkyujo.com/img/category/unity/img_overview_logo2.png'
+        },
+        {
+            name: 'Visual Studio',
+            src: 'https://upload.wikimedia.org/wikipedia/commons/5/59/Visual_Studio_Icon_2019.svg'
+        },
+        {
+            name: 'Visual Stuido Code',
+            src: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg'
+        }
+    ]
+);
+const ai_items = ref(
+    [
+        {
+            name: 'Chat GPT',
+            src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/2048px-ChatGPT_logo.svg.png'
+        },
+        {
+            name: 'Gemini',
+            src: 'https://upload.wikimedia.org/wikipedia/commons/8/8f/Google-gemini-icon.svg'
+        },
+        {
+            name: 'Copilot',
+            src: 'https://registry.npmmirror.com/@lobehub/icons-static-png/1.75.0/files/dark/copilot-color.png'
+        }
+    ]
+)
 </script>
 
 <template>
@@ -50,268 +210,19 @@ import SubSection from '~/components/SubSection.vue';
 
             <Section>Skills</Section>
             <SubSection>プログラミング言語</SubSection>
-            <div>
-                <v-container>
-                    <v-row justify="center" class="text-center">
-                        <v-col cols="auto">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Bash_Logo_Colored.svg"
-                                width="55">
-                            <br>
-                            Bash
-                        </v-col>
-                        <v-col cols="auto">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg"
-                                width="55">
-                            <br>
-                            C
-                        </v-col>
-                        <v-col cols="auto">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg"
-                                width="55">
-                            <br>
-                            C++
-                        </v-col>
-                        <v-col cols="auto">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg"
-                                width="55">
-                            <br>
-                            C#
-                        </v-col>
-                        <v-col cols="auto">
-                            <img src="https://www.svgrepo.com/show/398338/smiling-face-with-open-mouth-and-smiling-eyes.svg"
-                                width="55">
-                            <br>
-                            emojin
-                        </v-col>
-                    </v-row>
-                </v-container>
-            </div>
-            <div class="scroll-container">
-                <table border="1" style="text-align: left; border-collapse: collapse; border-color: white;">
-                    <tr>
-                        <th>Bash</th>
-                        <th>C</th>
-                        <th>C++</th>
-                        <th>C#</th>
-                        <th>emojin</th>
-                    </tr>
-                    <tr>
-                        <th><img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Bash_Logo_Colored.svg"
-                                width="55" class="hover-float-glow"></th>
-                        <th><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg"
-                                width="55" class="hover-float-glow">
-                        </th>
-                        <th><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg"
-                                width="55" class="hover-float-glow"></th>
-                        <th><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg"
-                                width="55" class="hover-float-glow"></th>
-                        <th>
-                            <img src="https://www.svgrepo.com/show/398338/smiling-face-with-open-mouth-and-smiling-eyes.svg"
-                                width="55" class="hover-float-glow">
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>Go</th>
-                        <th>HSP3</th>
-                        <th>JavaScript</th>
-                        <th>Maxima</th>
-                        <th>Python</th>
-                    </tr>
-                    <tr>
-                        <th><img src="https://cdn.worldvectorlogo.com/logos/golang-1.svg" width="55"
-                                class="hover-float-glow">
-                        </th>
-                        <th><img src="https://pbs.twimg.com/profile_images/1009315103181684742/n5dSFk6t_400x400.jpg"
-                                width="55" class="hover-float-glow">
-                        </th>
-                        <th>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
-                                width="55" class="hover-float-glow">
-                        </th>
-                        <th><img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Maxima-new.svg" width="55"
-                                class="hover-float-glow"></th>
-                        <th><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
-                                width="55" class="hover-float-glow"></th>
-                    </tr>
-                    <tr>
-                        <th>Risa/Asir</th>
-                        <th>SageMath</th>
-                    </tr>
-                    <tr>
-                        <th><img src="http://www.math.kobe-u.ac.jp/Asir/hopo_std.jpg" width="55"
-                                class="hover-float-glow">
-                        </th>
-                        <th><img src="https://avatars.githubusercontent.com/u/982721?s=200&v=4" width="55"
-                                class="hover-float-glow">
-                        </th>
-                    </tr>
-                </table>
-            </div>
+            <SkillTable :items="lang_items" />
 
             <SubSection>マークアップ言語</SubSection>
-            <div class="scroll-container">
-                <table border="1" style="text-align: left; border-collapse: collapse; border-color: white;">
-                    <tr>
-                        <th>CSS</th>
-                        <th>HTML</th>
-                        <th>LaTeX</th>
-                        <th>Markdown</th>
-                        <th>WML</th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <img src="https://cdn.worldvectorlogo.com/logos/css-3.svg" width="55"
-                                class="hover-float-glow">
-                        </th>
-                        <th>
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
-                                width="55" class="hover-float-glow">
-                        </th>
-                        <th>
-                            <img src="https://cdn.worldvectorlogo.com/logos/latex.svg" width="55"
-                                class="hover-float-glow">
-                        </th>
-                        <th>
-                            <img src="https://www.svgrepo.com/show/349446/markdown.svg" width="55"
-                                class="hover-float-glow">
-                        </th>
-                        <th>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/WML_logo_Wiki_Markup_Language_logo.svg"
-                                width="55" class="hover-float-glow">
-                        </th>
-                    </tr>
-                </table>
-            </div>
+            <SkillTable :items="markup_items" />
 
             <SubSection>ライブラリなど</SubSection>
-            <div class="scroll-container">
-                <table border="1" style="text-align: left; border-collapse: collapse; border-color: white;">
-                    <tr>
-                        <th>DXライブラリ</th>
-                        <th>Eigen</th>
-                        <th>fplll</th>
-                        <th>IPython</th>
-                        <th>Matplotlib</th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <img src="https://dxlib.xsrv.jp/Image/DxLogo.jpg" width="55" class="hover-float-glow">
-                        </th>
-                        <th>
-                            <img src="https://livedoor.blogimg.jp/tek_nishi/imgs/9/f/9ff5f91d.png" width="55"
-                                class="hover-float-glow">
-                        </th>
-                        <th></th>
-                        <th>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/IPy-logo.png" width="55"
-                                class="hover-float-glow">
-                        </th>
-                        <th>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Created_with_Matplotlib-logo.svg"
-                                width="55" class="hover-float-glow">
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>NTL</th>
-                        <th>Numpy</th>
-                        <th>pandas</th>
-                        <th>plotly</th>
-                        <th>scipy</th>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <th>
-                            <img src="https://cdn.worldvectorlogo.com/logos/numpy-1.svg" width="55"
-                                class="hover-float-glow">
-                        </th>
-                        <th>
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg"
-                                width="55" class="hover-float-glow">
-                        </th>
-                        <th>
-                            <img src="https://avatars.githubusercontent.com/u/5997976?s=200&v=4" width="55"
-                                class="hover-float-glow">
-                        </th>
-                        <th>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/SCIPY_2.svg" width="55"
-                                class="hover-float-glow">
-                        </th>
-                    </tr>
-                    <tr>
-                        <th colspan="2">pygame</th>
-                        <th>Siv3D</th>
-                        <th>sympy</th>
-                    </tr>
-                    <tr>
-                        <th colspan="2"><img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Pygame_logo.svg"
-                                width="110" class="hover-float-glow">
-                        </th>
-                        <th>
-                            <img src="https://i.gyazo.com/b0c2bba5abd0a845bab4166608b6a8cf.png" width="55"
-                                class="hover-float-glow">
-                        </th>
-                        <th>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Sympy_logo.svg" width="55"
-                                class="hover-float-glow">
-                        </th>
-                    </tr>
-                </table>
-            </div>
+            <SkillTable :items="lib_items" />
 
             <SubSection>エディター，IDEなど</SubSection>
-            <div class="scroll-container">
-                <table border="1" style="text-align: left; border-collapse: collapse; border-color: white;">
-                    <tr>
-                        <th>Google Colab</th>
-                        <th>Unity</th>
-                        <th>Visual Studio</th>
-                        <th>Visual Studio Code</th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <img src="https://embed.zenn.studio/api/optimize-og-image/26db74eefbf565c20234/https%3A%2F%2Fcolab.research.google.com%2Fimg%2Fcolab_favicon_256px.png"
-                                width="55" class="hover-float-glow">
-                        </th>
-                        <th>
-                            <img src="https://cg-kenkyujo.com/img/category/unity/img_overview_logo2.png" width="55"
-                                class="hover-float-glow">
-                        </th>
-                        <th>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Visual_Studio_Icon_2019.svg"
-                                width="55" class="hover-float-glow">
-                        </th>
-                        <th>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg"
-                                width="55" class="hover-float-glow">
-                        </th>
-                    </tr>
-                </table>
-            </div>
+            <SkillTable :items="editor_items" />
 
             <SubSection>AI</SubSection>
-            <div class="scroll-container">
-                <table border="1" style="text-align: left; border-collapse: collapse; border-color: white;">
-                    <tr>
-                        <th>ChatGPT Colab</th>
-                        <th>Gemini</th>
-                        <th>Copilot</th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/2048px-ChatGPT_logo.svg.png"
-                                width="55" class="hover-float-glow">
-                        </th>
-                        <th>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Google-gemini-icon.svg"
-                                width="55" class="hover-float-glow">
-                        </th>
-                        <th>
-                            <img src="https://registry.npmmirror.com/@lobehub/icons-static-png/1.75.0/files/dark/copilot-color.png"
-                                width="55" class="hover-float-glow">
-                        </th>
-                    </tr>
-                </table>
-            </div>
+            <SkillTable :items="ai_items" />
 
             <Section>Works</Section>
             <SubSection>Research Results</SubSection>

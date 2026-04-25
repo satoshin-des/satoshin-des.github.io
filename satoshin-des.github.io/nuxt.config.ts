@@ -5,7 +5,14 @@ export default defineNuxtConfig({
   app: {
     baseURL: "/"
   },
-  build: {
-    transpile: ['vuetify'],
-  },
+  modules: [
+    'vuetify-nuxt-module'
+  ],
+  vuetify: {
+    vuetifyOptions: {
+      theme: {
+        defaultTheme: 'dark'
+      }
+    }
+  }
 })
