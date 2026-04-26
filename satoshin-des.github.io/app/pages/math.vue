@@ -1,16 +1,13 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
-import VueMathjax from 'vue-mathjax-next'
-
 import Header from '~/components/Header.vue';
 import Footer from '~/components/Footer.vue';
-
-const formula = '$$x^2 + y^2 = z^2$$';
+import Equation from '~/components/Equation.vue';
 </script>
 
 <template>
     <Header />
-    <vue-mathjax :formula="formula" />
+    <Equation :f="'x+y+z'" :inline="true" />
     <Footer />
 </template>
