@@ -23,9 +23,9 @@ useHead({
 </script>
 
 <template>
-    <div v-if="inline">
+    <span v-if="inline">
         <vue-mathjax :formula="`\(${f}\)`" />
-    </div>
+    </span>
     <div v-else>
         <vue-mathjax :formula="`$$${f}$$`" />
     </div>
