@@ -1,7 +1,14 @@
+<script setup lang="ts">
+import { ref } from 'vue';
+
+const today = new Date();
+const currentYear = ref(today.getFullYear());
+</script>
+
 <template>
     <footer>
-        <small>
-            Copyright © 2024 - 2026 さとしん All Rights Reserved.
-        </small>
+        <p>
+            Copyright © 2024 - {{ currentYear }} さとしん All Rights Reserved.
+        </p>
     </footer>
 </template>
