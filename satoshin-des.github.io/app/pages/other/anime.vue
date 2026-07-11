@@ -29,13 +29,21 @@ const columns = ref(
     ]
 );
 
+const sortOpt = ref({
+    enabled: true,
+    initialSortBy: {
+        field: 'title',
+        type: 'asc',
+    }
+});
+
 const rowss = ref(jsonData);
 </script>
 
 <template>
     <Header />
     <div>
-        <VueGoodTable :columns="columns" :rows="rowss" theme="nocturnal" />
+        <VueGoodTable :columns="columns" :rows="rowss" theme="nocturnal" :sort-options="sortOpt" />
     </div>
     <Footer />
 </template>
