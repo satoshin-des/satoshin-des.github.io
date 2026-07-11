@@ -201,5 +201,6 @@
         { "id": 200, "title": "ONE PIECE", "author": "尾田栄一郎", "year": "1999", "company": "東映アニメーション" },
         { "id": 201, "title": "上伊那ぼたん、酔へる姿は百合の花", "author": "塀", "year": "2026", "company": "ソワネ" },
         { "id": 202, "title": "NEEDY GIRL OVERDOSE", "author": "WSS playground", "year": "2026", "company": "Yostar Pictures" },
-        { "id": 203, "title": "ガールズ&パンツァー", "author": "水島努", "year": "2012", "company": "アクタス" }
+        { "id": 203, "title": "ガールズ&パンツァー", "author": "水島努", "year": "2012", "company": "アクタス" },
+        { "id": 204, "title": "ジョジョの奇妙な冒険 ストーンオーシャン", "author": "荒木飛呂彦", "year": "2022", "company": "david production" }
 ]
