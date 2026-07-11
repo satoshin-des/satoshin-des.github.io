@@ -3,6 +3,7 @@ import { ref } from 'vue';
 
 import { VueGoodTable } from 'vue-good-table-next';
 import 'vue-good-table-next/dist/vue-good-table-next.css';
+import jsonData from 'animes.json';
 
 import Header from '~/components/Header.vue';
 import Footer from '~/components/Footer.vue';
@@ -27,6 +28,8 @@ const columns = ref(
         { label: "会社", field: "company" },
     ]
 );
+
+const rowss = ref(jsonData);
 
 const rows = ref(
     [
@@ -238,7 +241,7 @@ const rows = ref(
 <template>
     <Header />
     <div>
-        <VueGoodTable :columns="columns" :rows="rows" theme="nocturnal" />
+        <VueGoodTable :columns="columns" :rows="rowss" theme="nocturnal" />
     </div>
     <Footer />
 </template>
