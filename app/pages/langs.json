@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "name": "Bash",
+        "year": 1989,
+        "scene": "研究",
+        "ease": "★★★"
+    },
+    {
+        "id": 2,
+        "name": "C",
+        "year": 1972,
+        "scene": "研究・趣味",
+        "ease": "★★★★★"
+    },
+    {
+        "id": 3,
+        "name": "CSS",
+        "year": 1994,
+        "scene": "趣味",
+        "ease": "★★★"
+    },
+    {
+        "id": 4,
+        "name": "C++",
+        "year": 1983,
+        "scene": "研究・ゲーム開発・趣味",
+        "ease": "★★★★★"
+    },
+    {
+        "id": 5,
+        "name": "C#",
+        "year": 2000,
+        "scene": "ゲーム開発",
+        "ease": "★★★"
+    },
+    {
+        "id": 6,
+        "name": "emojin",
+        "year": 2024,
+        "scene": "趣味",
+        "ease": "★"
+    },
+    {
+        "id": 7,
+        "name": "Go",
+        "year": 2009,
+        "scene": "趣味",
+        "ease": "★★★★★"
+    },
+    {
+        "id": 8,
+        "name": "HSP",
+        "year": 1996,
+        "scene": "ゲーム開発",
+        "ease": "★★★"
+    },
+    {
+        "id": 9,
+        "name": "HTML",
+        "year": 1989,
+        "scene": "趣味",
+        "ease": "★★★"
+    },
+    {
+        "id": 10,
+        "name": "JavaScript",
+        "year": 1995,
+        "scene": "趣味",
+        "ease": "★★★"
+    },
+    {
+        "id": 11,
+        "name": "Markdown",
+        "year": 2004,
+        "scene": "趣味",
+        "ease": "★★★★★"
+    },
+    {
+        "id": 12,
+        "name": "Python",
+        "year": 1991,
+        "scene": "研究・ゲーム開発・趣味",
+        "ease": "★★★"
+    },
+    {
+        "id": 13,
+        "name": "Risa/Asir",
+        "year": 1990,
+        "scene": "研究",
+        "ease": "★★"
+    },
+    {
+        "id": 14,
+        "name": "SageMath",
+        "year": 2005,
+        "scene": "研究",
+        "ease": "★★★★"
+    },
+    {
+        "id": 15,
+        "name": "TeX",
+        "year": 1978,
+        "scene": "研究・同人誌執筆",
+        "ease": "★★★★★"
+    }
+]

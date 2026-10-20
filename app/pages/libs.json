@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "name": "DXライブラリ",
+        "year": 2001,
+        "lang": "C++",
+        "scene": "ゲーム開発",
+        "ease": "★★★★"
+    },
+    {
+        "id": 2,
+        "name": "Eigen",
+        "year": 2006,
+        "lang": "C++",
+        "scene": "研究",
+        "ease": "★★★★★"
+    },
+    {
+        "id": 3,
+        "name": "IPython",
+        "year": 2001,
+        "lang": "Python",
+        "scene": "趣味",
+        "ease": "★★★"
+    },
+    {
+        "id": 4,
+        "name": "japanize-matplotlib",
+        "year": 2018,
+        "lang": "Python",
+        "scene": "研究",
+        "ease": "★★★★"
+    },
+    {
+        "id": 5,
+        "name": ",Matplotlib",
+        "year": 2003,
+        "lang": "Python",
+        "scene": "研究",
+        "ease": "★★★★★"
+    },
+    {
+        "id": 6,
+        "name": "NTL",
+        "year": 1990,
+        "lang": "C++",
+        "scene": "研究",
+        "ease": "★★★★"
+    },
+    {
+        "id": 7,
+        "name": "Numpy",
+        "year": 1995,
+        "lang": "Python",
+        "scene": "研究・趣味",
+        "ease": "★★★★★"
+    },
+    {
+        "id": 8,
+        "name": "Pandas",
+        "year": 2008,
+        "lang": "Python",
+        "scene": "研究",
+        "ease": "★★★★"
+    },
+    {
+        "id": 9,
+        "name": "Pygame",
+        "year": 2000,
+        "lang": "Python",
+        "scene": "ゲーム開発",
+        "ease": "★★★"
+    },
+    {
+        "id": 10,
+        "name": "Pyinstaller",
+        "year": 2005,
+        "lang": "Python",
+        "scene": "ゲーム開発・趣味",
+        "ease": "★★★"
+    },
+    {
+        "id": 11,
+        "name": "Siv3D",
+        "year": 2012,
+        "lang": "C++",
+        "scene": "ゲーム開発",
+        "ease": "★★★★★"
+    },
+    {
+        "id": 12,
+        "name": "SymPy",
+        "year": 2007,
+        "lang": "Python",
+        "scene": "趣味",
+        "ease": "★★★★"
+    }
+]
