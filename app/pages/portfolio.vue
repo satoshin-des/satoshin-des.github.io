@@ -7,7 +7,7 @@ import Section from '~/components/Section.vue';
 import SubSection from '~/components/SubSection.vue';
 import SkillTable from '~/components/SkillTable.vue';
 
-const lang_items = ref(
+const langItems = ref(
     [
         {
             name: 'Bash',
@@ -210,7 +210,7 @@ const ai_items = ref(
 
             <Section>Skills</Section>
             <SubSection>プログラミング言語</SubSection>
-            <SkillTable :items="lang_items" />
+            <SkillTable :items="langItems" />
 
             <SubSection>マークアップ言語</SubSection>
             <SkillTable :items="markup_items" />
